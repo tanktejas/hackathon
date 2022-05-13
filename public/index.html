@@ -10,16 +10,15 @@
       content="Web site created using create-react-app"
     />
     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-  />
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
 
-  <link
-    rel="stylesheet"
-    href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
-  />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
+    />
 
- 
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
@@ -51,4 +50,17 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
+  <script>
+    var mapboxgl = require("mapbox-gl/dist/mapbox-gl.js");
+
+    mapboxgl.accessToken =
+      "pk.eyJ1Ijoia2hhd2xhemhpIiwiYSI6ImNsMXpvNzFieDBvaWUzZG1xZjFxbHVmcmIifQ.BC-aFwWVlh5xYzJrUdnT-w";
+    var map = new mapboxgl.Map({
+      container: "YOUR_CONTAINER_ELEMENT_ID",
+      style: "mapbox://styles/mapbox/streets-v11",
+      center: [-71.060982, 42.35745],
+      zoom: 18,
+    });
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
 </html>

@@ -1,0 +1,51 @@
+.stag{
+    text-decoration: underline;
+}
+.stag:hover{
+    cursor: pointer;
+    text-decoration: none;
+}
+.cardmain{
+   width: 410px;
+}
+.cardmain img{
+    height: auto;
+}
+.bodypart .eligi ul{
+    /* display: flex;
+    justify-content: center;  */
+}
+.buttforsc{
+    display: flex;
+    justify-content: space-between;
+}
+.buttforsc button{
+    width: 45%;
+    background-color: blue;
+    height: 36px;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    /* color: white; */
+    font-weight: 500;
+}
+.bodypart div h5{
+    text-decoration: underline;
+    color: rgb(232 65 51);
+}
+.bodypart div{
+    padding: 3px;
+}
+
+.dedy{
+    padding-top: 15px;
+    margin-top: 9px;
+}
+
+@media (max-width:510px) {
+    .bodypart div{
+        max-width: 410px !important;
+    }
+    
+}
+
+ 

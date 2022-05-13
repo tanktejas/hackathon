@@ -7,7 +7,10 @@
 body {
   background-color: #ffffffe0;
 }
-
+.logo{
+  width: 221px;
+  height: 69px;
+}
 .pages {
   display: grid;
   justify-content: center; 
@@ -78,21 +81,22 @@ body {
   margin-right: 1.4rem;
 }
 
-.nav-links {
-  color: rgb(245, 241, 241);
-  font-weight:700;
+.nav-link{ 
+
+  font-weight:600;
   text-decoration: none;
   padding: 0.5rem 1rem;
   height: 100%;
+  font-size: 20px;
   border-bottom: 3px solid transparent;
-}
+}   
 .fa-code {
   margin-left: 1rem;
 }
 
 .nav-item {
   line-height: 40px;
-  margin-right: 1.8rem;
+  margin-right: 2.0rem;
 }
 
 .nav-item:after {
@@ -122,9 +126,43 @@ ul li a{
 .losi{
   border: 2px solid black; 
 }
+.togglebut{
+  display: none;
+}
+.togglebut svg{    
+  font-size: 39px;
+  margin-right: 4px;
+}
+.navbar{
+  background: linear-gradient(to bottom,#4444e0,#6988e3);
+}
+.navbar-toggler{
+  color: white !important;
+  background: none;
+}
+#navmenu ul li a{
+    color:black;
+} 
 @media screen and (max-width: 960px) {
+  .togglebut{
+    display: block;
+  }
+  .navigation{
+    background-color: white; 
   
-  .nav-menu {
+  }
+  .navigation li a{
+    /* color: black !important;  */
+    text-align: center;
+  }  
+  #navmenu ul{
+    background-color: #b7b7ef;
+  }
+  #navmenu ul li a{
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .nav-menu { 
     display: flex;
     flex-direction: column;
     width: 100%;

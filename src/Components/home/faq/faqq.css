@@ -1,0 +1,16 @@
+.faqq1{
+    box-shadow: 2px 2px 2px #938989 !important;
+    border-radius: 8px !important;
+    background-color:rgb(158, 192, 221) !important;
+    /* height: 65px; */
+    margin: 9px;
+}
+@media (min-width:772px) {
+     .faqq1{
+         /* height: 65px; */
+         display: flex;
+         flex-direction: column;
+         justify-content: center; 
+     }     
+      
+}
