@@ -9,6 +9,10 @@ export default function SimpleAccordion() {
       <Faqs />
       <Faqs />
       <Faqs />
+      <Faqs />
+      <Faqs />
+      <Faqs />
+      <Faqs />
     </div>
   );
 }

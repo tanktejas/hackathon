@@ -1,4 +1,4 @@
-
+/* 
 * {
   margin: 0;
   padding: 0;
@@ -152,7 +152,7 @@ ul li a{
   
   }
   .navigation li a{
-    /* color: black !important;  */
+     color: black !important;  
     text-align: center;
   }  
   #navmenu ul{
@@ -202,4 +202,4 @@ ul li a{
     cursor: pointer;
     color: #155986;
   }
-}
+} */

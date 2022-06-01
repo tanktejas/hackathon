@@ -1,5 +1,6 @@
 import React from "react";
 import "./footer.css";
+import "../main.css";
 
 function Footer() {
   return (
@@ -70,7 +71,36 @@ function Footer() {
             </a>
           </div>
         </div>
+
+        <div className="footer-bottom pb-70 ">
+        <div className="container">
+            <div className="row align-items-end">
+                <div className="col-12 col-md-12">
+                    <p className="text-muted small text-center">&copy; 2022. All rights reserved. Designed and developed by <a href="#!" className="line-link">Scholars</a></p>
+                    {/* <p className="text-center mt-2"><img src="img copy/dmca.png" /></p> */}
+                    <p className="text-muted small mt-10">Trademark Legal Notice : All product names, trademarks and registered trademarks are property of their respective owners. All company, product and service names used in this website are for identification purposes only. Use of these names,trademarks and brands does not imply endorsement.
+</p><p className="text-muted small mt-2 text-center">Made with ❣️ by Mindbenders</p>
+                </div>
+            </div>
+        </div>
+
+    {/* <script src=
+"./js/custome.js" 
+    type="text/javascript" />
+    <script src=
+"./js/app.js" 
+    type="text/javascript" /> */}
+ 
+        <a href="#top" className="scroll-to-anim scroll-top text-white rounded-circle text-center"><span className="fe fe-chevron-up"></span></a>
+   
+    </div>
+
       </footer>
+
+      {/* <script src="js/custome.js" type="text/javascript" />
+      <script src="js/app.js" type="text/javascript" />
+      <script src="js/jquery-3.4.1.min.js"></script>
+      <script src="js/plugins.min.js"></script> */}
     </>
   );
 }
