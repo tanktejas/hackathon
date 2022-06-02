@@ -96,13 +96,13 @@ select{
     margin-bottom: 23px;
 }
 
-#services h2,
+/* #services h2,
 #about h2{
     background-color: rgb(188, 244, 225);
     text-align: center;
     height: auto; 
     padding: 14px;
-}
+} */
 .faq{
     margin: 56px ;
     margin-top: 33px;

@@ -6,6 +6,7 @@ import url from "../images/scholaship.png";
 import Card from "../Card/card";
 import Faq from "./faq/faq";
 import Footer from "../footer/footer";
+import ServiceFaqM from "../ServiceFaqM";
 
 function Home() {
   return (
@@ -98,9 +99,8 @@ function Home() {
 
       {/* Faq starts  */}
       <section class="" id="about">
-        <h2>Frequently Asked</h2>
         <div className="container faq">
-          <Faq />
+          <ServiceFaqM />
         </div>
       </section>
       {/* faq ends  */}

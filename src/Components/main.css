@@ -742,7 +742,8 @@ mark {
 	border-color: #211d3e !important;
 }
 .text-marked {
-	color: #ffe147  !important;
+	color: #1e90ff !important;
+	/* color: #ffe147  !important; */
 }
 .banner-wrapper .block p {
 	overflow: hidden;
@@ -3140,3 +3141,243 @@ margin-bottom:25px;
   .delivery-apps-head a img {
 	margin: 0 10px 0 0;
   }
+
+  .internal-links{color:#252b33;text-decoration:none !important;position: relative;font-weight: 600;}
+
+  .internal-links::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 100%;
+    bottom: 0px;
+    height: 1px;
+    background-color: #000;
+    visibility: hidden;
+    -webkit-transition-property: right;
+    transition-property: right;
+    -webkit-transition-duration: .3s;
+    transition-duration: .3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+.internal-links:hover::before {
+    visibility: visible;
+    right: 0;
+}
+.internal-links:hover {
+	color:#252b33 !important;
+}
+
+.services-top-main{padding:0}
+.services-top-main .row{align-items:center;height:100vh;margin:0}
+.services-top-main h2{margin-bottom:30px}
+.services-top-main .home-slider-decor{text-align:right;display:inline-block;width:100%}
+.services-top-main .home-slider-decor img{height:auto;max-height:490px}
+
+.services-top-main .home-logs{margin:30px 0 0}
+.services-top-main .home-logs h5{margin-bottom:30px}
+.services-top-main .home-logs a{padding:10px!important;box-shadow:5px 5px 15px rgba(0,0,0,0.1);width:30%!important;text-align:center;border-radius:10px;display:inline-block;margin-right:15px}
+.services-top-main .home-logs a img{margin:0!important}
+
+@media only screen and (max-width:1024px){
+	.services-top-main h2{font-size:28px!important;line-height:36px!important;font-weight:600}
+.services-top-main{padding:100px 0 45px}}
+
+@media only screen and (max-width:991px){.service-grtapp .we-are-box{margin:0 0 30px}
+.services-top-main .mobile-about-img{display:none!important}
+.services-top-main .desktop-about-img{display:block}}
+
+@media only screen and (max-width:767px){
+	.services-top-main .mobile-about-img{display:inline-block!important;margin:0 0 30px!important;text-align:center;}
+	.services-top-main .mobile-about-img img{width:80%;}
+	.services-top-main .desktop-about-img{display:none}
+}
+
+.services-top-main.services-new-top {
+	padding: 100px 0 80px;
+}
+.services-top-main.services-new-top .row {
+	height: auto;
+}
+.services-top-main.services-new-top {
+	background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: right top !important;
+    padding: 0 0 0;
+    margin-top: 67px;
+    position: relative;
+    min-height:650px;
+}
+.services-top-main.services-new-top .row {
+    height: auto;
+    min-height:650px;
+    align-items: center;
+}
+.services-top-main.services-new-top .home-logs a {
+	padding: 0 !important;
+	box-shadow: none !important;
+	width: auto !important;
+	margin-right: 35px;
+}
+.services-top-main.services-new-top .home-logs a img {
+	height: 44px;
+}
+.services-top-main.services-new-top .home-logs {
+	margin-bottom: 80px;
+}
+
+@media only screen and (max-width:991px){.service-grtapp .we-are-box{margin:0 0 30px}
+.services-top-main .mobile-about-img{display:none!important}
+.services-top-main .desktop-about-img{display:block}
+#accordion.faq{margin-top:15px!important}
+#accordion .panel-title>a.collapsed::before,#accordion .panel-title>a::before{top:25px!important}
+
+}
+
+#accordion .panel-title>a{display:inline-block}
+@media only screen and (max-width:767px){
+	.factsheet-services .col-lg-3:last-child,.ios-about-con .col-lg-3:last-child{margin:0}
+	#accordion .panel-title>a.collapsed::before,#accordion .panel-title>a::before{top:0!important;bottom:0;background-position:right center;height:100%}
+
+.services-top-main .mobile-about-img{display:inline-block!important;margin:0 0 30px!important;text-align:center;}
+.services-top-main .mobile-about-img img{width:80%;}
+.services-top-main .desktop-about-img{display:none}
+
+}
+
+.mobile-about-img{display:none!important}
+
+.ios-about-main .ios-right-img{margin-top:170px}
+
+.ios-about-main .row{
+	margin:0;
+}
+
+.ios-about-main{
+	padding: 60px 0;
+}
+
+@media only screen and (max-width:1024px){
+	.factsheet-services .col-lg-3,.ios-about-con .col-lg-3{margin:0 0 30px}
+	#accordion .panel .panel-title{font-size:18px!important;line-height:20px!important}
+	#accordion .panel-title>a.collapsed::before,#accordion .panel-title>a::before{width:15px}
+	#accordion .panel-heading{padding:10px 0;}
+	#accordion .panel-title>a{padding-right:30px}
+	#accordion .panel-title>a.collapsed::before,#accordion .panel-title>a::before{top:25px!important}
+	#accordion.faq{margin-top:0px!important}
+	
+.service_faqs .row{
+	margin:0 -15px!important;
+}
+	.ios-about-main,.service_faqs{
+		padding: 30px 0;
+	}
+	.ios-about-main .ios-right-img{margin-top:40px}
+.ios-small-img-box{margin:-300px 0 0 0}
+.ios-img-box{width:90%}
+.ios-img-box{margin:0;width:100%}
+.ios-img-box::after{
+	content:none;
+}
+
+	.ios-about-main .ios-right-img{margin-top:40px}
+	.ios-about-main .row{
+
+		margin:0 -15px!important
+	}
+	.soln-heading h1,.soln-heading h2{margin:15px 0 20px!important}
+
+	
+}
+
+.container {
+    width: 1200px;
+    max-width: 100%;
+}
+
+.soln-heading{position:relative}
+
+.soln-heading h2{font-size:40px!important;line-height:50px!important}
+.soln-heading h1,.soln-heading h2{margin:0 0 30px!important}
+
+.soln-heading2 h2{padding-left:0;margin-top:0;margin-bottom:80px;font-weight:700;}
+
+.ios-about-con .app-ics{text-align:center}
+.ios-about-con .app-ics img{height:70px;width:70px}
+.ios-about-con .app-ics p{margin:0}
+.ios-about-con h5{margin-bottom:50px}
+
+.ios-img-box{float:right;width:80%;position:relative}
+.ios-img-box img{width:100%;border-radius:4px}
+.ios-img-box::after{content:'';border-radius:4px;position:absolute;z-index:-1;left:20px;right:-20px;top:-20px;bottom:20px;background:#d6ffe6}
+.ios-about-main .ios-right-img{margin-top:170px}
+.ios-small-img-box{float:left;width:70%;position:relative;z-index:99;margin:-100px 0 0 0}
+.ios-small-img-box::after{content:'';border-radius:4px;position:absolute;z-index:-1;left:20px;right:-20px;top:-20px;bottom:20px;background:#fff9dc}
+.ios-small-img-box img{width:100%;border-radius:4px}
+
+ul.nav.nav-tabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+/* service faq styling */
+.service_faqs #accordion .panel {
+    border-bottom: 1px solid #ccc;
+    margin: 0;
+    border-radius: 0;
+}
+
+.service_faqs .row{margin:0;}
+
+.service_faqs{
+	padding: 60px 0;
+}
+.faq-main{width:100%}
+
+#accordion.faq{border-radius:0;padding:0;margin:0}
+#accordion .panel{margin:0 0 25px!important; border-radius:10px;border:0;box-shadow:none;padding:0;box-shadow:0 0 15px 0 rgba(0,0,0,0.13)}
+#accordion .panel-heading{border:0;border-radius:0;position:relative;padding:30px 0}
+#accordion .panel .panel-title{text-decoration:none;margin-bottom:0}
+#accordion .panel-title>a{text-decoration:none!important;outline:0}
+#accordion .panel-title>a:hover{color:#252b33!important}
+#accordion .panel-title>a::before{content:"";width:20px;height:20px;position:absolute;right:15px;background-position:right top;background-size:100%;background-repeat:no-repeat;top:20px}
+#accordion .panel-title>a.collapsed::before{content:"";width:20px;height:20px;position:absolute;right:15px;background-position:right top;background-size:100%;background-repeat:no-repeat;top:20px}
+#accordion .panel-collapse .panel-body{border:0;padding:20px 80px 20px 0px;border-radius:0}
+.faq-main{width:100%}
+#accordion .panel:last-child{border:0}
+
+
+#accordion .panel{box-shadow:none}
+.accordion-flush .accordion-item .accordion-button{
+	font-size: 17px;
+    border-radius: 0;
+    font-family: 'Poppins';
+    color: black;
+    font-weight: 500;
+}
+
+
+.services-box-main ul li p {
+    font-size: 17px;
+    border-radius: 0;
+    font-family: 'Poppins';
+    color: black;
+    font-weight: 500;
+    margin: 0;
+}
+
+.services-box-main ul li p:hover {
+    font-size: 17px;
+    border-radius: 0;
+    font-family: 'Poppins';
+    color: black;
+    font-weight: 500;
+    margin: 0;
+}
+/* factsheet style */
+.factsheet-services{text-align:center;margin-top:50px;display:flex;align-items:flex-start;flex-wrap:wrap}
+
