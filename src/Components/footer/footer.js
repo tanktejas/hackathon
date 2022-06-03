@@ -2,7 +2,11 @@ import React, { useState } from "react";
 import "./footer.css";
 
 function Footer() {
-  const [arr,setarr]=useState([])
+  const [ql, setql] = useState({ "max-height": "0px" });
+  const [ns, setns] = useState({ "max-height": "0px" });
+  const [is, setis] = useState({ "max-height": "0px" });
+  const [rs, setrs] = useState({ "max-height": "0px" });
+  const [ex, setex] = useState({ "max-height": "0px" });
 
   return (
     <>
@@ -68,8 +72,18 @@ function Footer() {
         <div className="container">
           <div className="row">
             <div className="footer-link ftr__list nav">
-              <h5>Quick Links</h5>
-              <ul>
+              <h5
+                onClick={() => {
+                  if (ql["max-height"] == "0px") {
+                    setql({ "max-height": "100%" });
+                  } else {
+                    setql({ "max-height": "0px" });
+                  }
+                }}
+              >
+                Quick Links
+              </h5>
+              <ul style={ql}>
                 <li>
                   <a href="aboutus.shtml" className="lear-more-l">
                     Home
@@ -99,8 +113,18 @@ function Footer() {
               </ul>
             </div>
             <div className="footer-link ftr__list nav">
-              <h5>National Scholarships</h5>
-              <ul>
+              <h5
+                onClick={() => {
+                  if (ns["max-height"] == "0px") {
+                    setns({ "max-height": "100%" });
+                  } else {
+                    setns({ "max-height": "0px" });
+                  }
+                }}
+              >
+                National Scholarships
+              </h5>
+              <ul style={ns}>
                 <li>
                   <a href="#" className="lear-more-l">
                     State Scholarships
@@ -124,8 +148,18 @@ function Footer() {
               </ul>
             </div>
             <div className="footer-link ftr__list nav">
-              <h5>international Scholarships</h5>
-              <ul>
+              <h5
+                onClick={() => {
+                  if (is["max-height"] == "0px") {
+                    setis({ "max-height": "100%" });
+                  } else {
+                    setis({ "max-height": "0px" });
+                  }
+                }}
+              >
+                international Scholarships
+              </h5>
+              <ul style={is}>
                 <li>
                   <a href="#" className="lear-more-l">
                     Study at Jermany
@@ -154,8 +188,18 @@ function Footer() {
               </ul>
             </div>
             <div className="footer-link ftr__list nav">
-              <h5>Research Fellowships</h5>
-              <ul>
+              <h5
+                onClick={() => {
+                  if (rs["max-height"] == "0px") {
+                    setrs({ "max-height": "100%" });
+                  } else {
+                    setrs({ "max-height": "0px" });
+                  }
+                }}
+              >
+                Research Fellowships
+              </h5>
+              <ul style={rs}>
                 <li>
                   <a href="#" className="lear-more-l">
                     PMRF Fellowship
@@ -184,8 +228,18 @@ function Footer() {
               </ul>
             </div>
             <div className="footer-link ftr__list nav">
-              <h5>Exams</h5>
-              <ul>
+              <h5
+                onClick={() => {
+                  if (ex["max-height"] == "0px") {
+                    setex({ "max-height": "100%" });
+                  } else {
+                    setex({ "max-height": "0px" });
+                  }
+                }}
+              >
+                Exams
+              </h5>
+              <ul style={ex}>
                 <li>
                   <a href="#" className="lear-more-l">
                     NDA
