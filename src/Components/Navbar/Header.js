@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../main.css";
 
-
 import "./plugins.min.css";
+
 function Header() {
+  const [navicon, setnav] = useState({ display: "none" });
+  const [scho, setscho] = useState({ display: "none" });
+  const [cont, setcont] = useState({ display: "none" });
+
   return (
     <>
       <header className="grip-header sticky">
@@ -14,7 +18,7 @@ function Header() {
               <nav className="navbar navbar-expand-lg navbar-light">
                 <Link style={{ textDecoration: "none" }} to="/">
                   <a className="navbar-brand" href="#index.php">
-                  {/* <img
+                    {/* <img
             className="logo"
             src="https://www.sih.gov.in/img1/SIH2022-white-logo.png"/> */}
                     <span>SCHOLARS</span>
@@ -29,12 +33,20 @@ function Header() {
                   aria-controls="navTrigger"
                   aria-expanded="false"
                   aria-label="Toggle navigation"
+                  onClick={() => {
+                    if (navicon.display == "none") setnav({ display: "block" });
+                    else setnav({ display: "none" });
+                  }}
                 >
                   <span className="show fe fe-menu"></span>
                   <span className="hidden fe fe-x"></span>
                 </button>
 
-                <div className="collapse navbar-collapse spec" id="navTrigger">
+                <div
+                  className="collapse navbar-collapse spec"
+                  id="navTrigger"
+                  style={navicon}
+                >
                   <ul className="navbar-nav ml-auto">
                     <li className="nav-item ">
                       <a className="nav-link active " href="#!">
@@ -42,7 +54,14 @@ function Header() {
                       </a>
                     </li>
 
-                    <li className="nav-item dropdown">
+                    <li
+                      className="nav-item dropdown"
+                      onClick={() => {
+                        if (scho.display == "none")
+                          setscho({ display: "block" });
+                        else setscho({ display: "none" });
+                      }}
+                    >
                       <a
                         className="nav-link  dropdown-toggle"
                         href="#!"
@@ -58,6 +77,7 @@ function Header() {
                       <div
                         className="dropdown-menu  "
                         aria-labelledby="navbarDropdown"
+                        style={scho}
                       >
                         {/* <div className="row no-gutters distinct">
                         <div className="col-lg-6"> */}
@@ -106,8 +126,14 @@ function Header() {
                       </a>
                     </li>
 
-                   
-                    <li className="nav-item dropdown">
+                    <li
+                      className="nav-item dropdown"
+                      onClick={() => {
+                        if (cont.display == "none")
+                          setcont({ display: "block" });
+                        else setcont({ display: "none" });
+                      }}
+                    >
                       <a
                         className="nav-link dropdown-toggle"
                         href="##!"
@@ -122,6 +148,7 @@ function Header() {
                       <div
                         className="dropdown-menu dropdown-column"
                         aria-labelledby="navbarDropdown"
+                        style={cont}
                       >
                         <div className="row no-gutters">
                           <div className="col-lg-6">
@@ -167,7 +194,7 @@ function Header() {
           </div>
         </div>
       </header>
-{/* 
+      {/* 
       <script src=
 "./js/custome.js" 
     type="text/javascript" />

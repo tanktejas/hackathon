@@ -642,6 +642,7 @@ mark {
 		transform: scale(.95);
 	}
 	.grip-header .navbar-nav {
+		background: #e0d8d8;
 	    padding-top: 25px;
 		padding-bottom: 10px;
 		width: 320px;
@@ -660,7 +661,7 @@ mark {
 	    padding: 4px 20px !important;
 	}
 	.grip-header .active .nav-link, .grip-header .active.nav-link, .grip-header .nav-link:hover {
-		background-color: #e9f3ec !important;
+		/* background-color: #e9f3ec !important; */
 		border-radius: 5px;
 	}
 }
