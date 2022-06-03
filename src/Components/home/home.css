@@ -5,6 +5,9 @@
     content: '';
     height: 60px;
 } */
+.left h1{
+    font-size: calc(1.375rem + 1.5vw) !important;
+}
 #services{
   padding-top: 20px;
 }

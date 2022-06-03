@@ -53,9 +53,12 @@ h2, .h2 {
 		font-size: 28px;
 	}
 }
+.container div h3{
+	font-weight: 500 !important;
+}
 h3, .h3 {
 	border: none;
-	font-size: 28px;
+	font-size: 28px !important;
 	text-decoration: none;
 }
 @media (max-width: 767px) {
