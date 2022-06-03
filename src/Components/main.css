@@ -25,7 +25,7 @@ h1, h2, h3, h4, h5, h6, p {
 	text-decoration: none;
 	margin: 0;
 	padding: 0;
-}
+} 
 h1, h2, h3, h4, h5, h6 {
 	border: none;
 	text-decoration: none;
@@ -1585,7 +1585,7 @@ mark {
 button:not(:disabled), [type=button]:not(:disabled) {
     font-weight: 700;
 	font-size: 18px;
-    color: black;
+    /* color: black; */
     cursor: pointer;
 }
 button:not(:disabled):hover, [type=button]:not(:disabled):hover {
@@ -1679,7 +1679,7 @@ button:not(:disabled):hover, [type=button]:not(:disabled):hover {
 
 /*====  contact-wrapper style  ====*/
 .form-control {
-	height: 50px;
+	height: 50px !important;
 	font-size: 15px;
 }
 .form-control:focus {
