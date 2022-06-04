@@ -45,7 +45,12 @@
   margin: 70px -15px;
 }
 .copy-right {
-  margin-top: 170px;
+  margin-top: 170px;  
+}
+@media (min-width:983px) {
+  .footer-link ul{
+    /* max-width: 0px !important; */
+  }
 }
 @media (max-width:987px) {
   .footer .footer-link ul li {

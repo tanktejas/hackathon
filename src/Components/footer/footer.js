@@ -7,6 +7,7 @@ function Footer() {
   const [is, setis] = useState({ "max-height": "0px" });
   const [rs, setrs] = useState({ "max-height": "0px" });
   const [ex, setex] = useState({ "max-height": "0px" });
+  const [width, setwid] = useState(window.innerWidth);
 
   return (
     <>
@@ -74,16 +75,18 @@ function Footer() {
             <div className="footer-link ftr__list nav">
               <h5
                 onClick={() => {
-                  if (ql["max-height"] == "0px") {
-                    setql({ "max-height": "100%" });
-                  } else {
-                    setql({ "max-height": "0px" });
+                  if (width <= 987) {
+                    if (ql["max-height"] == "0px") {
+                      setql({ "max-height": "100%" });
+                    } else {
+                      setql({ "max-height": "0px" });
+                    }
                   }
                 }}
               >
                 Quick Links
               </h5>
-              <ul style={ql}>
+              <ul style={width <= 987 ? ql : {}}>
                 <li>
                   <a href="aboutus.shtml" className="lear-more-l">
                     Home
@@ -115,16 +118,18 @@ function Footer() {
             <div className="footer-link ftr__list nav">
               <h5
                 onClick={() => {
-                  if (ns["max-height"] == "0px") {
-                    setns({ "max-height": "100%" });
-                  } else {
-                    setns({ "max-height": "0px" });
+                  if (width <= 987) {
+                    if (ns["max-height"] == "0px") {
+                      setns({ "max-height": "100%" });
+                    } else {
+                      setns({ "max-height": "0px" });
+                    }
                   }
                 }}
               >
                 National Scholarships
               </h5>
-              <ul style={ns}>
+              <ul style={width <= 987 ? ns : {}}>
                 <li>
                   <a href="#" className="lear-more-l">
                     State Scholarships
@@ -150,16 +155,18 @@ function Footer() {
             <div className="footer-link ftr__list nav">
               <h5
                 onClick={() => {
-                  if (is["max-height"] == "0px") {
-                    setis({ "max-height": "100%" });
-                  } else {
-                    setis({ "max-height": "0px" });
+                  if (width <= 987) {
+                    if (is["max-height"] == "0px") {
+                      setis({ "max-height": "100%" });
+                    } else {
+                      setis({ "max-height": "0px" });
+                    }
                   }
                 }}
               >
                 international Scholarships
               </h5>
-              <ul style={is}>
+              <ul style={width <= 987 ? is : {}}>
                 <li>
                   <a href="#" className="lear-more-l">
                     Study at Jermany
@@ -190,16 +197,18 @@ function Footer() {
             <div className="footer-link ftr__list nav">
               <h5
                 onClick={() => {
-                  if (rs["max-height"] == "0px") {
-                    setrs({ "max-height": "100%" });
-                  } else {
-                    setrs({ "max-height": "0px" });
+                  if (width <= 987) {
+                    if (rs["max-height"] == "0px") {
+                      setrs({ "max-height": "100%" });
+                    } else {
+                      setrs({ "max-height": "0px" });
+                    }
                   }
                 }}
               >
                 Research Fellowships
               </h5>
-              <ul style={rs}>
+              <ul style={width <= 987 ? rs : {}}>
                 <li>
                   <a href="#" className="lear-more-l">
                     PMRF Fellowship
@@ -230,16 +239,18 @@ function Footer() {
             <div className="footer-link ftr__list nav">
               <h5
                 onClick={() => {
-                  if (ex["max-height"] == "0px") {
-                    setex({ "max-height": "100%" });
-                  } else {
-                    setex({ "max-height": "0px" });
+                  if (width <= 987) {
+                    if (ex["max-height"] == "0px") {
+                      setex({ "max-height": "100%" });
+                    } else {
+                      setex({ "max-height": "0px" });
+                    }
                   }
                 }}
               >
                 Exams
               </h5>
-              <ul style={ex}>
+              <ul style={width <= 987 ? ex : {}}>
                 <li>
                   <a href="#" className="lear-more-l">
                     NDA
@@ -285,8 +296,7 @@ function Footer() {
               <span>
                 © 2022
                 <a href="#" target="_new">
-                  {" "}
-                  Scholar{" "}
+                  Scholar
                 </a>
                 All rights reserved.
               </span>
