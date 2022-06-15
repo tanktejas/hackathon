@@ -5,8 +5,18 @@
     cursor: pointer;
     text-decoration: none;
 }
+.eligi h5,
+.desc h5{
+    font-size: 1.25rem !important;
+    font-weight: 500 !important;
+}
+.eligi h6,
+.desc h6{
+    font-weight: 500 !important;
+
+}
 .cardmain{
-   width: 410px;
+    width: 329px !important;
 }
 .cardmain img{
     height: auto;
@@ -24,16 +34,16 @@
     background-color: blue;
     height: 36px;
     border-radius: 5px;
-    font-size: 1.3rem;
-    /* color: white; */
+    font-size: 1.3rem !important;
+    color: white !important;
     font-weight: 500;
 }
 .bodypart div h5{
-    text-decoration: underline;
-    color: rgb(232 65 51);
+    /* text-decoration: underline; */
+    color: rgb(232 65 51) !important;
 }
 .bodypart div{
-    padding: 3px;
+    padding: 3px !important;
 }
 
 .dedy{

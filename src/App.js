@@ -4,12 +4,13 @@ import Navbar from "./Components/Navbar/Navbar";
 import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
 import { HashRouter } from "react-router-dom";
 import Home from "./Components/home/home";
+import Header from "./Components/Navbar/Header"
 
 function App() {
   return (
     <>
       <BrowserRouter>
-        <Navbar />
+        <Header />
         <Routes>
           <Route exact path="/" element={<Home />}></Route>
         </Routes>

@@ -45,8 +45,9 @@ function NavBar() {
           {navicon.display == "none" && (
             <MenuIcon
               onClick={() => {
-                if (navicon.display == "none") setnav({ display: "Block" });
+                if (navicon.display == "none") setnav({ display: "block" });
                 else setnav({ display: "none" });
+                console.log(navicon);
               }}
             />
           )}
