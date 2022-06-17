@@ -17,19 +17,18 @@ function Card() {
             <CalendarMonthIcon />{" "}
             <span className="dedy"> Deadline : March 3 2021</span>
           </p>
-          <h1 className="font-bold text-[20px] stag">
+          <h1 className="font-bold text-[20px] stag" style={{textDecoration:"none"}}>
             Mukhya mantri Yuva swavlamban youjna
           </h1>
           <div className="bodypart">
             <div className="eligi">
               <h5>Eligibiity :</h5>
-              <h6>adjsakfh, jfkds, ifjsdkg, ojhfkjds</h6>
+              <h6>Scored atleast 80 Percentile in class 12 Board Exam</h6>
             </div>
             <div className="desc">
-              <h5>Description :</h5>
+              <h5>Benefits :</h5>
               <h6 className="pt-2 mb-5 text-[15px] text-gray-700">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus
-                labore sint, natus temporibus quas vel.
+                Rs. 67000 Per year to student who are studying in private college
               </h6>
             </div>
             <div className="buttforsc">

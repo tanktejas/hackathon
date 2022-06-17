@@ -8,6 +8,7 @@ import Faq from "./faq/faq";
 import Footer from "../footer/footer";
 import ServiceFaqM from "../ServiceFaqM";
 
+
 function Home() {
   return (
     <>
@@ -30,7 +31,7 @@ function Home() {
                 Find your best scholarship and take advantage of it.
               </p>
               <button
-                class="btn btn-primary btn-lg"
+                class=" button2"
                 data-bs-toggle="modal"
                 data-bs-target="#Enroll"
               >
@@ -82,13 +83,17 @@ function Home() {
           </div>
         </div>
       </section>
+
+      {/* <AboutUsPage/> */}
       {/* scholarship filter over */}
 
       {/* scholarship card start  */}
 
       <section class="" id="services">
-        <h2>All Scholarchips</h2>
+        <h1 class="section-title text-center">All Scholarships</h1>
         <div class="container">
+          <Card />
+          <Card />
           <Card />
           <Card />
           <Card />

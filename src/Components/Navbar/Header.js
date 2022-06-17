@@ -121,9 +121,11 @@ function Header() {
                     </li>
 
                     <li className="nav-item dropdown">
-                      <a className="nav-link  " href="#!">
+                    <Link style={{ textDecoration: "none" }} to="/About-Scholar">
+                      <a className="nav-link" href="#!">
                         About Us
                       </a>
+                      </Link>
                     </li>
 
                     <li
