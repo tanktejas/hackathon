@@ -59,7 +59,7 @@
 .filter select{
     margin: 7px;
 }
-.filter select{
+.filter select,.filter button{
     width: 116px;
     height: 38px;
     border: 2px solid rgb(209, 203, 203);
@@ -99,6 +99,27 @@ select{
     margin-bottom: 23px;
 }
 
+/* .viewby{
+    display: flex; 
+    justify-content: space-between;
+    padding: 10px;
+    flex-wrap: wrap;
+    margin-top: 7px;
+}
+
+.viewby select,.viewby button{
+    width: 116px;
+    height: 38px;
+    border: 2px solid rgb(209, 203, 203);
+    font-size: 20px;
+     margin: 7px;
+   border-radius: 7px;
+   width: 20%;
+   height: 50px;
+text-align: center;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+} */
 /* #services h2,
 #about h2{
     background-color: rgb(188, 244, 225);

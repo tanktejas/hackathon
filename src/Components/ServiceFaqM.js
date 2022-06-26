@@ -24,178 +24,144 @@ function ServiceFaqM() {
                 <Accordion.Item eventKey="0">
                   <Accordion.Header>
                     {" "}
-                    How much time does it take to develop a Hybrid application project?
+                    How much time does it takes times to come scholarships in bank account?
                   </Accordion.Header>
                   <Accordion.Body>
                     <div class="panel-body">
                       <p>
                         The time of the{" "}
-                        <a
-                          class="internal-links"
-                          href="Android-app-development.shtml"
-                        >
-                          Android app development
-                        </a>{" "}
+                        scholarships to come into your bank accounts
+                          
+                        {" "}
                         depends on the following:
                       </p>
                       <p>
-                        - Customised required for the application during the
-                        development.
+                        - Atleast first deadline completed
                       </p>{" "}
                       <p>
-                        - Designing part and its importance for the application.
+                        - After Deadline time to find the one who need it and suitable candidate for it
                       </p>
-                      <p>- Size of the project/application.</p>{" "}
+                      <p>- Size of the application.</p>{" "}
                       <p>
                         - Advanced features if there are any to be included.
                       </p>
                       <p>
-                        - Understanding and consent of the project evaluation
-                        from both the parties.
+                        - Finalizing and provided to next level for final confirmation
                       </p>
-                      <p>- Medium-sized project (5-8 weeks).</p>
+                      <p>- usually 2 month on and average</p>
                     </div>
                     {/* <!-- <div class="bg-soft-green rounded-lg border px-4 py-3 mt-20">You’ll be sent a confirmation email to verify you so make sure you check your email.</div> --> */}
                   </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="1">
                   <Accordion.Header>
-                    How to hire a dedicated team or developer for my Android
-                    project?
+                    How to decide which scholarships to apply?
                   </Accordion.Header>
                   <Accordion.Body>
                     <div class="panel-body">
-                      <p>- Share your requirements online or via Skype.</p>
+                      <p>- First of all do following steps just after taking admission into any college or may be univercity</p>
                       <p>
-                        - Talk to our business development head for the hiring
-                        process.
+                        - Talk to your seniour and concern teachers about it they will definately give you good information about it.
                       </p>
                       <p>
-                        - We will make you talk to the head of the Android
-                        department.
+                        -Then after knowing scholarships name come to our platform to take deep information about that.
                       </p>
-                      <p>- Discuss initial project details.</p>
+                      <p>- THere are many features available through which gather and understand every possible things about that scholarships</p>
                       <p>
-                        - Hire team or developer (signing NDA is compulsory).
+                        - Match their requirement with your qualifycation  (Gather all nessary documents).
                       </p>
                       <p>
-                        - Choose from the hiring plan (hourly, daily, weekly).
+                        - Then simply apply for it using scholars.
                       </p>
                     </div>
                   </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="2">
                   <Accordion.Header>
-                    Will the dedicated offshore developer work only on my
-                    project?
+                    How to know that when any scholarships proposal started or ending?
                   </Accordion.Header>
                   <Accordion.Body>
                     <div class="panel-body">
                       <p>
-                        Of course, if you have hired a particular team or
-                        developer for your project, it will surely be dedicated
-                        to your brand unless the project is delivered.
+                       with great pleasure, we have a great content team who provide you starting and ending date of any scholarships on scholars platform.
                       </p>
                     </div>
                   </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="3">
                   <Accordion.Header>
-                    How will be the communication process after hiring the
-                    developer/team?
+                   What are the steps after deciding Scholarships for me?
                   </Accordion.Header>
                   <Accordion.Body>
                     <div class="panel-body">
                       <p>
-                        Hey, we live in the digital era! Communication is just a
-                        swipe away! Developers will be available on Skype and
-                        Whatsapp during the working hours/days for answering all
-                        your queries.
+                        Hey, After deciding the best suitable scholarship for you now just need to follow steps given in respective scholarships on scholars portal.
                       </p>
                     </div>
                   </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="4">
                   <Accordion.Header>
-                    Can I handle the entire team myself as I am the Chief
-                    Technical Officer ( CTO)?
+                    Can I apply for more than one scholarships?
                   </Accordion.Header>
                   <Accordion.Body>
                     <div class="panel-body">
                       <p>
-                        100% if you want to do that, you can. In any case, if
-                        you are not able to dedicate time, we have experienced
-                        technicians to take care of the same.
+                        Actually, there are some barrier to student who are taking govrnment scholarships that you should take only any one govrnment scheme benefits. The moto behind it of govrnment to provides as much as possible student to benefits in their study.
                       </p>
                     </div>
                   </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="5">
                   <Accordion.Header>
-                    Will I be able to change any developer/team, if I am not
-                    satisfied with it?
+                   will i able to changed incorrect details in my scholarships?
                   </Accordion.Header>
                   <Accordion.Body>
-                    Yes. You will have that authority. And the client’s
-                    satisfaction is as important to us as the quality of Hybrid
-                    app development. We are here to deliver the best{" "}
+                    Yes. Before you click final submit you can change corresponding details yourself but after final submit you need to mail the support team of respective scholarships, the mail id of every scholarships support team is provided at{" "}
                     <a
                       class="internal-links"
-                      href="Android-app-development.shtml"
+                      href="#"
                     >
-                      Android app development
+                      Scholars
                     </a>{" "}
-                    service and output.
+                    
                   </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="6">
                   <Accordion.Header>
-                    Android Development Team or Single Developer, What is the
-                    best choice?
+                   What if i have query regarding any scholarships that i am going to apply using scholars platform ?
                   </Accordion.Header>
                   <Accordion.Body>
-                    Teamwork is always better than single hand creativity.
-                    Though we always take care while hiring our employees, and
-                    it is in our best interest to employ experience and
-                    excellent Android developers. Still, a team always makes the
-                    best output as more brains are working on a similar project.
+                   We have chat bot feautre through which you can solve your query yourself and after that you have query you can use discussion form or contact us.
                   </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="7">
                   <Accordion.Header>
-                    What is the Average cost of developing an Android
-                    Application with cscodetech?
+                   As organization i want to give scholarships to the best candidate who are suitable for that. How can i do it?
                   </Accordion.Header>
                   <Accordion.Body>
                     <div class="panel-body">
                       <p>
-                        There are few factors that determine the cost of
-                        developing an Android Application.
+                        There are few factors that determine the Way to do it.
                       </p>
-                      <p>- Size of the Android App project.</p>
+                      <p>- Goto admin portal and request for key to access the admin feauter.</p>
                       <p>
-                        - Advanced features of the development if any included.
+                        - After getting key, now you just need to sign-in and provide all nssary information about your scheme.
                       </p>
                       <p>
-                        - Time and skills required for the project to be
-                        accomplished.
+                        - We will review and give you confirmation about it ASAP; 
                       </p>{" "}
                     </div>
                   </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="8">
                   <Accordion.Header>
-                    How well experienced are the developers who shall be working
-                    on my project?
+                   What things we can do it as admin?
                   </Accordion.Header>
                   <Accordion.Body>
                     <div class="panel-body">
                       <p>
-                        The average years of experience at CSCODETECH in the
-                        Hybrid application development is 4.5-7 years. Our
-                        developers are well versed with the latest technology
-                        and tools. They are trained and well-equipped with
-                        digital platforms that they are expert of.
+                       You can add scholarships, edit scholarships requirement, extend deadlines, promote us after successs of your program etc.
                       </p>
                     </div>
                   </Accordion.Body>

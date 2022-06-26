@@ -58,6 +58,25 @@ function AboutUs() {
         </div>
       </div>
 
+      <div class="parallax solution-main pricing-main" id="parallax" data-color="#ffffff">
+      <div class="container">
+      
+      <div class="row">
+      <div class="col-lg-7 col-md-7">
+      <div class="text-left food-top-content">
+      <div class="pc-homeimg-main hom-hero become2 food-new-img mobile-about-img">
+      <img class="" loading="lazyload" data-src="img/What-is-a-Digital-Marketing-Strategy.png" src="img/What-is-a-Digital-Marketing-Strategy.png" alt="Food Delivery App Development" title="Food Delivery App Development" width="451" height="500"/>
+      </div>
+      <h1  class="section-title mb-30 aos-init aos-animate">
+      Who We Are ?</h1><p>
+      India’s largest scholarship network with the vision to make quality education accessible for all. A brainchild of IIT, IIIT, NIT and BVM Students, Scholars aggregates global scholarship information. We work hard to provides 100% correct information to the our students. 
+      </p>
+      <a href="/lets-talk" style={{textDecoration: "none"}}>
+      <a class=" button2 get-a-demo" href="#">
+      Meet Our Team</a></a></div></div>
+      <div class="col-xs-12 col-sm-5 col-md-5 food-top-img food-top-img-n desktop-about-img">
+      <div class="become2"><img class="" loading="lazyload" data-src="img/What-is-a-Digital-Marketing-Strategy.png" src="img/What-is-a-Digital-Marketing-Strategy.png" alt="Medicine Delivery App Development" title="Medicine Delivery App Development" width="451" height="500"/></div></div></div></div></div>
+
 <section class="parallax we-are-main"  style={{backgroundColor: "rgb(220 236 251 / 71%)"}}>
 <div class="container">
 <div class="row">

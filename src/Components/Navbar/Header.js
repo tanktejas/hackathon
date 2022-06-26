@@ -121,68 +121,18 @@ function Header() {
                     </li>
 
                     <li className="nav-item dropdown">
-                    <Link style={{ textDecoration: "none" }} to="/About-Scholar">
-                      <a className="nav-link" href="#!">
-                        About Us
-                      </a>
+                      <Link
+                        style={{ textDecoration: "none" }}
+                        to="/About-Scholar"
+                      >
+                        <a className="nav-link" href="#!">
+                          About Us
+                        </a>
                       </Link>
                     </li>
 
-                    <li
-                      className="nav-item dropdown"
-                      onClick={() => {
-                        if (cont.display == "none")
-                          setcont({ display: "block" });
-                        else setcont({ display: "none" });
-                      }}
-                    >
-                      <a
-                        className="nav-link dropdown-toggle"
-                        href="##!"
-                        id="navbarDropdown"
-                        role="button"
-                        data-toggle="dropdown"
-                        aria-haspopup="true"
-                        aria-expanded="false"
-                      >
-                        Contact
-                      </a>
-                      <div
-                        className="dropdown-menu dropdown-column"
-                        aria-labelledby="navbarDropdown"
-                        style={cont}
-                      >
-                        <div className="row no-gutters">
-                          <div className="col-lg-6">
-                            <a className="dropdown-item" href="#">
-                              Team
-                            </a>
-                            <a className="dropdown-item" href="#">
-                              Services
-                            </a>
-                            <a className="dropdown-item" href="#">
-                              Partners
-                            </a>
-                            <a className="dropdown-item" href="#">
-                              Case Stydy
-                            </a>
-                          </div>
-                          <div className="col-lg-6">
-                            <a className="dropdown-item" href="#">
-                              Purpose
-                            </a>
-                            <a className="dropdown-item" href="#">
-                              FAQ
-                            </a>
-                            <a className="dropdown-item" href="#">
-                              Error 404
-                            </a>
-                            <a className="dropdown-item" href="#">
-                              Privacy &amp; Policy
-                            </a>
-                          </div>
-                        </div>
-                      </div>
+                    <li className="nav-item ">
+                      <a className="nav-link " href="#">Contact</a>
                     </li>
                     <li className="nav-item">
                       <a className="nav-link" href="#">
