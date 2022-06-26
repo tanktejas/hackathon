@@ -7,6 +7,7 @@ import Card from "../Card/card";
 import Faq from "./faq/faq";
 import Footer from "../footer/footer";
 import ServiceFaqM from "../ServiceFaqM";
+import { Link } from "react-router-dom";
 
 
 function Home() {
@@ -99,6 +100,16 @@ function Home() {
           <Card />
           <Card />
         </div>
+        <div class="container ">
+<div className=" col-md-12 ml-0 ml-lg-3 my-2 my-lg-0 text-center" >
+<Link style={{ textDecoration: "none" }} to="/ViewAllScholarships">
+                      <a className=" button2 " href="#" >
+                         view more
+                      </a>
+                      </Link>
+                   
+                  </div>
+                  </div>
       </section>
       {/* scholarship card end  */}
 

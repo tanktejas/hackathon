@@ -6,6 +6,7 @@ import { HashRouter } from "react-router-dom";
 import Home from "./Components/home/home";
 import Header from "./Components/Navbar/Header"
 import AboutUsPage from "./Components/AboutUsPage";
+import AllScho from "./Components/home/AllScho";
 
 function App() {
   return (
@@ -14,7 +15,8 @@ function App() {
         <Header />
         <Routes>
           <Route exact path="/" element={<Home />}></Route>
-
+         
+          <Route exact path="/ViewAllScholarships" element={<AllScho/>}></Route>
           <Route exact path="/About-Scholar" element={<AboutUsPage/>}></Route>
         </Routes>
        

@@ -3705,7 +3705,9 @@ margin: 27px;
 
 .become1, .become2, .become3, .become4, .become5{position:relative;display:inline-block;}
 .become1 img, .become2 img, .become3 img, .become4 img, .become5 img{position:relative;z-index:1;}
-.become1::after, .become2::after, .become3::after, .become4::after, .become5::after{position:absolute;content:'';background:#FFE147;right:-20px;top:-20px;width:100%;height:100%;z-index:0;}
+.become1::after, .become2::after, .become3::after, .become4::after, .become5::after{position:absolute;content:'';
+	/* background:#FFE147; */
+	right:-20px;top:-20px;width:100%;height:100%;z-index:0;}
 .become1::after{border-radius:50%;}
 .become2::after, .become3::after, .become4::after, .become5::after, .become2 img, .become3 img, .become4 img, .become5 img{border-radius:5px;}
 .become2, .become3, .become4, .become5{margin-top:20px;}
