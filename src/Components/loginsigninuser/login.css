@@ -143,5 +143,6 @@ form {
 }
 
 form .log{
+    background-color: rgb(15, 172, 250) !important;
    margin: auto;
 }
