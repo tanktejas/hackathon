@@ -27,7 +27,9 @@ function Login() {
         navigate("/");
         window.location.reload();
       })
-      .catch((err) => {});
+      .catch((err) => {
+        seterr("Login failed");
+      });
   }
 
   return (
