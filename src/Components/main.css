@@ -15,6 +15,9 @@ body {
 	background-color: #000;
 	text-shadow: none;
 }
+.nav-item button{
+	padding: 10px 20px !important;
+}
 ::selection {
 	color: #fff;
 	background-color: #000;
@@ -471,11 +474,7 @@ mark {
 	font-size: 18px;
 	margin-right: 2px;
 }
-.logo{
-	width: 221px;
-	height: 69px;
-	color:black;
-  }
+ 
 .grip-header a {
 	-webkit-transition: color .3s;
 	-o-transition: color .3s;

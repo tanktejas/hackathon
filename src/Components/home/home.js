@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./home.css";
 import url from "../images/scholaship.png";
 
@@ -9,8 +9,80 @@ import Footer from "../footer/footer";
 import ServiceFaqM from "../ServiceFaqM";
 import { Link } from "react-router-dom";
 
+import { db } from "../DB/firebase";
+
+import {
+  collection,
+  query,
+  orderBy,
+  onSnapshot,
+  doc,
+} from "firebase/firestore";
+
+import { addDoc, Timestamp } from "firebase/firestore";
 
 function Home() {
+  const [schodata, setsch] = useState([]);
+  const [search, setsearch] = useState("");
+  const [status, setstatus] = useState(true);
+  const [perdata, setperdata] = useState([]);
+  const [ismilitry, setismil] = useState(false);
+  const [isHandi, setishan] = useState(false);
+  const [category, setcate] = useState("all");
+
+  useEffect(() => {
+    setstatus(false);
+    const q = query(collection(db, "Scholarships"));
+    onSnapshot(q, (qS) => {
+      let data = qS.docs.slice(0, 6);
+      setsch(data);
+      setperdata(qS.docs);
+    });
+    setstatus(true);
+  }, []);
+
+  if (!status) {
+    return (
+      <>
+        <h1>Loading...</h1>
+      </>
+    );
+  }
+
+  const filter = () => {
+    let temp = perdata;
+
+    if (search != "") {
+      temp = temp.filter((ele) => {
+        return ele.data().name.toLowerCase().includes(search.toLowerCase());
+      });
+    }
+
+    if (isHandi) {
+      temp = temp.filter((ele) => {
+        return ele.data().isHandi;
+      });
+    }
+
+    if (ismilitry) {
+      temp = temp.filter((ele) => {
+        return ele.data().isMilitry;
+      });
+    }
+
+    if (category != "all") {
+      console.log(1);
+      temp = temp.filter((ele) => {
+        console.log(ele.data().category.toLowerCase());
+        return ele.data().category.toLowerCase() == category;
+      });
+    }
+    let dd = temp;
+    if (dd.length > 6) dd = dd.slice(0, 6);
+
+    setsch(dd);
+  };
+
   return (
     <>
       {/* header  */}
@@ -57,8 +129,18 @@ function Home() {
                 type="text"
                 class="form-control"
                 placeholder="Scholarship Name"
+                value={search}
+                onChange={(e) => {
+                  setsearch(e.target.value);
+                }}
               />
-              <button class="btn btn-dark btn-lg" type="button">
+              <button
+                class="btn btn-dark btn-lg"
+                type="button"
+                onClick={() => {
+                  filter();
+                }}
+              >
                 Search
               </button>
             </div>
@@ -67,49 +149,76 @@ function Home() {
             <div>
               <h3>Filter : </h3>
             </div>
-            <select>
+            <select
+              onChange={(e) => {
+                if (e.target.value === "Hendicap") {
+                  setishan(true);
+                } else setishan(false);
+              }}
+            >
               <option>Hendicap</option>
-              <option>Non-hendicap</option>
+              <option selected>Non-hendicap</option>
             </select>
-            <select>
+            <select
+              onChange={(e) => {
+                if (e.target.value == "For-Miletry") {
+                  setismil(true);
+                  console.log(ismilitry);
+                } else {
+                  setismil(false);
+                }
+              }}
+            >
               <option>For-Miletry</option>
-              <option>Normal</option>
+              <option selected>Normal</option>
             </select>
-            <select>
+            <select
+              onChange={(e) => {
+                setcate(e.target.value.toLowerCase());
+              }}
+            >
+              <option selected>All</option>
               <option>OBC</option>
               <option>General</option>
               <option>SC</option>
               <option>ST</option>
             </select>
+            <button
+              class="btn btn-dark btn-lg  applyfilt"
+              type="button"
+              onClick={() => {
+                filter();
+              }}
+            >
+              Apply
+            </button>
           </div>
         </div>
       </section>
 
-      {/* <AboutUsPage/> */}
-      {/* scholarship filter over */}
-
-      {/* scholarship card start  */}
-
       <section class="" id="services">
         <h1 class="section-title text-center">All Scholarships</h1>
         <div class="container">
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+          {schodata.map((ele) => {
+            return (
+              <Card
+                name={ele.data().name}
+                eligiblity={ele.data().eligiblity}
+                benefit={ele.data().benefit}
+                deadline={ele.data().closeingDate}
+              />
+            );
+          })}
         </div>
         <div class="container ">
-<div className=" col-md-12 ml-0 ml-lg-3 my-2 my-lg-0 text-center" >
-<Link style={{ textDecoration: "none" }} to="/ViewAllScholarships">
-                      <a className=" button2 " href="#" >
-                         view more
-                      </a>
-                      </Link>
-                   
-                  </div>
-                  </div>
+          <div className=" col-md-12 ml-0 ml-lg-3 my-2 my-lg-0 text-center">
+            <Link style={{ textDecoration: "none" }} to="/ViewAllScholarships">
+              <a className=" button2 " href="#">
+                view more
+              </a>
+            </Link>
+          </div>
+        </div>
       </section>
       {/* scholarship card end  */}
 
@@ -121,380 +230,6 @@ function Home() {
       </section>
       {/* faq ends  */}
       <Footer />
-      {/* 
-      <section class="p-5 bg-dark text-light" id="learn ">
-        <div class="container">
-          <div class="row align-items-center justify-content-between">
-            <div class="col-md p-5">
-              <h2>Learn The react</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
-                labore repudiandae eveniet commodi. Recusandae, vitae!
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio
-                libero porro quis. Perferendis error iste, voluptatem aliquid
-                dignissimos qui quia consectetur quaerat possimus similique
-                fugit eos pariatur itaque laboriosam deserunt.
-              </p>
-              <a href="#" class="btn btn-light mt3">
-                <i class="bi bi-chevron-right"></i>
-                read more
-              </a>
-            </div>
-
-            <div class="col-md">
-              <a href="https://svgshare.com/s/gHb">
-                <img
-                  class="img-fluid "
-                  src="https://svgshare.com/i/gHb.svg"
-                  title=""
-                />
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="p-5" id="questions">
-        <div class="container">
-          <h2 class="text-center mb-4">Frequent asked</h2>
-
-          <div class="accordion accordion-flush" id="accordionFlushExample">
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="flush-headingOne">
-                <button
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#q-one"
-                >
-                  Our exact Locaction
-                </button>
-              </h2>
-              <div
-                id="q-one"
-                class="accordion-collapse collapse"
-                data-bs-parent="#accordionFlushExample"
-              >
-                <div class="accordion-body">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Nesciunt veniam omnis nemo eius eos earum cupiditate dicta quo
-                  adipisci voluptates.
-                </div>
-              </div>
-            </div>
-
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="flush-headingOne">
-                <button
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#q-tow"
-                >
-                  How much does it cost to attend
-                </button>
-              </h2>
-              <div
-                id="q-tow"
-                class="accordion-collapse collapse"
-                data-bs-parent="#accordionFlushExample"
-              >
-                <div class="accordion-body">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Nesciunt veniam omnis nemo eius eos earum cupiditate dicta quo
-                  adipisci voluptates.
-                </div>
-              </div>
-            </div>
-
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="flush-headingOne">
-                <button
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#q-three"
-                >
-                  How do I sign up?
-                </button>
-              </h2>
-              <div
-                id="q-three"
-                class="accordion-collapse collapse"
-                data-bs-parent="#accordionFlushExample"
-              >
-                <div class="accordion-body">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Nesciunt veniam omnis nemo eius eos earum cupiditate dicta quo
-                  adipisci voluptates.
-                </div>
-              </div>
-            </div>
-
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="flush-headingOne">
-                <button
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#q-four"
-                >
-                  Do you help me find a job?
-                </button>
-              </h2>
-              <div
-                id="q-four"
-                class="accordion-collapse collapse"
-                data-bs-parent="#accordionFlushExample"
-              >
-                <div class="accordion-body">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Nesciunt veniam omnis nemo eius eos earum cupiditate dicta quo
-                  adipisci voluptates.
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="Instructors" class="p-5 bg-primary">
-        <div class="container">
-          <h2 class="text-center text-white">Our instructors</h2>
-          <p class="lead text-center text-white mb-5">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda
-            saepe labore quo laboriosam voluptas.
-          </p>
-
-          <div class="row g-4">
-            <div class="col-md-6 col-lg-3">
-              <div class="card bg-light">
-                <div class="card-body text-center">
-                  <img
-                    src="https://randomuser.me/api/portraits/men/11.jpg"
-                    class="rounded-circle mb-3"
-                  />
-                  <h3 class="card-title mb-3">John Doe</h3>
-                  <p class="card-text">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. A
-                    dolorum dolor in atque commodi!
-                  </p>
-                  <a href="#">
-                    <i class="bi bi-twitter text-dark mx-1 lead"></i>
-                  </a>
-                  <a href="#">
-                    <i class="bi bi-facebook text-dark mx-1 lead"></i>
-                  </a>
-                  <a href="#">
-                    <i class="bi bi-linkedin text-dark mx-1 lead"></i>
-                  </a>
-                  <a href="#">
-                    <i class="bi bi-instagram text-dark mx-1 lead"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-6 col-lg-3">
-              <div class="card bg-light">
-                <div class="card-body text-center">
-                  <img
-                    src="https://randomuser.me/api/portraits/men/10.jpg"
-                    class="rounded-circle mb-3"
-                  />
-                  <h3 class="card-title mb-3">Jahn Doe</h3>
-                  <p class="card-text">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. A
-                    dolorum dolor in atque commodi!
-                  </p>
-                  <a href="#">
-                    <i class="bi bi-twitter text-dark mx-1 lead"></i>
-                  </a>
-                  <a href="#">
-                    <i class="bi bi-facebook text-dark mx-1 lead"></i>
-                  </a>
-                  <a href="#">
-                    <i class="bi bi-linkedin text-dark mx-1 lead"></i>
-                  </a>
-                  <a href="#">
-                    <i class="bi bi-instagram text-dark mx-1 lead"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-6 col-lg-3">
-              <div class="card bg-light">
-                <div class="card-body text-center">
-                  <img
-                    src="https://randomuser.me/api/portraits/women/11.jpg"
-                    class="rounded-circle mb-3"
-                  />
-                  <h3 class="card-title mb-3">Dalia</h3>
-                  <p class="card-text">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. A
-                    dolorum dolor in atque commodi!
-                  </p>
-                  <a href="#">
-                    <i class="bi bi-twitter text-dark mx-1 lead"></i>
-                  </a>
-                  <a href="#">
-                    <i class="bi bi-facebook text-dark mx-1 lead"></i>
-                  </a>
-                  <a href="#">
-                    <i class="bi bi-linkedin text-dark mx-1 lead"></i>
-                  </a>
-                  <a href="#">
-                    <i class="bi bi-instagram text-dark mx-1 lead"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-6 col-lg-3">
-              <div class="card bg-light">
-                <div class="card-body text-center">
-                  <img
-                    src="https://randomuser.me/api/portraits/women/3.jpg"
-                    class="rounded-circle mb-3"
-                  />
-                  <h3 class="card-title mb-3">Sara Doe</h3>
-                  <p class="card-text">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. A
-                    dolorum dolor in atque commodi!
-                  </p>
-                  <a href="#">
-                    <i class="bi bi-twitter text-dark mx-1 lead"></i>
-                  </a>
-                  <a href="#">
-                    <i class="bi bi-facebook text-dark mx-1 lead"></i>
-                  </a>
-                  <a href="#">
-                    <i class="bi bi-linkedin text-dark mx-1 lead"></i>
-                  </a>
-                  <a href="#">
-                    <i class="bi bi-instagram text-dark mx-1 lead"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="p-5" id="contact">
-        <div class="container">
-          <div class="row g-4">
-            <div class="col-md">
-              <h2 class="text-center mb-4">Contact Info</h2>
-              <ul class="list-group list-group-flush lead">
-                <li class="list-group-item">
-                  <span class="fw-bold">Main Locaction:</span>50 M street Fs
-                </li>
-
-                <li class="list-group-item">
-                  <span class="fw-bold">Phone Number:</span>(+1) 234 567 890
-                </li>
-
-                <li class="list-group-item">
-                  <span class="fw-bold">Busniss E-mail:</span>example@email.com
-                </li>
-
-                <li class="list-group-item">
-                  <span class="fw-bold">Students E-mail:</span>
-                  sexample@email.com
-                </li>
-              </ul>
-            </div>
-
-            <div class="col-md">
-              <div id="map"></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <footer class="p-5 bg-dark text-white text-center position-relative">
-        <div class="container">
-          <p class="lead">Copyright &copy; 2022 khawla zahi</p>
-
-          <a href="#" class="position-absolute bottom-0 end-0 p-5">
-            <i class="bi bi-arrow-up-circle h1"></i>
-          </a>
-        </div>
-      </footer>
-
-      <div
-        class="modal fade"
-        id="Enroll"
-        tabindex="-1"
-        aria-labelledby="EnrollLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="EnrollLabel">
-                Modal title
-              </h5>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-
-            <div class="modal-body">
-              <p class="lead">Fill That Form and we will get back to you</p>
-
-              <form>
-                <div class="mb-3">
-                  <label for="first-name" class="col-form-label">
-                    First Name:
-                  </label>
-                  <input type="text" class="form-control" id="name" />
-                </div>
-
-                <div class="mb-3">
-                  <label for="first-name" class="col-form-label">
-                    First Name:
-                  </label>
-                  <input type="text" class="form-control" id="name" />
-                </div>
-
-                <div class="mb-3">
-                  <label for="first-name" class="col-form-label">
-                    First Name:
-                  </label>
-                  <input type="text" class="form-control" id="name" />
-                </div>
-
-                <div class="mb-3">
-                  <label for="first-name" class="col-form-label">
-                    First Name:
-                  </label>
-                  <input type="text" class="form-control" id="name" />
-                </div>
-              </form>
-            </div>
-
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-secondary"
-                data-bs-dismiss="modal"
-              >
-                Close
-              </button>
-              <button type="button" class="btn btn-primary">
-                Submit
-              </button>
-            </div>
-          </div>
-        </div>
-      </div> */}
     </>
   );
 }

@@ -223,7 +223,12 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
 }
 #services .container .cardmain{
     margin: 9px;
+    position: relative;
 }
+.applyfilt{
+ width: 134px !important;
+}
+
 #map{
     width: 100%;
     height: 100%;

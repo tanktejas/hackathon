@@ -5,6 +5,15 @@
     cursor: pointer;
     text-decoration: none;
 }
+.sbody {
+    height: 65%;
+     display: flex;
+     flex-direction: column;
+    justify-content: space-between;
+}
+.buttforsc{
+    margin-bottom: 3px;
+}
 .eligi h5,
 .desc h5{
     font-size: 1.25rem !important;
@@ -27,7 +36,11 @@
 }
 .buttforsc{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 1%;
+    padding: 9px;
+    width: 100%;
 }
 .buttforsc button{
     background-color: #1e90ff;

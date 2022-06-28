@@ -1,5 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import { logcont } from "../logincontext/authcontext";
+
 import "../main.css";
 
 import "./plugins.min.css";
@@ -8,6 +11,24 @@ function Header() {
   const [navicon, setnav] = useState({ display: "none" });
   const [scho, setscho] = useState({ display: "none" });
   const [cont, setcont] = useState({ display: "none" });
+  const { user, logout } = useContext(logcont);
+  const [curruser, setuser] = useState(user == "no" ? null : user);
+
+  // for admin logout
+  const Logout = () => {
+    console.log("ok");
+    logout()
+      .then((ok) => {
+        setuser(null);
+      })
+      .catch((err) => {
+        alert(err);
+      });
+  };
+
+ 
+
+  console.log(user);
 
   return (
     <>
@@ -49,9 +70,9 @@ function Header() {
                 >
                   <ul className="navbar-nav ml-auto">
                     <li className="nav-item ">
-                      <a className="nav-link active " href="#!">
+                      <NavLink className="nav-link active " to="/">
                         Home
-                      </a>
+                      </NavLink>
                     </li>
 
                     <li
@@ -62,9 +83,9 @@ function Header() {
                         else setscho({ display: "none" });
                       }}
                     >
-                      <a
+                      <NavLink
                         className="nav-link  dropdown-toggle"
-                        href="#!"
+                        to="/ViewAllScholarships"
                         id="navbarDropdown"
                         role="button"
                         data-toggle="dropdown"
@@ -72,7 +93,7 @@ function Header() {
                         aria-expanded="true"
                       >
                         Scholarships
-                      </a>
+                      </NavLink>
 
                       <div
                         className="dropdown-menu  "
@@ -81,9 +102,12 @@ function Header() {
                       >
                         {/* <div className="row no-gutters distinct">
                         <div className="col-lg-6"> */}
-                        <a href="#" className=" dropdown-item">
+                        <NavLink
+                          to="/ViewAllScholarships"
+                          className=" dropdown-item"
+                        >
                           National Scholarship
-                        </a>
+                        </NavLink>
 
                         <a href="#" className="dropdown-item">
                           Govrnment Scholarship
@@ -115,7 +139,7 @@ function Header() {
                     </li>
 
                     <li className="nav-item ">
-                      <a className="nav-link  " href="#!">
+                      <a className="nav-link  " href="/">
                         Q&A
                       </a>
                     </li>
@@ -132,13 +156,35 @@ function Header() {
                     </li>
 
                     <li className="nav-item ">
-                      <a className="nav-link " href="#">Contact</a>
+                      <NavLink className="nav-link " to="/contact">
+                        Contact
+                      </NavLink>
                     </li>
-                    <li className="nav-item">
-                      <a className="nav-link" href="#">
-                        Admin Login
-                      </a>
-                    </li>
+                    {!curruser && (
+                      <li className="nav-item">
+                        <NavLink className="nav-link" to="/login">
+                          Admin Login
+                        </NavLink>
+                      </li>
+                    )}
+                    {curruser && (
+                      <li className="nav-item">
+                        <NavLink className="nav-link" to="/form">
+                          Data Form
+                        </NavLink>
+                      </li>
+                    )}
+                    {curruser && (
+                      <li className="nav-item">
+                        <button
+                          onClick={() => {
+                            Logout();
+                          }}
+                        >
+                          logout
+                        </button>
+                      </li>
+                    )}
                   </ul>
                 </div>
               </nav>
@@ -146,16 +192,6 @@ function Header() {
           </div>
         </div>
       </header>
-      {/* 
-      <script src=
-"./js/custome.js" 
-    type="text/javascript" />
-    <script src=
-"./js/app.js" 
-    type="text/javascript" />
-
-      <script src="./js/jquery-3.4.1.min.js"></script>
-      <script src="./js/plugins.min.js"></script> */}
     </>
   );
 }

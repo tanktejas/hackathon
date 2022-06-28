@@ -26,17 +26,6 @@ function NavBar() {
           ></img>
         </NavLink>
 
-        {/* <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navmenu"
-          onClick={() => {
-            if (navicon.display == "none") setnav({ display: "Block" });
-            else setnav({ display: "none" });
-          }}
-        > */}
-        {/* <span className="navbar-toggler-icon"></span> */}
         <div
           className="togglebut"
           data-bs-toggle="collapse"
@@ -65,13 +54,13 @@ function NavBar() {
         <div className="collapse navbar-collapse" id="navmenu" style={navicon}>
           <ul className="navbar-nav ms-auto navigation">
             <li className="nav-item">
-              <NavLink to="#home" className="nav-link">
+              <NavLink to="/" className="nav-link">
                 Home
               </NavLink>
             </li>
 
             <li className="nav-item">
-              <NavLink to="#services" className="nav-link">
+              <NavLink to="/asa" className="nav-link">
                 About
               </NavLink>
             </li>
