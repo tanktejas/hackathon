@@ -71,9 +71,14 @@ function AboutUs() {
       Who We Are ?</h1><p>
       India’s largest scholarship network with the vision to make quality education accessible for all. A brainchild of IIT, IIIT, NIT and BVM Students, Scholars aggregates global scholarship information. We work hard to provides 100% correct information to the our students. 
       </p>
-      <a href="/lets-talk" style={{textDecoration: "none"}}>
-      <a class=" button2 get-a-demo" href="#">
-      Meet Our Team</a></a></div></div>
+     
+      
+      <Link
+      style={{ textDecoration: "none" }}
+      to="/Team"
+    ><a class=" button2 get-a-demo" href="#">
+    Meet Our Team</a></Link>
+</div></div>
       <div class="col-xs-12 col-sm-5 col-md-5 food-top-img food-top-img-n desktop-about-img">
       <div class="become2"><img class="" loading="lazyload" data-src="img/What-is-a-Digital-Marketing-Strategy.png" src="img/What-is-a-Digital-Marketing-Strategy.png" alt="Medicine Delivery App Development" title="Medicine Delivery App Development" width="451" height="500"/></div></div></div></div></div>
 
