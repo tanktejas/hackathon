@@ -44,7 +44,7 @@ function Login() {
               <span>Scholar </span>
             </div>
             <h1>Log In</h1>
-            <p>If you are authorized by Scholar the do login !!</p>
+            <p>If you are authorized by Scholar then do login !!</p>
             {err && <Alert severity="error">{err}</Alert>}
             <form class="flex-c foormforlogin">
               <div class="input-box">
