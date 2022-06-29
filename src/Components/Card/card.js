@@ -30,7 +30,7 @@ function Card({ name, eligiblity, benefit, deadline }) {
             <div className="desc">
               <h5>Benefits :</h5>
               <h6 className="pt-2 mb-5 text-[15px] text-gray-700">
-                Rs.{benefit}
+                {benefit[0]}
               </h6>
             </div>
           </div>
