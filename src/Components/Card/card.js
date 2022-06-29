@@ -27,7 +27,7 @@ function Card({ name, eligiblity, benefit, deadline }) {
               <h5>Eligibiity :</h5>
               <h6>{eligiblity[0]}</h6>
             </div>
-            <div className="desc">
+            <div className="desc">  
               <h5>Benefits :</h5>
               <h6 className="pt-2 mb-5 text-[15px] text-gray-700">
                 {benefit[0]}
