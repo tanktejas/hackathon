@@ -232,6 +232,18 @@ margin-left: 150px;
 justify-content: center;
 align-items: center;
 }
+
+.fleep h4{
+  font-weight: 500;
+  line-height: 1.2;
+  font-size: 1.5rem;
+}
+
+.fleep h6{
+  font-weight: 500;
+  line-height: 1.2;
+  font-size: 1rem;
+}
 @media (max-width: 710px) {
   .common .brandScholarshipDetails_paddingB__1zmIh {
     width: 100%;
