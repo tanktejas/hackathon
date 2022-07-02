@@ -9,6 +9,7 @@ import AboutUsPage from "./Components/AboutUsPage";
 import AllScho from "./Components/home/AllScho";
 import Login from "./Components/loginsigninuser/login";
 import Team from "./Components/Team/Team"
+import Details from "./Components/Details/Details";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           ></Route>
           <Route exact path="/About-Scholar" element={<AboutUsPage />}></Route>
           <Route exact path="/Team" element={<Team />}></Route>
+          <Route exact path="/scholarship-info" element={<Details/>}></Route>
           <Route exact path="/login" element={<Login />}></Route>
         </Routes>
       </BrowserRouter>

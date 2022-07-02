@@ -1,6 +1,7 @@
 import { Button } from "@mui/material";
 import React from "react";
 import "./card.css";
+import { Link } from "react-router-dom";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 
 function Card({ name, eligiblity, benefit, deadline }) {
@@ -37,7 +38,10 @@ function Card({ name, eligiblity, benefit, deadline }) {
           <div className="p-1"></div>
         </div>
         <div className="buttforsc">
+        <Link style={{ textDecoration: "none" }} to="/scholarship-info">
+        
           <button> View </button>
+</Link>
           <button>Apply</button>
         </div>
       </div>
