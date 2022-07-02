@@ -60,8 +60,7 @@ function Details() {
             <ul>
               <li>
                 <h5>
-                  Keep India Smiling Foundational Grant for Individuals Helping
-                  Others 2021-22
+                Foundation For Excellence FFE For Navodian's 
                 </h5>
                 <article class="brandScholarshipDetails_content__1uj_y">
                   <article class="brandScholarshipDetails_contentBoxWrapper___GQGi">
@@ -71,6 +70,22 @@ function Details() {
                     </span>
                     <article class="brandScholarshipDetails_sectionBox__yP4qi brandScholarshipDetails_firstElem__2pjgC">
                       <span class="brandScholarshipDetails_sectionTitle__2t6sl  sec-t">
+                        About This Scholarship Program
+                      </span>
+                      <div>
+                        <ul>
+                          <div class="merge">
+                            <ChevronRightIcon />
+                            <li>
+                            The Foundation for Excellence (FFE) was founded with the mission to award college scholarships to students who, although financially constrained, showed great promise in the Engineering, Medical, BPharm and law programs, these being some of the most expensive higher education programs in India. Apart from FFE’s alumni, who support future scholars like themselves, donations come from all around the world from individual donors, corporations and foundations.
+                            </li>
+                          </div>
+                          
+                        </ul>
+                      </div>
+                    </article>
+                    <article class="brandScholarshipDetails_sectionBox__yP4qi brandScholarshipDetails_firstElem__2pjgC">
+                      <span class="brandScholarshipDetails_sectionTitle__2t6sl  sec-t">
                         Eligibility
                       </span>
                       <div>
@@ -78,9 +93,25 @@ function Details() {
                           <div class="merge">
                             <ChevronRightIcon />
                             <li>
-                              Must be involved in activities like teaching a
-                              group of underprivileged children or providing
-                              sports training to them
+                            Family income should less than 2.5 Lac and enrolled in B.E/B.TECHLac
+                            </li>
+                          </div>
+                          <div class="merge">
+                            <ChevronRightIcon />
+                            <li>
+                            Only Professional Degree Courses Eligible For Scholarships Are B.E./B.Tech.
+                            </li>
+                          </div>
+                          <div class="merge">
+                            <ChevronRightIcon />
+                            <li>
+                            Only First-Year Applicants Beginning Their Studies In B.E., B.Tech, Integrated 5-Year Dual-Degree M.Tech ,MBBS, BPharm And LLB Are Eligible.
+                            </li>
+                          </div>
+                          <div class="merge">
+                            <ChevronRightIcon />
+                            <li>
+                            Admission To Professional Degree Courses/Institutions Is Based On The Merit Rank Awarded At The State Or National Level.
                             </li>
                           </div>
                           <div class="merge">
@@ -97,9 +128,12 @@ function Details() {
                       <span class="brandScholarshipDetails_sectionTitle__2t6sl sec-t">
                         Benefits:
                       </span>
-                      <div>
-                        <p>INR 75,000 per year for 2 years</p>
+                      <ul>
+                      <div class="merge">
+                            <ChevronRightIcon />
+                        <li>INR 75,000 per year for 2 years</li>
                       </div>
+                      </ul>
                     </article>
                     <article class="brandScholarshipDetails_sectionBox__yP4qi">
                       <span class="brandScholarshipDetails_sectionTitle__2t6sl sec-t">
@@ -153,7 +187,7 @@ function Details() {
                       </div>
                     </article>
                     <article class="centerItem ">
-                      <button class="button2 get-a-demo m-2">Apply Now</button>
+                      <a class="button2 get-a-demo m-2" href="https://ffe.org/scholarships/">Apply Now</a>
                       <a
                         class="button2 get-a-demo m-2"
                         href="/scholarship-result/keep-india-smiling-foundational-grant-for-individuals-helping-others-2020-21"
