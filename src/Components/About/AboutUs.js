@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Details from "../Details/Details";
+
 import "../main.css";
 
 function AboutUs() {
@@ -20,7 +20,7 @@ function AboutUs() {
           </div>
         </div>
       </div>
-<Details/>
+  
       <div class="container  pb-50">
         <div class="row">
           <div class="col-lg-12 col-md-12 text-left">
