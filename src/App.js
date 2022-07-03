@@ -10,7 +10,7 @@ import AllScho from "./Components/home/AllScho";
 import Login from "./Components/loginsigninuser/login";
 import Team from "./Components/Team/Team"
 import Details from "./Components/Details/Details";
-
+import Contact from "./Components/Contact/Contact";
 function App() {
   return (
     <>
@@ -27,6 +27,8 @@ function App() {
           <Route exact path="/Team" element={<Team />}></Route>
           <Route exact path="/scholarship-info" element={<Details/>}></Route>
           <Route exact path="/login" element={<Login />}></Route>
+          <Route exact path="/contact" element={<Contact/>}></Route>
+          
         </Routes>
       </BrowserRouter>
     </>
