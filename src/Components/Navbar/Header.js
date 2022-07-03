@@ -42,7 +42,8 @@ function Header() {
                     {/* <img
             className="logo"
             src="https://www.sih.gov.in/img1/SIH2022-white-logo.png"/> */}
-                    <span>SCHOLARS</span>
+            <span><i class="fab fa-speakap"></i></span>        
+            <span>SCHOLARS</span>
                   </a>
                 </Link>
 
