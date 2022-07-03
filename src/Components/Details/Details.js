@@ -6,46 +6,44 @@ import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import SchoolIcon from "@mui/icons-material/School";
 import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
 import PublicIcon from "@mui/icons-material/Public";
-import AccessTimeIcon from '@mui/icons-material/AccessTime';
+import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import Footer from "../footer/footer";
 
-function Details() {
+function Details({ data }) {
+  console.log(data);
   return (
     <div>
-    <div class=" ccc">
-  <div class="  uniqq">
-     
-
-        <div class="siz25 itemm ">
-          <AccessTimeIcon/>
-          <div class="fleep">
-          <h4>Last Updated..</h4>
-          <h6>25 min ago</h6>
+      <div class=" ccc">
+        <div class="  uniqq">
+          <div class="siz25 itemm ">
+            <AccessTimeIcon />
+            <div class="fleep">
+              <h4>Last Updated..</h4>
+              <h6>25 min ago</h6>
+            </div>
+          </div>
+          <div class="siz25 itemm">
+            <EmojiEventsIcon />
+            <div class="fleep">
+              <h4>Region</h4>
+              <h6>{data.region.toUpperCase()}</h6>
+            </div>
+          </div>
+          <div class="siz25 itemm">
+            <PublicIcon />
+            <div class="fleep">
+              <h4>Award</h4>
+              <h6>Rs.40000 per year</h6>
+            </div>
+          </div>
+          <div class="siz25 itemm">
+            <CalendarMonthIcon />
+            <div class="fleep">
+              <h4>Deadline</h4>
+              <h6>{data.closeingDate}</h6>
+            </div>
           </div>
         </div>
-        <div class="siz25 itemm">
-          <EmojiEventsIcon />
-          <div class="fleep">
-          <h4>Region</h4>
-          <h6>INDIA</h6>
-          </div>
-        </div>
-        <div class="siz25 itemm">
-          <PublicIcon />
-          <div class="fleep">
-          <h4>Award</h4>
-          <h6>Rs.40000 per year</h6>
-          </div>
-        </div>
-        <div class="siz25 itemm">
-          <CalendarMonthIcon />
-          <div class="fleep">
-          <h4>Deadline</h4>
-          <h6>26/02/2022</h6>
-          </div>
-        </div>
-        </div>
-
       </div>
 
       <div class="common">
@@ -59,15 +57,12 @@ function Details() {
           >
             <ul>
               <li>
-                <h5>
-                  Keep India Smiling Foundational Grant for Individuals Helping
-                  Others 2021-22
-                </h5>
+                <h5>{data.name}</h5>
                 <article class="brandScholarshipDetails_content__1uj_y">
                   <article class="brandScholarshipDetails_contentBoxWrapper___GQGi">
                     <span class="brandScholarshipDetails_calendarIcon__2-5hX">
                       <CalendarMonthIcon />
-                      <p>Deadline 05-Jul-2022</p>
+                      <p>Deadline {data.closeingDate}</p>
                     </span>
                     <article class="brandScholarshipDetails_sectionBox__yP4qi brandScholarshipDetails_firstElem__2pjgC">
                       <span class="brandScholarshipDetails_sectionTitle__2t6sl  sec-t">
@@ -75,21 +70,16 @@ function Details() {
                       </span>
                       <div>
                         <ul>
-                          <div class="merge">
-                            <ChevronRightIcon />
-                            <li>
-                              Must be involved in activities like teaching a
-                              group of underprivileged children or providing
-                              sports training to them
-                            </li>
-                          </div>
-                          <div class="merge">
-                            <ChevronRightIcon />{" "}
-                            <li>
-                              Must be from the economically weaker or
-                              moderate-income group of the society
-                            </li>
-                          </div>
+                          {data.eligiblity.map((item) => {
+                            return (
+                              <>
+                                <div class="merge">
+                                  <ChevronRightIcon />
+                                  <li>{item}</li>
+                                </div>
+                              </>
+                            );
+                          })}
                         </ul>
                       </div>
                     </article>
@@ -98,7 +88,18 @@ function Details() {
                         Benefits:
                       </span>
                       <div>
-                        <p>INR 75,000 per year for 2 years</p>
+                        <ul>
+                          {data.benefit.map((item) => {
+                            return (
+                              <>
+                                <div class="merge">
+                                  <ChevronRightIcon />
+                                  <li>{item}</li>
+                                </div>
+                              </>
+                            );
+                          })}
+                        </ul>
                       </div>
                     </article>
                     <article class="brandScholarshipDetails_sectionBox__yP4qi">
@@ -107,40 +108,16 @@ function Details() {
                       </span>
                       <div>
                         <ul>
-                          <div class="merge">
-                            <ChevronRightIcon />
-                            <li>Passport-sized photograph</li>
-                          </div>
-                          <div class="merge">
-                            <ChevronRightIcon />
-                            <li>
-                              Valid ID proof – Either of Aadhaar Card/Driving
-                              License/Voter Id Card/Pan Card
-                            </li>
-                          </div>
-                          <div class="merge">
-                            <ChevronRightIcon />
-                            <li>
-                              Income Proof – Income certificate/BPL
-                              certificate/Food security certificate/Any other
-                              certificate of income issued by competent
-                              government authority.
-                            </li>
-                          </div>
-                          <div class="merge">
-                            <ChevronRightIcon />
-                            <li>
-                              Disability certificate, in case of any physical
-                              disability
-                            </li>
-                          </div>
-                          <div class="merge">
-                            <ChevronRightIcon />
-                            <li>
-                              Name &amp; Registration no. of
-                              NGO/Rotary/Association/ Not for profit
-                            </li>
-                          </div>
+                          {data.document.map((item) => {
+                            return (
+                              <>
+                                <div class="merge">
+                                  <ChevronRightIcon />
+                                  <li>{item}</li>
+                                </div>
+                              </>
+                            );
+                          })}
                         </ul>
                       </div>
                     </article>

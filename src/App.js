@@ -8,8 +8,9 @@ import Header from "./Components/Navbar/Header";
 import AboutUsPage from "./Components/AboutUsPage";
 import AllScho from "./Components/home/AllScho";
 import Login from "./Components/loginsigninuser/login";
-import Team from "./Components/Team/Team"
+import Team from "./Components/Team/Team";
 import Details from "./Components/Details/Details";
+import AllCard from "./Components/Scholarship detail/schodetail";
 
 function App() {
   return (
@@ -25,8 +26,13 @@ function App() {
           ></Route>
           <Route exact path="/About-Scholar" element={<AboutUsPage />}></Route>
           <Route exact path="/Team" element={<Team />}></Route>
-          <Route exact path="/scholarship-info" element={<Details/>}></Route>
+          <Route exact path="/scholarship-info" element={<Details />}></Route>
           <Route exact path="/login" element={<Login />}></Route>
+          <Route
+            exact
+            path="/scholarship/:schoid"
+            element={<AllCard />}
+          ></Route>
         </Routes>
       </BrowserRouter>
     </>
