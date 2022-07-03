@@ -1,8 +1,8 @@
 import React from 'react';
 
-import AboutUs from './About/AboutUs';
+import AboutUs from './AboutUs';
 // import Testinomial from './About/testinomial';
-import Footer from './footer/footer';
+import Footer from '../footer/footer';
 
 function AboutUsPage() {
   return (

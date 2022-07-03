@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 // import { Helmet } from "react-helmet";
-import "./main.css";
+// import "./main.css";
 
 // import "bootstrap/dist/css/bootstrap.min.css";
 // import "./plugins.min.css";

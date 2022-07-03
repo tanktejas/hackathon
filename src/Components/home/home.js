@@ -6,7 +6,7 @@ import url from "../images/scholaship.png";
 import Card from "../Card/card";
 import Faq from "./faq/faq";
 import Footer from "../footer/footer";
-import ServiceFaqM from "../ServiceFaqM";
+import ServiceFaqM from "../Faq/ServiceFaqM";
 import { Link } from "react-router-dom";
 
 import { db } from "../DB/firebase";
