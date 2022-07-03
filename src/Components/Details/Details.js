@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./det.css";
 import "../main.css";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
@@ -8,9 +8,40 @@ import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
 import PublicIcon from "@mui/icons-material/Public";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import Footer from "../footer/footer";
+import Card from "../Card/card";
+
+import {
+  collection,
+  query,
+  orderBy,
+  onSnapshot,
+  doc,
+} from "firebase/firestore";
+
+import { db } from "../DB/firebase";
+import { Link } from "react-router-dom";
+import { color } from "@mui/system";
 
 function Details({ data }) {
-  console.log(data);
+  const [scholar, setscho] = useState([]);
+
+  useEffect(() => {
+    const q = query(collection(db, "Scholarships"));
+    onSnapshot(q, (qS) => {
+      let data = qS.docs;
+      setscho(data.slice(0, 2));
+    });
+  }, []);
+
+  if (scholar.length == 0) {
+    return (
+      <>
+        <h1>Loading...</h1>
+      </>
+    );
+  }
+  console.log(scholar);
+
   return (
     <div>
       <div class=" ccc">
@@ -33,7 +64,9 @@ function Details({ data }) {
             <PublicIcon />
             <div class="fleep">
               <h4>Award</h4>
-              <h6>Rs.40000 per year</h6>
+              <h6>
+                Described in <strong> Benefits</strong>
+              </h6>
             </div>
           </div>
           <div class="siz25 itemm">
@@ -62,7 +95,7 @@ function Details({ data }) {
                   <article class="brandScholarshipDetails_contentBoxWrapper___GQGi">
                     <span class="brandScholarshipDetails_calendarIcon__2-5hX">
                       <CalendarMonthIcon />
-                      <p>Deadline {data.closeingDate}</p>
+                      <p>Deadline : {data.closeingDate}</p>
                     </span>
                     <article class="brandScholarshipDetails_sectionBox__yP4qi brandScholarshipDetails_firstElem__2pjgC">
                       <span class="brandScholarshipDetails_sectionTitle__2t6sl  sec-t">
@@ -130,10 +163,14 @@ function Details({ data }) {
                       </div>
                     </article>
                     <article class="centerItem ">
-                      <button class="button2 get-a-demo m-2">Apply Now</button>
+                      <a href={data.link}>
+                        <button class="button2 get-a-demo m-2">
+                          Apply Now
+                        </button>
+                      </a>
                       <a
                         class="button2 get-a-demo m-2"
-                        href="/scholarship-result/keep-india-smiling-foundational-grant-for-individuals-helping-others-2020-21"
+                        href={data.link}
                         target="_blank"
                       >
                         Check Result
@@ -149,7 +186,23 @@ function Details({ data }) {
         <section class=" featuredScholarshipsDefault_featuredScholarshipsDefault__25PDG">
           <h4>Featured Scholarships</h4>
           <div class="cardd brandScholarshipDetails_content__1uj_y">
-            <h6>here scholarships card come</h6>
+            {/* //scholarship card  */}
+            <div className="op">
+              {scholar.map((ele) => {
+                return (
+                  <Card
+                    name={ele.data().name}
+                    eligiblity={ele.data().eligiblity}
+                    benefit={ele.data().benefit}
+                    deadline={ele.data().closeingDate}
+                    viewlink={ele.id}
+                  />
+                );
+              })}
+            </div>
+            <Link className="ioo" to="/ViewAllScholarships">
+              see more..
+            </Link>
           </div>
         </section>
       </div>

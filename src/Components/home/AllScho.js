@@ -256,6 +256,8 @@ function AllScho() {
                   eligiblity={ele.data().eligiblity}
                   benefit={ele.data().benefit}
                   deadline={ele.data().closeingDate}
+                  viewlink={ele.id}
+                  link={ele.link}
                 />
               );
             })}

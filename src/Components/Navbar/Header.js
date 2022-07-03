@@ -26,8 +26,6 @@ function Header() {
       });
   };
 
- 
-
   console.log(user);
 
   return (
@@ -42,8 +40,10 @@ function Header() {
                     {/* <img
             className="logo"
             src="https://www.sih.gov.in/img1/SIH2022-white-logo.png"/> */}
-            <span><i class="fab fa-speakap"></i></span>        
-            <span>SCHOLARS</span>
+                    <span>
+                      <i class="fab fa-speakap"></i>
+                    </span>
+                    <span>SCHOLARS</span>
                   </a>
                 </Link>
 
@@ -71,7 +71,7 @@ function Header() {
                 >
                   <ul className="navbar-nav ml-auto">
                     <li className="nav-item ">
-                      <NavLink className="nav-link active " to="/">
+                      <NavLink className="nav-link" to="/">
                         Home
                       </NavLink>
                     </li>

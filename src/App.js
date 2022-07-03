@@ -10,12 +10,9 @@ import AllScho from "./Components/home/AllScho";
 import Login from "./Components/loginsigninuser/login";
 import Team from "./Components/Team/Team";
 import Details from "./Components/Details/Details";
-<<<<<<< HEAD
 import AllCard from "./Components/Scholarship detail/schodetail";
 
-=======
 import Contact from "./Components/Contact/Contact";
->>>>>>> f92f36ea2faf5566cd5268b854f2d920bddbcdc4
 function App() {
   return (
     <>
@@ -32,16 +29,12 @@ function App() {
           <Route exact path="/Team" element={<Team />}></Route>
           <Route exact path="/scholarship-info" element={<Details />}></Route>
           <Route exact path="/login" element={<Login />}></Route>
-<<<<<<< HEAD
           <Route
             exact
             path="/scholarship/:schoid"
             element={<AllCard />}
           ></Route>
-=======
-          <Route exact path="/contact" element={<Contact/>}></Route>
-          
->>>>>>> f92f36ea2faf5566cd5268b854f2d920bddbcdc4
+          <Route exact path="/contact" element={<Contact />}></Route>
         </Routes>
       </BrowserRouter>
     </>
