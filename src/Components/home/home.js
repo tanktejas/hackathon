@@ -94,14 +94,13 @@ function Home() {
           <div class="d-sm-flex align-items-center justify-content-between head">
             <div className="left">
               <h1>
-                <span class="text-warning">Welcome to Scholar !!</span>
+                <span class="text-warning">Welcome to STUHELP !!</span>
               </h1>
               <p class="lead my-4 ">
-                Here you will find each kind of scholarships and all details
-                about it.
+                Here you will register for course/compitition -- Teacher's can analyse each Student Evalution
               </p>
               <p class="lead my-4 ">
-                Find your best scholarship and take advantage of it.
+                Find your best Course and take advantage of it.
               </p>
               <Link to="/ViewAllScholarships">
                 <button
@@ -115,7 +114,7 @@ function Home() {
             </div>
 
             <a href="https://svgshare.com/s/gH0" className="right">
-              <img class="img-fluid  d-none d-sm-block" src={url} title="" />
+              <img class="img-fluid  d-none d-sm-block" src="img/44.png" title="" />
             </a>
           </div>
         </div>
