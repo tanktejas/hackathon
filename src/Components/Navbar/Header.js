@@ -43,7 +43,7 @@ function Header() {
                     <span>
                       <i class="fab fa-speakap"></i>
                     </span>
-                    <span>SCHOLARS</span>
+                    <span>STUHELP</span>
                   </a>
                 </Link>
 
@@ -70,11 +70,7 @@ function Header() {
                   style={navicon}
                 >
                   <ul className="navbar-nav ml-auto">
-                    <li className="nav-item ">
-                      <NavLink className="nav-link" to="/">
-                        Home
-                      </NavLink>
-                    </li>
+                    
 
                     <li
                       className="nav-item dropdown"
@@ -93,7 +89,7 @@ function Header() {
                         aria-haspopup="true"
                         aria-expanded="true"
                       >
-                        Scholarships
+                        courses
                       </NavLink>
 
                       <div
@@ -107,32 +103,26 @@ function Header() {
                           to="/ViewAllScholarships"
                           className=" dropdown-item"
                         >
-                          National Scholarship
+                          CS/IT core Courses
                         </NavLink>
 
                         <a href="#" className="dropdown-item">
-                          Govrnment Scholarship
+                          Website Development
                         </a>
 
                         <a href="#" className="dropdown-item">
-                          Private Scholarship
+                          Application Development
                         </a>
 
                         <a href="#" className="dropdown-item">
-                          Compititive Exam based scolarship
+                           communication skills courses
                         </a>
 
                         <a href="#" className="dropdown-item">
-                          Foreign Study based Scholarships
+                         Web3 / Marketing courses
                         </a>
 
-                        <a href="#" className="dropdown-item">
-                          Indian Research Scholarship
-                        </a>
-
-                        <a href="#" className="dropdown-item">
-                          Foreign Research Scolarship
-                        </a>
+                       
                       </div>
 
                       {/* </div>
@@ -141,9 +131,15 @@ function Header() {
 
                     <li className="nav-item ">
                       <Link className="nav-link  " to="/QnA">
-                        Q&A
+                        Compitition
                       </Link>
                     </li>
+
+                    <li className="nav-item ">
+                    <NavLink className="nav-link" to="/">
+                      Result
+                    </NavLink>
+                  </li>
 
                     <li className="nav-item dropdown">
                       <Link
@@ -156,22 +152,32 @@ function Header() {
                       </Link>
                     </li>
 
+                   
+
                     <li className="nav-item ">
                       <NavLink className="nav-link " to="/contact">
                         Contact
                       </NavLink>
                     </li>
+
+                    
+
+                    <li className="nav-item ">
+                      <NavLink className="nav-link" to="/">
+                        Student Login
+                      </NavLink>
+                    </li>
                     {!curruser && (
                       <li className="nav-item">
                         <NavLink className="nav-link" to="/login">
-                          Admin Login
+                          Teacher Login
                         </NavLink>
                       </li>
                     )}
                     {curruser && (
                       <li className="nav-item">
                         <NavLink className="nav-link" to="/form">
-                          Data Form
+                          Dashboard
                         </NavLink>
                       </li>
                     )}
