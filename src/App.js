@@ -12,6 +12,8 @@ import Details from "./Components/Details/Details";
 import AllCard from "./Components/Scholarship detail/schodetail";
 
 import Contact from "./Components/Contact/Contact";
+import Comment from "./Components/comment/co";
+
 function App() {
   return (
     <>
@@ -34,9 +36,10 @@ function App() {
             element={<AllCard />}
           ></Route>
           <Route exact path="/contact" element={<Contact />}></Route>
+          <Route exact path="/QnA" element={<Comment />}></Route>
         </Routes>
       </BrowserRouter>
-    </>
+    </>  
   );
 }
 
