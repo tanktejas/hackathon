@@ -13,7 +13,7 @@ function AboutUs() {
               <div class="col-md-12 text-left">
                 <h1 class="section-title">
                   A Single Portal of <br />
-                  National International Scholarships{" "}
+                  Student Activity Management System{" "}
                 </h1>
               </div>
             </div>
@@ -30,21 +30,18 @@ function AboutUs() {
               </div>
 
               <p>
-                Our website is helpful to all the students who are willing to
-                get scholarships for their great careers and to help their
-                parents. by using{" "}
+                Our website is helpful to all the student to learnabout new Compitition, courses and many more things. by using{" "}
                 <Link style={{ textDecoration: "none" }} to="/">
                   <a class="internal-links" href="#">
-                    Scholars
+                    Stuhelp
                   </a>
                 </Link>{" "}
                 students make their future very bright and a bright future of
-                students can make a developed country.
+                students can make a developed country. Also Teacher can view and analyse student's progress and also can control the portal.
               </p>
 
               <p>
-                Today, we are recognized under the top Scholarships Information
-                Provider Organization by renowned researching organizations and
+                Today, we are recognized under the top Student Activity Management System by renowned researching organizations and
                 firms. We owe the entire credit to our keen team of designers,
                 developers and strategists; who never let things go! In a single
                 word,{" "}
@@ -85,11 +82,7 @@ function AboutUs() {
                   Who We Are ?
                 </h1>
                 <p>
-                  India’s largest scholarship network with the vision to make
-                  quality education accessible for all. A brainchild of IIT,
-                  IIIT, NIT and BVM Students, Scholars aggregates global
-                  scholarship information. We work hard to provides 100% correct
-                  information to the our students.
+                  We are group of Student who are wilings to solve the real world problems. Currently We are working on Student Activity Management System to helps the student and teachers.
                 </p>
 
                 <Link style={{ textDecoration: "none" }} to="/Team">
@@ -128,11 +121,7 @@ function AboutUs() {
                 <h2>Innovation meets endless opportunity At Scholars.</h2>
               </div>
               <p>
-                As students, we have always experienced the joy of success in
-                getting scholarships. When any student gets scholarship
-                information from our platform and gets succeeds in it, it's a
-                very delighted feeling for us. We believe in student benefit
-                hence we can't take any personal information.
+              Background: Teachers, students are encouraged to take up research and innovate. Current accreditation, ranking and grading norms emphasizes research work and publications by both students and faculty. In order to take up research work and subsequently make publications of research findings, to collaborate and network with others who are working on similar problems there is a need to participate in global, national and local workshops, seminars, symposia, conferences, etc.
               </p>
               <a class="button2" href="#">
                 Explore
@@ -168,7 +157,7 @@ function AboutUs() {
                             <h2>+</h2>
                           </span>
                         </div>
-                        <h5>Organization Connected</h5>
+                        <h5>Teachers Connected</h5>
                       </div>
                     </div>
                     <div
@@ -205,11 +194,11 @@ function AboutUs() {
                 {" "}
                 <Link style={{ textDecoration: "none" }} to="/">
                   <a class="internal-links" href="#">
-                    Scholars
+                    Stuhelp
                   </a>
                 </Link>{" "}
                 's mission is to organize scholarship information in a good
-                manner and help to get scholarships to every needy student.
+                manner and help to Student and Teacher to fulfill their requirement.
               </p>
             </div>
           </div>
@@ -227,10 +216,10 @@ function AboutUs() {
                 {" "}
                 <Link style={{ textDecoration: "none" }} to="/">
                   <a class="internal-links" href="#">
-                    Scholars
+                   Stuhelp
                   </a>
                 </Link>{" "}
-                's Goal is to help 100000+ student to get scholarships and to
+                's Goal is to help 100000+ students and teachers to helps and to
                 connect every organizations to expand it world wide.
               </p>
             </div>
@@ -280,7 +269,7 @@ function AboutUs() {
                 We have posted several projects, each worth a few thousand
                 dollars, and they have delivered them punctually every single
                 time! I guess that pretty much sums up the excellent experience
-                we have had with iCoderz (Ashish and Team)! They have excellent
+                we have had with Stuhelp (Ashish and Team)! They have excellent
                 communication skills in English, very prompt in replying and
                 extremely hard working as a team. I have been in IT for over 25
                 years now and this team has been a lucky find for us. I have a

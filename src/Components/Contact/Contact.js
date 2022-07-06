@@ -76,11 +76,11 @@ const Contact = () => {
       <div className="d-flex flex-row justify-content-around flex-wrap">
         <h5 className="my-1 mb-4">
           {contactIcon()} <span className="fw-bold">Contact No:</span> +91
-          9234567890
+          6354434661
         </h5>
         <h5 className="my-1 mb-4">
           {emailIconSVG()} <span className="fw-bold">Email:</span>{" "}
-          scholar@gmail.com
+          stuhelpoficial@gmail.com
         </h5>
       </div>
 
