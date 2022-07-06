@@ -21,6 +21,9 @@ import { logcont } from "./Loginsignincontext/context";
 import { useContext, useState } from "react";
 import Forgot from "./loginsignup/forgot1";
 
+import TeacherLogin from "./loginsignup/teacherlogin";
+import TeacherSign from "./loginsignup/teachersignin";
+
 function App() {
   const all = useContext(logcont);
   if (all.user == undefined) {
@@ -42,6 +45,9 @@ function App() {
           <Route exact path="/Team" element={<Team />}></Route>
           <Route exact path="/scholarship-info" element={<Details />}></Route>
           <Route exact path="/login" element={<Login />}></Route>
+          <Route exact path="/tlogin" element={<TeacherLogin />}></Route>
+          <Route exact path="/tsignin" element={<TeacherSign />}></Route>
+
           <Route
             exact
             path="/scholarship/:schoid"

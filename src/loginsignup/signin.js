@@ -44,7 +44,7 @@ function Signin() {
               <span>
                 <i class="fab fa-speakap"></i>
               </span>
-              <span>STUHELP</span>
+              <span>STUHELP (Student)</span>
             </div>
             <h1>Sign In</h1>
             <p>It's not long before you embark on this journey! </p>
