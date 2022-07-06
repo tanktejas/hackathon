@@ -28,12 +28,12 @@ function Footer() {
               <div class="footer-center">
                 <div>
                   <i class="fa fa-phone"></i>
-                  <p style={{ margin: "auto" }}>+91 9309090932</p>
+                  <p style={{ margin: "auto" }}>+91 6354434661</p>
                 </div>
                 <div>
                   <i class="fa fa-envelope"></i>
                   <p>
-                    <a href="mailto:support@company.com">Scholar@gmail.com</a>
+                    <a href="mailto:stuhelpofficial@gmail.com">Stuhelpofficial@gmail.com</a>
                   </p>
                 </div>
               </div>
@@ -94,12 +94,12 @@ function Footer() {
                 </li>
                 <li>
                   <a href="testimonials.shtml" className="lear-more-l">
-                    Testimonials
+                   Student Login
                   </a>
                 </li>
                 <li className="hiring-link blink-menu">
                   <a href="career.shtml" className="lear-more-l blink-active">
-                    Admin Login
+                    Teacher Login
                   </a>{" "}
                   <span className="hiring">We Are Hiring</span>
                 </li>
@@ -110,7 +110,7 @@ function Footer() {
                 </li>
                 <li>
                   <a href="faqs.shtml" className="lear-more-l">
-                    Service
+                    COntact Us
                   </a>
                 </li>
               </ul>
@@ -127,27 +127,27 @@ function Footer() {
                   }
                 }}
               >
-                National Scholarships
+                Certifited Courses
               </h5>
               <ul style={width <= 987 ? ns : {}}>
                 <li>
                   <a href="#" className="lear-more-l">
-                    State Scholarships
+                    CS/IT Core Courses
                   </a>
                 </li>
                 <li>
                   <a href="#" className="lear-more-l">
-                    Central Scholarships
+                    Web Dev. Courses
                   </a>
                 </li>
                 <li>
                   <a href="#" className="lear-more-l">
-                    Private Scholarship
+                    App Dev. Courses
                   </a>
                 </li>
                 <li>
                   <a href="#" className="lear-more-l">
-                    Compititive Exam <br /> based Scholarships
+                    communication Skills Courses
                   </a>
                 </li>
               </ul>
@@ -164,7 +164,7 @@ function Footer() {
                   }
                 }}
               >
-                international Scholarships
+                Foreign Study Helper
               </h5>
               <ul style={width <= 987 ? is : {}}>
                 <li>
@@ -206,32 +206,32 @@ function Footer() {
                   }
                 }}
               >
-                Research Fellowships
+                Our's Compitition
               </h5>
               <ul style={width <= 987 ? rs : {}}>
                 <li>
                   <a href="#" className="lear-more-l">
-                    PMRF Fellowship
+                    Select * from brain
                   </a>
                 </li>
                 <li>
                   <a href="#" className="lear-more-l">
-                    TARE Fellowship
+                  Spin E Web
                   </a>
                 </li>
                 <li>
                   <a href="#" className="lear-more-l">
-                    JNFF Fellowship
+                   MoneyHeist
                   </a>
                 </li>
                 <li>
                   <a href="#" className="lear-more-l">
-                    Google Phd Fellowship
+                    Maths Pirates
                   </a>
                 </li>
                 <li>
                   <a href="#" className="lear-more-l">
-                    ICMR Fellowship
+                  Bug Bunny
                   </a>
                 </li>
               </ul>
@@ -248,32 +248,32 @@ function Footer() {
                   }
                 }}
               >
-                Exams
+                Imp !!
               </h5>
               <ul style={width <= 987 ? ex : {}}>
                 <li>
                   <a href="#" className="lear-more-l">
-                    NDA
+                    Courses
                   </a>
                 </li>
                 <li>
                   <a href="#" className="lear-more-l">
-                    SSB
+                   Compitition
                   </a>
                 </li>
                 <li>
                   <a href="#" className="lear-more-l">
-                    GATE
+                    Our Team
                   </a>
                 </li>
                 <li>
                   <a href="#" className="lear-more-l">
-                    KVPY
+                    Career
                   </a>
                 </li>
                 <li>
                   <a href="#" className="lear-more-l">
-                    JEE
+                    Results
                   </a>
                 </li>
               </ul>
@@ -296,7 +296,7 @@ function Footer() {
               <span>
                 © 2022
                 <a href="#" target="_new">
-                  Scholar
+                  STUHELP
                 </a>
                 All rights reserved.
               </span>

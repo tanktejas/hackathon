@@ -23,6 +23,7 @@ function Login() {
     seterr("");
     login(email, pass)
       .then((res) => {
+        alert("you are succesfully login!!");
         navigate("/");
       })
       .catch((err) => {
@@ -39,7 +40,7 @@ function Login() {
               <span>
                 <i class="fab fa-speakap"></i>
               </span>
-              <span>Study Buddy</span>
+              <span>STUHELP</span>
             </div>
             <h1>Log In</h1>
             <p>It's not long before you embark on this journey! </p>

@@ -10,7 +10,7 @@ import "./plugins.min.css";
 import { logcont } from "../../Loginsignincontext/context";
 
 function Header() {
-  const { login } = useContext(logcont);
+  const { login, Logout } = useContext(logcont);
 
   const [navicon, setnav] = useState({ display: "none" });
   const [scho, setscho] = useState({ display: "none" });
@@ -36,7 +36,11 @@ function Header() {
   if (all.user == undefined) {
     return <h1>Loading...</h1>;
   }
-
+  const Loguser = () => {
+    alert("You are Logout!");
+    Logout();
+  };
+  console.log(all.user);
   return (
     <>
       <header className="grip-header sticky">
@@ -52,7 +56,7 @@ function Header() {
                     <span>
                       <i class="fab fa-speakap"></i>
                     </span>
-                    <span>SCHOLARS</span>
+                    <span>STUHELP</span>
                   </a>
                 </Link>
 
@@ -80,7 +84,7 @@ function Header() {
                 >
                   <ul className="navbar-nav ml-auto">
                     <li className="nav-item ">
-                      <NavLink className="nav-link" to="/login">
+                      <NavLink className="nav-link" to="/">
                         Home
                       </NavLink>
                     </li>
@@ -102,7 +106,7 @@ function Header() {
                         aria-haspopup="true"
                         aria-expanded="true"
                       >
-                        Scholarships
+                        courses
                       </NavLink>
 
                       <div
@@ -116,31 +120,23 @@ function Header() {
                           to="/ViewAllScholarships"
                           className=" dropdown-item"
                         >
-                          National Scholarship
+                          CS/IT core Courses
                         </NavLink>
 
                         <a href="#" className="dropdown-item">
-                          Govrnment Scholarship
+                          Website Development
                         </a>
 
                         <a href="#" className="dropdown-item">
-                          Private Scholarship
+                          Application Development
                         </a>
 
                         <a href="#" className="dropdown-item">
-                          Compititive Exam based scolarship
+                          communication skills courses
                         </a>
 
                         <a href="#" className="dropdown-item">
-                          Foreign Study based Scholarships
-                        </a>
-
-                        <a href="#" className="dropdown-item">
-                          Indian Research Scholarship
-                        </a>
-
-                        <a href="#" className="dropdown-item">
-                          Foreign Research Scolarship
+                          Web3 / Marketing courses
                         </a>
                       </div>
 
@@ -149,9 +145,15 @@ function Header() {
                     </li>
 
                     <li className="nav-item ">
-                      <Link className="nav-link  " to="/QnA">
-                        Q&A
+                      <Link className="nav-link  " to="/">
+                        Compitition
                       </Link>
+                    </li>
+
+                    <li className="nav-item">
+                      <NavLink className="nav-link" to="/result">
+                        Result
+                      </NavLink>
                     </li>
 
                     <li className="nav-item dropdown">
@@ -164,58 +166,44 @@ function Header() {
                         </a>
                       </Link>
                     </li>
-
                     <li className="nav-item ">
                       <NavLink className="nav-link " to="/contact">
                         Contact
                       </NavLink>
                     </li>
-                    {all.use != "no" && (
+                    {all.user != "no" && (
                       <li className="nav-item">
                         <NavLink className="nav-link" to="/dashboard">
                           Dashboard
                         </NavLink>
                       </li>
                     )}
-                    {all.use == "no" && (
+                    {all.user == "no" && (
                       <li className="nav-item">
                         <NavLink className="nav-link" to="/Login">
-                          Login
+                          Student Login
                         </NavLink>
                       </li>
-                    )} 
-                    {all.use == "no" && (
+                    )}
+                    {all.user == "no" && (
                       <li className="nav-item">
                         <NavLink className="nav-link" to="/Signin">
-                          Signin
-                        </NavLink>
-                      </li>  
-                    )}
-                    {/* {!curruser && (
-                      <li className="nav-item">
-                        <NavLink className="nav-link" to="/login">
-                          Admin Login
+                          Student Signin
                         </NavLink>
                       </li>
                     )}
-                    {curruser && (
-                      <li className="nav-item">
-                        <NavLink className="nav-link" to="/form">
-                          Data Form
+                    {all.user != "no" && (
+                      <li
+                        className="nav-item"
+                        onClick={() => {
+                          Loguser();
+                        }}
+                      >
+                        <NavLink className="nav-link" to="/">
+                          Logout
                         </NavLink>
                       </li>
                     )}
-                    {curruser && (
-                      <li className="nav-item">
-                        <button
-                          onClick={() => {
-                            Logout();
-                          }}
-                        >
-                          logout
-                        </button>
-                      </li>
-                    )} */}
                   </ul>
                 </div>
               </nav>

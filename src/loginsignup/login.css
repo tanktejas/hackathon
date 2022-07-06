@@ -34,7 +34,8 @@
 .login-text {
   background-color: #f6f6f6;
   max-width: 400px;
-  min-height: 500px;
+  /* min-height: 500px; */
+  min-height: 447px;
   border-radius: 21px;
   padding: 10px 20px;
  

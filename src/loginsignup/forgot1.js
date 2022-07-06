@@ -23,7 +23,7 @@ function Forgot() {
         setsent(true);
       })
       .catch((err) => {
-        seterr("Some Error occured try again.");
+        seterr("Some Error occured or User not exist try again.");
       });
   }
 
@@ -36,10 +36,13 @@ function Forgot() {
               <span>
                 <i class="fab fa-speakap"></i>
               </span>
-              <span>Study Buddy</span>
+              <span>STUHELP</span>
             </div>
             <h1>Forgot Password</h1>
-            <p>Type your mail and get password reset link on mail.</p>
+            <p>
+              Type your mail and get password reset link on mail (Check Spam
+              Also).
+            </p>
             {err && <Alert severity="error">{err}</Alert>}
             {sent && (
               <Alert severity="success">

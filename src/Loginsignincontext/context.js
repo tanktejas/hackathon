@@ -35,6 +35,10 @@ function LogCompo({ children }) {
     return updatePassword(user, pass);
   }
 
+  function Logout() {
+    return auth.signOut();
+  }
+
   function passremail(email) {
     return sendPasswordResetEmail(auth, email, {
       url: "http://localhost:3000/login",
@@ -48,6 +52,7 @@ function LogCompo({ children }) {
     updatepass,
     user,
     passremail,
+    Logout,
   };
 
   useEffect(() => {

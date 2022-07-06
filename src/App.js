@@ -19,6 +19,7 @@ import Comment from "./Components/comment/co";
 
 import { logcont } from "./Loginsignincontext/context";
 import { useContext, useState } from "react";
+import Forgot from "./loginsignup/forgot1";
 
 function App() {
   const all = useContext(logcont);
@@ -31,8 +32,6 @@ function App() {
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route exact path="/login" element={<Login />}></Route>
-          <Route exact path="/signin" element={<Signin />}></Route>
           <Route exact path="/" element={<Home />}></Route>
           <Route
             exact
@@ -50,6 +49,9 @@ function App() {
           ></Route>
           <Route exact path="/contact" element={<Contact />}></Route>
           <Route exact path="/QnA" element={<Comment />}></Route>
+          <Route exact path="/login" element={<Login />}></Route>
+          <Route exact path="/signin" element={<Signin />}></Route>
+          <Route exact path="/forgot" element={<Forgot />}></Route>
         </Routes>
       </BrowserRouter>
     </>
