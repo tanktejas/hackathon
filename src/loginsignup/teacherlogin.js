@@ -40,10 +40,10 @@ function Login() {
               <span>
                 <i class="fab fa-speakap"></i>
               </span>
-              <span>STUHELP (Student)</span>
+              <span>STUHELP (Teacher)</span>
             </div>
             <h1>Log In</h1>
-            <p>It's not long before you embark on this journey! </p>
+            <p>If you are professor/teacher then login here.</p>
             {err && <Alert severity="error">{err}</Alert>}
             <form class="flex-c ff">
               <div class="input-box">
@@ -92,7 +92,7 @@ function Login() {
               <span class="extra-line">
                 <span>Don't have account?</span>
                 <a>
-                  <NavLink to="/signin"> Sign In</NavLink>
+                  <NavLink to="/tsignin"> Sign In</NavLink>
                 </a>
               </span>
             </form>
