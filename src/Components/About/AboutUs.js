@@ -47,7 +47,7 @@ function AboutUs() {
                 word,{" "}
                 <Link style={{ textDecoration: "none" }} to="/">
                   <a class="internal-links" href="#">
-                    Scholars
+                    Stuhelp
                   </a>
                 </Link>{" "}
                 is all about ‘doing things innovatively’ and ‘never giving up’.
@@ -82,7 +82,7 @@ function AboutUs() {
                   Who We Are ?
                 </h1>
                 <p>
-                  We are group of Student who are wilings to solve the real world problems. Currently We are working on Student Activity Management System to helps the student and teachers.
+                  We are group of Student who are wilings to solve the real world problems. Currently We are working on Student Activity Management System to helps the student and teachers and in subject areas so as to enable the students, faculty, and researchers to access information and prepare well in advance and participate effectively and successfully.<br/>
                 </p>
 
                 <Link style={{ textDecoration: "none" }} to="/Team">
@@ -118,10 +118,10 @@ function AboutUs() {
           <div class="row">
             <div class="col-lg-6 col-md-12 col-sm-12 col-12 text-left">
               <div class="soln-heading">
-                <h2>Innovation meets endless opportunity At Scholars.</h2>
+                <h2>Innovation meets endless opportunity At Stuhelp.</h2>
               </div>
               <p>
-              Background: Teachers, students are encouraged to take up research and innovate. Current accreditation, ranking and grading norms emphasizes research work and publications by both students and faculty. In order to take up research work and subsequently make publications of research findings, to collaborate and network with others who are working on similar problems there is a need to participate in global, national and local workshops, seminars, symposia, conferences, etc.
+              We need you to develop a portal where information about all academic activities across the country, universities and international arena in chronological order and in subject areas so as to enable the students, faculty, and researchers to access information and prepare well in advance and participate effectively and successfully."
               </p>
               <a class="button2" href="#">
                 Explore
@@ -249,10 +249,11 @@ function AboutUs() {
                 <img
                   class=""
                   loading="lazyload"
-                  data-src="img/david-c1.png"
-                  src="img/david-c1.png"
+                  data-src="img/yash.jpg"
+                  src="img/yash.jpg"
                   alt="David Koganti"
                   title="David Koganti"
+                  style={{borderRadius:"50%"}}
                 />
               </div>
 
@@ -265,19 +266,13 @@ function AboutUs() {
                     src="img/quote-sign.png"
                   />
                 </span>
-                " We have been using Ashish and his team for over 3 years now.
-                We have posted several projects, each worth a few thousand
-                dollars, and they have delivered them punctually every single
-                time! I guess that pretty much sums up the excellent experience
-                we have had with Stuhelp (Ashish and Team)! They have excellent
-                communication skills in English, very prompt in replying and
-                extremely hard working as a team. I have been in IT for over 25
-                years now and this team has been a lucky find for us. I have a
+                " We have been using Stuhelp for over 3 years now.
+                 We have great experience to add courses, update course, result also.We have been added and completed many compitition using stuhelp. I have a
                 few more projects lined up and will be using them again. Highly
                 recommended! "
               </p>
               <h5 class="testimonial-author">
-                David Koganti - <small>CEO</small>
+                Yash Parsana - <small>Principal Of P.P.SAVANI</small>
               </h5>
             </div>
             <div class="testi-loding-box bgafter2">
@@ -285,10 +280,11 @@ function AboutUs() {
                 <img
                   class=""
                   loading="lazyload"
-                  data-src="img/dag-c1.png"
-                  src="img/dag-c1.png"
+                  data-src="img/vivek.jpg"
+                  src="img/vivek.jpg"
                   alt="Dag Gårdheim"
                   title="Dag Gårdheim"
+                  style={{borderRadius:"50%"}}
                 />
               </div>
 
@@ -301,14 +297,14 @@ function AboutUs() {
                     src="img/quote-sign.png"
                   />
                 </span>
-                " The app has seen a substantial profit. iCoderz Solutions was a
+                " The app has seen a substantial profit. Stuhelp was a
                 particularly valuable partner during the ideation phase,
-                offering advice and sharing honest opinions about the product.
+                offering advice and sharing honest opinions about the student activities.
                 The team's straight-forward communication style complements
                 their excellent technical skills. "
               </p>
               <h5 class="testimonial-author">
-                Dag Gårdheim - <small>(Director)</small>
+                Vivek Baldaniya - <small>(Director)</small>
               </h5>
             </div>
             <div class="testi-loding-box bgafter1">
@@ -316,11 +312,13 @@ function AboutUs() {
                 <img
                   class=""
                   loading="lazyload"
-                  data-src="img/omar-c1.png"
-                  src="img/omar-c1.png"
+                  data-src="img/2.jpg"
+                  src="img/2.jpg"
                   alt="Omar"
                   title="Omar"
+                  style={{borderRadius:"50%"}}
                 />
+
               </div>
 
               <p>
@@ -339,7 +337,7 @@ function AboutUs() {
                 "
               </p>
               <h5 class="testimonial-author">
-                Omar - <small>CEO</small>
+               Kavya - <small>HOD of Science</small>
               </h5>
             </div>
             <div class="testi-loding-box">
@@ -347,10 +345,11 @@ function AboutUs() {
                 <img
                   class=""
                   loading="lazyload"
-                  data-src="img/jason-m-coles-c1.png"
-                  src="img/jason-m-coles-c1.png"
+                  data-src="img/kush.jpg"
+                  src="img/kush.jpg"
                   alt="Jason"
                   title="Jason"
+                  style={{borderRadius:"50%"}}
                 />
               </div>
 
@@ -363,8 +362,8 @@ function AboutUs() {
                     src="img/quote-sign.png"
                   />
                 </span>
-                " Working with iCoderz has been a great experience. They have
-                helped me with my first app project and have been very
+                " Working with Stuhelp has been a great experience. They have
+                helped me with my first year in school and have been very
                 professional and responsive to my needs. Even when i needed to
                 alter my initial plans for the app, they were understanding and
                 had the skillset needed to accommodate my request. I would
@@ -372,7 +371,7 @@ function AboutUs() {
                 application built. "
               </p>
               <h5 class="testimonial-author">
-                Jason - <small>CEO</small>
+                Kushang - <small>Science Teacher</small>
               </h5>
             </div>
           </div>
