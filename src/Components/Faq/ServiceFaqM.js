@@ -24,14 +24,12 @@ function ServiceFaqM() {
                 <Accordion.Item eventKey="19">
                   <Accordion.Header>
                     {" "}
-                    How much time does it takes times to come scholarships in
-                    bank account?
+                    As Student in when my final registration done from teacher side?
                   </Accordion.Header>
                   <Accordion.Body>
                     <div class="panel-body">
                       <p>
-                        The time of the scholarships to come into your bank
-                        accounts depends on the following:
+                        The time of the course regisration is depends on the following:
                       </p>
                       <p>- Atleast first deadline completed</p>{" "}
                       <p>
@@ -46,20 +44,20 @@ function ServiceFaqM() {
                         - Finalizing and provided to next level for final
                         confirmation
                       </p>
-                      <p>- usually 2 month on and average</p>
+                      <p>- usually 2 week on and average</p>
                     </div>
                     {/* <!-- <div class="bg-soft-green rounded-lg border px-4 py-3 mt-20">You’ll be sent a confirmation email to verify you so make sure you check your email.</div> --> */}
                   </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="1">
                   <Accordion.Header>
-                    How to decide which scholarships to apply?
+                    How to decide which courses to apply?
                   </Accordion.Header>
                   <Accordion.Body>
                     <div class="panel-body">
                       <p>
                         - First of all do following steps just after taking
-                        admission into any college or may be univercity
+                       desicion of your preferable course
                       </p>
                       <p>
                         - Talk to your seniour and concern teachers about it
@@ -70,21 +68,21 @@ function ServiceFaqM() {
                         platform to take deep information about that.
                       </p>
                       <p>
-                        - THere are many features available through which gather
+                        - There are many features available through which gather
                         and understand every possible things about that
                         scholarships
                       </p>
                       <p>
-                        - Match their requirement with your qualifycation
-                        (Gather all nessary documents).
+                        - Match their requirement with your interest
+                        
                       </p>
-                      <p>- Then simply apply for it using scholars.</p>
+                      <p>- Then simply apply for it using stuhelp.</p>
                     </div>
                   </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="2">
                   <Accordion.Header>
-                    How to know that when any scholarships proposal started or
+                    How to know that when any course / compitition proposal started or
                     ending?
                   </Accordion.Header>
                   <Accordion.Body>
@@ -92,59 +90,56 @@ function ServiceFaqM() {
                       <p>
                         with great pleasure, we have a great content team who
                         provide you starting and ending date of any scholarships
-                        on scholars platform.
+                        on stuhelp platform.
                       </p>
                     </div>
                   </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="3">
                   <Accordion.Header>
-                    What are the steps after deciding Scholarships for me?
+                    What are the steps after deciding course for me?
                   </Accordion.Header>
                   <Accordion.Body>
                     <div class="panel-body">
                       <p>
-                        Hey, After deciding the best suitable scholarship for
+                        Hey, After deciding the best suitable course for
                         you now just need to follow steps given in respective
-                        scholarships on scholars portal.
+                       course on stuhelp portal.
                       </p>
                     </div>
                   </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="4">
                   <Accordion.Header>
-                    Can I apply for more than one scholarships?
+                    Can I apply for more than one course?
                   </Accordion.Header>
                   <Accordion.Body>
                     <div class="panel-body">
                       <p>
                         Actually, there are some barrier to student who are
-                        taking govrnment scholarships that you should take only
-                        any one govrnment scheme benefits. The moto behind it of
-                        govrnment to provides as much as possible student to
-                        benefits in their study.
-                      </p>
+                        taking more than one course at same time that you should take only
+                        any core subject and with that you can take professional skilled course like marketing / communication skill's course.</p>
                     </div>
                   </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="5">
                   <Accordion.Header>
-                    will i able to changed incorrect details in my scholarships?
+                    will i able to changed course detail after final submit?
                   </Accordion.Header>
                   <Accordion.Body>
                     Yes. Before you click final submit you can change
                     corresponding details yourself but after final submit you
                     need to mail the support team of respective scholarships,
-                    the mail id of every scholarships support team is provided
+                    the mail id of every courses support team is provided
                     at{" "}
                     <a class="internal-links" href="#">
-                      Scholars
+                      Stuhelp
                     </a>{" "}
                   </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="6">
                   <Accordion.Header>
-                    What if i have query regarding any scholarships that i am
+                    What if i have query regarding any course/compitition that i am
                     going to apply using scholars platform ?
                   </Accordion.Header>
                   <Accordion.Body>
@@ -155,7 +150,7 @@ function ServiceFaqM() {
                 </Accordion.Item>
                 <Accordion.Item eventKey="7">
                   <Accordion.Header>
-                    As organization i want to give scholarships to the best
+                    As course co-ordinaator i want to add to the best
                     candidate who are suitable for that. How can i do it?
                   </Accordion.Header>
                   <Accordion.Body>
@@ -180,14 +175,12 @@ function ServiceFaqM() {
                 </Accordion.Item>
                 <Accordion.Item eventKey="8">
                   <Accordion.Header>
-                    What things we can do it as admin?
+                    What things teacher can analyse through your Dashboard?
                   </Accordion.Header>
                   <Accordion.Body>
                     <div class="panel-body">
                       <p>
-                        You can add scholarships, edit scholarships requirement,
-                        extend deadlines, promote us after successs of your
-                        program etc.
+                        you can add course/compitition/marks of student and check the progress and continue evalution in co-curriculam activities of each student.
                       </p>
                     </div>
                   </Accordion.Body>

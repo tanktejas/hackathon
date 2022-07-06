@@ -1,0 +1,53 @@
+[
+    {
+        "name" : "C Laungauge course",
+        "deadline" : "27/7/2022",
+        "eligibility" : ["Should have cleared all the subject of Last sem and enrolled in 2nd semester","student must be in field CS/IT"],
+        "objective" : "To enhance logical thinking and to impart basic programming skills using C programming language",
+        "outcome" : ["Use different features of C programming language to develop a possible programming solution to a given problem in a given domain",". Test and execute the programs and correct syntax and logical errors","Decipher simple C programs and determine the outputs","To formulate simple algorithms for arithmetic and logical problems and translate them to programs"],
+        "credit":"4 (3-0-1)",
+        "Refrences" : ["Balagarusamy E, 'Programming in ANCI C'","Kernighan B W and Ritchie D M, 'C Programming language'"],
+        "link" : "https://img.favpng.com/10/23/21/c-programming-language-icon-png-favpng-878WK0RF2zxn7b6TimT7zquZN.jpg"
+    },
+    {
+        "name" : "Object Oriented Programming C++",
+        "deadline" : "26/7/2022",
+        "eligibility" : ["Should have cleared all the subject of Last sem and enrolled in 2nd semester","student must be in field CS/IT"],
+        "objective" : "To impart the knowledge about principles of Object Oriented Programming paradigm using C++.",
+        "outcome" : ["Use different features of C++ programming language to develop a possible programming solution to a given problem in a given domain","Enhance Logical Reasoning and Programming skills.","Design a solution of a given problem using Object Oriented Programming concepts.","Incorporate features like Exception handling and Templates in the solution."],
+        "credit":"4 (3-0-1)",
+        "Refrences" : ["Balagarusamy E, 'Programming in ANCI C++'","Kernighan B W and Ritchie D M, 'C++ Programming language'"],
+        "link" : "https://www.pinclipart.com/picdir/middle/519-5199354_c-programming-language-logo-clipart.png"
+    },
+    {
+        "name" : "Engineering Graphics",
+        "deadline" : "26/7/2022",
+        "eligibility" : ["Should have cleared all the subject of Last sem and enrolled in 2nd semester","student must be in field CS/IT"],
+        "objective" : "To impart the knowledge about principles of Graphics in mechanical and civil career",
+        "outcome" : ["Use different features of C++ programming language to develop a possible programming solution to a given problem in a given domain","Enhance Logical Reasoning and Programming skills.","Design a solution of a given problem using Object Oriented Programming concepts.","Incorporate features like Exception handling and Templates in the solution."],
+        "credit":"3 (0-0-2)",
+        "Refrences" : ["Balagarusamy E, 'Programming in ANCI C++'","Kernighan B W and Ritchie D M, 'C++ Programming language'"],
+        "link" : ""
+    },
+    {
+        "name" : "Environmental Science",
+        "deadline" : "26/7/2022",
+        "eligibility" : ["student must be in Engineering"],
+        "objective" : "To inculcate the environmental values translating into pro-conservation actions Honorable  Supreme Court of India has made it 'mandatory’ to introduce a basic course on environment at the undergraduate level. ",
+        "outcome" : ["Inculcate the concepts of Reduce, Reuse, Recycle and recovery in all aspects","Gain scientific perspectives of critical environmental pollution, its effects and mitigation","Understand the scope , guiding principles and importance of Environmental Science"],
+        "credit":"2 (2-0-0)",
+        "Refrences" : ["Science Everywhere","Environmental Science -- J.J.Thomsan"],
+        "link" : ""
+    },
+    {
+        "name" : "Professional Soft Skills",
+        "deadline" : "16/7/2022",
+        "eligibility" : ["Any Field Student can apply for this course"],
+        "objective" : "The subject also will enable them to learn interpersonal skills, work culture and effective management of time and stress.",
+        "outcome" : ["Effectively manage time and stress","Develop Interview skills and Write Reports.","Conduct meetings and conferences","Make effective Presentations."],
+        "credit":"4 (1-0-1)",
+        "Refrences" : ["'Business Communication and Soft Skill'","'Pocket Style Manual”'"],
+        "link" : ""
+    }
+    
+]

@@ -181,7 +181,7 @@ function Header() {
                     {all.user == "no" && (
                       <li className="nav-item">
                         <NavLink className="nav-link" to="/Login">
-                          Student Login/Signin
+                          Student 
                         </NavLink>
                       </li>
                     )}
@@ -201,7 +201,7 @@ function Header() {
                     {all.user == "no" && (
                       <li className="nav-item">
                         <NavLink className="nav-link" to="/tlogin">
-                          Teacher Login/Signin
+                          Teacher 
                         </NavLink>
                       </li>
                     )}
