@@ -181,17 +181,11 @@ function Header() {
                     {all.user == "no" && (
                       <li className="nav-item">
                         <NavLink className="nav-link" to="/Login">
-                          Student Login
+                          Student Login/Signin
                         </NavLink>
                       </li>
                     )}
-                    {all.user == "no" && (
-                      <li className="nav-item">
-                        <NavLink className="nav-link" to="/Signin">
-                          Student Signin
-                        </NavLink>
-                      </li>
-                    )}
+
                     {all.user != "no" && (
                       <li
                         className="nav-item"
@@ -201,6 +195,13 @@ function Header() {
                       >
                         <NavLink className="nav-link" to="/">
                           Logout
+                        </NavLink>
+                      </li>
+                    )}
+                    {all.user == "no" && (
+                      <li className="nav-item">
+                        <NavLink className="nav-link" to="/tlogin">
+                          Teacher Login/Signin
                         </NavLink>
                       </li>
                     )}
