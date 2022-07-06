@@ -20,6 +20,9 @@ import {
 } from "firebase/firestore";
 
 import { addDoc, Timestamp } from "firebase/firestore";
+import CourseCard from "../Card/CourseCard";
+import CompiCard from "../Card/CompiCard";
+import CourseDetail from "../Details/CourseDetail";
 
 function Home() {
   const [schodata, setsch] = useState([]);
@@ -97,7 +100,8 @@ function Home() {
                 <span class="text-warning">Welcome to STUHELP !!</span>
               </h1>
               <p class="lead my-4 ">
-                Here you will register for course/compitition -- Teacher's can analyse each Student Evalution
+                Here you will register for course/compitition -- Teacher's can
+                analyse each Student Evalution
               </p>
               <p class="lead my-4 ">
                 Find your best Course and take advantage of it.
@@ -114,22 +118,27 @@ function Home() {
             </div>
 
             <a href="https://svgshare.com/s/gH0" className="right">
-              <img class="img-fluid  d-none d-sm-block" src="img/44.png" title="" />
+              <img
+                class="img-fluid  d-none d-sm-block"
+                src="img/44.png"
+                title=""
+              />
             </a>
           </div>
         </div>
       </section>
+     <CourseDetail/>
       {/* scholarship details filters */}
       <section class="bg-primary text-light p-5">
         <div class="container">
           <div class="d-md-flex justify-content-around align-items-center">
-            <h3 class="mb-3 mb-md-0 cc">Search Scholarship</h3>
+            <h3 class="mb-3 mb-md-0 cc">Search Course</h3>
 
             <div class="input-group news-input">
               <input
                 type="text"
                 class="form-control"
-                placeholder="Scholarship Name"
+                placeholder="Course Name"
                 value={search}
                 onChange={(e) => {
                   setsearch(e.target.value);

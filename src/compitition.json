@@ -1,0 +1,73 @@
+[
+  {
+    "name": "Bugs Bunny",
+    "Tagline": "Champions Are Never Born",
+    "no of participant": "1",
+    "Round": [
+      "Code Error Hunting / Bug Fixing Championship Again, 50% Students To Be Taken For Next Round",
+      "A Pattern / Object Will Be Provided To Students And They Have Code It. - Time-Based Evaluation. 50% To Be Taken For Next Round"    ],
+
+    "tag": "CS/IT",
+    "link": "https://github.com/jeet-1452001/udaan22-Images/blob/master/images/computer%20IT/Bugs%20Bunny.jpg?raw=true"
+  },
+  {
+    "name": "MoneyHeist",
+    "Tagline": "Let’s Dig It Out!",
+    "no of participant": "2",
+    "Round": [
+      "paper-Based Quiz",
+      "Treasure Hunt In Our College"
+    ],
+
+    "Tag": "non-tech",
+    "link": "https://github.com/jeet-1452001/udaan22-Images/blob/master/images/non%20tech/Money%20Heist.jpg?raw=true"
+  },
+  {
+    "name": "MathsPirate",
+    "Tagline": "Aye Aye Cap!!",
+    "no of participant": "2",
+    "Round": [
+      "A Team Needs To Perform Some Physical Activities Like Playing With A Ball, Rope Skipping, Jumping, Running, Etc. Simultaneously They Have To Solve Some Moderate-Level Math And Logical Questions.",
+      "Two Team Members Are Seating Opposite To Each Other Facing Their Back. One Has Laptop Screen Showing Some Geometrical Figure And Needs To Narrate It To The Other Team Member And He/She Needs To Draw It."
+         ],
+
+    "tag": "non-tech",
+    "link": "https://github.com/jeet-1452001/udaan22-Images/blob/master/images/non%20tech/Math%20-%20%CF%80Rates.jpg?raw=true"
+  },
+  {
+    "name": "Select * from Brain",
+    "Tagline": "Query Successfully Executed",
+    "no of participant": "2",
+    "Round": [
+      "Basic Online Quiz With Database Related Questions - 1hr Time Should Be Allotted 25% Students To Be Taken For Next Round",
+      "Design Database According To Requirement Provided By Us. - Perform Any 3 Moderate And 2 Advanced Queries, As Asked By Us - Time Based Evaluation 3 Winners To Be Selected"
+    ],
+
+    "tag": "CS/IT",
+    "link": "https://github.com/jeet-1452001/udaan22-Images/blob/master/images/computer%20IT/select%20brain.png?raw=true"
+  },
+  {
+    "name": "Spin E Web",
+    "Tagline": "Let's Code & Roll",
+    "no of participant": "3",
+    "Round": [
+      "opic Will Be Provided On The Spot. - Build A Static Webpage According To Requirements Mentioned In That Topic. - Each Team Will Be Allotted 1 Hr For Building And Source File Should Submitted In Assignment Created. Out Of Around 25 Teams, Top 10 Teams To Be Filtered For Next Round",
+      "A Common Topic Will Be Allocated To Every Team. - They Have To Build A Dynamic, Fully-Functioned Website With Backend. - Any Platform Can Be Used To Build Website. - Min Half Day Time Should Be Provided For It - 10 Mins Time Will Be Given To Each Team To Showcase Their Work. 3 Winner Teams Should Be Selected"
+    ],
+
+    "tag": "EL/EC",
+    "link": "https://github.com/jeet-1452001/udaan22-Images/blob/master/images/computer%20IT/Spin-e-Web.jpg?raw=true"
+  },
+  {
+    "name": "Coding Chefs",
+    "Tagline": "Chef Is Cooking Some Delicious Code",
+    "no of participant": "1",
+    "Round": [
+      "Code Relay - 3 Problem Statements Will Be Given To Team - Each Member Will Be Given 10 Mins In Different Interval. - Time And Problem-Solving Based Evaluation 50% To Be Taken For Next Round",
+      "Scavenger Hunt - Based On Code, Decode The Code And Find Some Object Or Place And Click Picture Of That - Time Based Evaluation Winner And Runner’s Up To Be Declared "
+    ],
+
+    "link": "https://github.com/jeet-1452001/udaan22-Images/blob/master/images/computer%20IT/coding%20chef.jpg?raw=true",
+    "tag": "CS/IT"
+  }
+]
