@@ -1,34 +1,29 @@
 import React, { useContext, useState } from "react";
-import { logcont } from "../../Loginsignincontext/context";
+import { logcont } from "../Loginsignincontext/context";
 import "./login.css";
 
 import Button from "@mui/material/Button";
 import { NavLink, Route, useNavigate } from "react-router-dom";
 import Alert from "@mui/material/Alert";
 
-function Login() {
-  const { login, user } = useContext(logcont);
+function Forgot() {
+  const { passremail, user } = useContext(logcont);
 
   const [email, setemail] = useState("");
-  const [pass, setpass] = useState("");
   const [err, seterr] = useState("");
+  const [sent, setsent] = useState(false);
 
   const navigate = useNavigate();
 
-  function loginuser() {
-    if (!email.includes(".com")) {
-      return seterr("Failed to Login.");
-    }
-
+  function sendmail() {
     seterr("");
-    login(email, pass)
-      .then((res) => {
-        // location.replace("/");
-        navigate("/");
-        window.location.reload();
+    setsent(false);
+    passremail(email)
+      .then(() => {
+        setsent(true);
       })
       .catch((err) => {
-        seterr("Login failed");
+        seterr("Some Error occured or User not exist try again.");
       });
   }
 
@@ -36,23 +31,31 @@ function Login() {
     <>
       <div class=" flex-r container logsign">
         <div class="flex-r login-wrapper">
-          <div class="login-text">
+          <div class="login-text asd">
             <div class="logo">
               <span>
                 <i class="fab fa-speakap"></i>
               </span>
-              <span>Scholar </span>
+              <span>STUHELP</span>
             </div>
-            <h1>Log In</h1>
-            <p>If you are authorized by Scholar then do login !!</p>
+            <h1>Forgot Password</h1>
+            <p>
+              Type your mail and get password reset link on mail (Check Spam
+              Also).
+            </p>
             {err && <Alert severity="error">{err}</Alert>}
-            <form class="flex-c foormforlogin">
+            {sent && (
+              <Alert severity="success">
+                Mail sent Successfully, Check inbox (Must check Spam).
+              </Alert>
+            )}
+            <form class="flex-c">
               <div class="input-box">
                 <span class="label">E-mail</span>
                 <div class=" flex-r input">
                   <input
                     type="text"
-                    placeholder="name@abc.com"
+                    placeholder="abc@gmail.com"
                     value={email}
                     onChange={(e) => {
                       setemail(e.target.value);
@@ -62,29 +65,14 @@ function Login() {
                 </div>
               </div>
 
-              <div class="input-box">
-                <span class="label">Password</span>
-                <div class="flex-r input">
-                  <input
-                    type="password"
-                    placeholder="8+ (a, A, 1, #)"
-                    value={pass}
-                    onChange={(e) => {
-                      setpass(e.target.value);
-                    }}
-                  />
-                  <i class="fas fa-lock"></i>
-                </div>
-              </div>
-
               <Button
                 variant="contained"
-                className="log"
+                className="log links"
                 onClick={() => {
-                  loginuser();
+                  sendmail();
                 }}
               >
-                Login
+                send
               </Button>
             </form>
           </div>
@@ -94,4 +82,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Forgot;

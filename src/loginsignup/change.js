@@ -1,34 +1,36 @@
 import React, { useContext, useState } from "react";
-import { logcont } from "../../Loginsignincontext/context";
+import { logcont } from "../Loginsignincontext/context";
 import "./login.css";
 
 import Button from "@mui/material/Button";
 import { NavLink, Route, useNavigate } from "react-router-dom";
 import Alert from "@mui/material/Alert";
 
-function Login() {
-  const { login, user } = useContext(logcont);
+function Forgot() {
+  const { updatepass, user } = useContext(logcont);
 
-  const [email, setemail] = useState("");
+  const [email, setemail] = useState(user.email);
   const [pass, setpass] = useState("");
+  const [cpass, setcpass] = useState("");
   const [err, seterr] = useState("");
 
   const navigate = useNavigate();
 
-  function loginuser() {
-    if (!email.includes(".com")) {
-      return seterr("Failed to Login.");
+  function resetpass() {
+    if (pass != cpass) {
+      return seterr("Password and Confirm password Must be same.");
+    } else if (pass.length < 6) {
+      return seterr("Password length must be at least 6.");
     }
 
     seterr("");
-    login(email, pass)
+    updatepass(pass)
       .then((res) => {
-        // location.replace("/");
+        alert("Your Password has been Successfully changed.");
         navigate("/");
-        window.location.reload();
       })
       .catch((err) => {
-        seterr("Login failed");
+        seterr("Some Error Occured Please try again.");
       });
   }
 
@@ -41,29 +43,25 @@ function Login() {
               <span>
                 <i class="fab fa-speakap"></i>
               </span>
-              <span>Scholar </span>
+              <span>Study Buddy</span>
             </div>
-            <h1>Log In</h1>
-            <p>If you are authorized by Scholar then do login !!</p>
+            <h1>Change Password</h1>
+            <p>
+              here you can change or reset your password and make it more
+              strong.
+            </p>
             {err && <Alert severity="error">{err}</Alert>}
-            <form class="flex-c foormforlogin">
+            <form class="flex-c">
               <div class="input-box">
-                <span class="label">E-mail</span>
+                <span class="label">Your E-mail (Read Only)</span>
                 <div class=" flex-r input">
-                  <input
-                    type="text"
-                    placeholder="name@abc.com"
-                    value={email}
-                    onChange={(e) => {
-                      setemail(e.target.value);
-                    }}
-                  />
+                  <input type="text" value={email} disabled />
                   <i class="fas fa-at"></i>
                 </div>
               </div>
 
               <div class="input-box">
-                <span class="label">Password</span>
+                <span class="label">Change Password</span>
                 <div class="flex-r input">
                   <input
                     type="password"
@@ -77,14 +75,29 @@ function Login() {
                 </div>
               </div>
 
+              <div class="input-box">
+                <span class="label">Retype Password</span>
+                <div class="flex-r input">
+                  <input
+                    type="password"
+                    placeholder="8+ (a, A, 1, #)"
+                    value={cpass}
+                    onChange={(e) => {
+                      setcpass(e.target.value);
+                    }}
+                  />
+                  <i class="fas fa-lock"></i>
+                </div>
+              </div>
+
               <Button
                 variant="contained"
                 className="log"
                 onClick={() => {
-                  loginuser();
+                  resetpass();
                 }}
               >
-                Login
+                Change
               </Button>
             </form>
           </div>
@@ -94,4 +107,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Forgot;

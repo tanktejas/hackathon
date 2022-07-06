@@ -1,33 +1,46 @@
 import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
-import { logcont } from "../logincontext/authcontext";
+// import { logcont } from "../logincontext/authcontext";
 
 import "../main.css";
 
 import "./plugins.min.css";
 
+import { logcont } from "../../Loginsignincontext/context";
+
 function Header() {
+  const { login, Logout } = useContext(logcont);
+
   const [navicon, setnav] = useState({ display: "none" });
   const [scho, setscho] = useState({ display: "none" });
   const [cont, setcont] = useState({ display: "none" });
-  const { user, logout } = useContext(logcont);
-  const [curruser, setuser] = useState(user == "no" ? null : user);
+  // const { user, logout } = useContext(logcont);
+  // const [curruser, setuser] = useState(user == "no" ? null : user);
 
   // for admin logout
-  const Logout = () => {
-    console.log("ok");
-    logout()
-      .then((ok) => {
-        setuser(null);
-      })
-      .catch((err) => {
-        alert(err);
-      });
+  // const Logout = () => {
+  //   console.log("ok");
+  //   logout()
+  //     .then((ok) => {
+  //       setuser(null);
+  //     })
+  //     .catch((err) => {
+  //       alert(err);
+  //     });
+  // };
+
+  // console.log(user);
+
+  const all = useContext(logcont);
+  if (all.user == undefined) {
+    return <h1>Loading...</h1>;
+  }
+  const Loguser = () => {
+    alert("You are Logout!");
+    Logout();
   };
-
-  console.log(user);
-
+  console.log(all.user);
   return (
     <>
       <header className="grip-header sticky">
@@ -70,7 +83,11 @@ function Header() {
                   style={navicon}
                 >
                   <ul className="navbar-nav ml-auto">
-                    
+                    <li className="nav-item ">
+                      <NavLink className="nav-link" to="/">
+                        Home
+                      </NavLink>
+                    </li>
 
                     <li
                       className="nav-item dropdown"
@@ -115,14 +132,12 @@ function Header() {
                         </a>
 
                         <a href="#" className="dropdown-item">
-                           communication skills courses
+                          communication skills courses
                         </a>
 
                         <a href="#" className="dropdown-item">
-                         Web3 / Marketing courses
+                          Web3 / Marketing courses
                         </a>
-
-                       
                       </div>
 
                       {/* </div>
@@ -130,16 +145,16 @@ function Header() {
                     </li>
 
                     <li className="nav-item ">
-                      <Link className="nav-link  " to="/QnA">
+                      <Link className="nav-link  " to="/">
                         Compitition
                       </Link>
                     </li>
 
-                    <li className="nav-item ">
-                    <NavLink className="nav-link" to="/">
-                      Result
-                    </NavLink>
-                  </li>
+                    <li className="nav-item">
+                      <NavLink className="nav-link" to="/result">
+                        Result
+                      </NavLink>
+                    </li>
 
                     <li className="nav-item dropdown">
                       <Link
@@ -151,45 +166,42 @@ function Header() {
                         </a>
                       </Link>
                     </li>
-
-                   
-
                     <li className="nav-item ">
                       <NavLink className="nav-link " to="/contact">
                         Contact
                       </NavLink>
                     </li>
-
-                    
-
-                    <li className="nav-item ">
-                      <NavLink className="nav-link" to="/">
-                        Student Login
-                      </NavLink>
-                    </li>
-                    {!curruser && (
+                    {all.user != "no" && (
                       <li className="nav-item">
-                        <NavLink className="nav-link" to="/login">
-                          Teacher Login
-                        </NavLink>
-                      </li>
-                    )}
-                    {curruser && (
-                      <li className="nav-item">
-                        <NavLink className="nav-link" to="/form">
+                        <NavLink className="nav-link" to="/dashboard">
                           Dashboard
                         </NavLink>
                       </li>
                     )}
-                    {curruser && (
+                    {all.user == "no" && (
                       <li className="nav-item">
-                        <button
-                          onClick={() => {
-                            Logout();
-                          }}
-                        >
-                          logout
-                        </button>
+                        <NavLink className="nav-link" to="/Login">
+                          Student Login
+                        </NavLink>
+                      </li>
+                    )}
+                    {all.user == "no" && (
+                      <li className="nav-item">
+                        <NavLink className="nav-link" to="/Signin">
+                          Student Signin
+                        </NavLink>
+                      </li>
+                    )}
+                    {all.user != "no" && (
+                      <li
+                        className="nav-item"
+                        onClick={() => {
+                          Loguser();
+                        }}
+                      >
+                        <NavLink className="nav-link" to="/">
+                          Logout
+                        </NavLink>
                       </li>
                     )}
                   </ul>

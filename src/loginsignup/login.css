@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+ 
+
+.flex-r,
+.flex-c {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.flex-c {
+  flex-direction: column;
+}
+.flex-r {   
+  flex-direction: row;
+}
+  
+.logsign {
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px 10px; 
+}
+
+.logsign{ 
+   background-color: #0095b6;
+   max-width: 100% !important;
+}
+ 
+.login-text{
+  box-shadow: 6px 6px 20px black;
+ border-radius: 25px;
+}
+
+.login-text {
+  background-color: #f6f6f6;
+  max-width: 400px;
+  /* min-height: 500px; */
+  min-height: 447px;
+  border-radius: 21px;
+  padding: 10px 20px;
+ 
+}
+
+.links{
+  margin-top: 63px;
+}
+.asd{
+  min-height: 100% !important;
+}
+
+.logo {
+  margin-bottom: 20px;
+  display: flex;
+    justify-content: center;
+}
+.login-text h1{
+  text-align: center;
+}
+.ff{
+ 
+}
+.logo span,
+.logo span i {
+  font-size: 25px;
+  color: #0d8aa7;
+}
+
+.login-text h1 {
+  font-size: 25px;
+}
+.login-text p {
+  font-size: 15px;
+  color: #000000b2;
+}
+
+form {
+  align-items: flex-start !important;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.input-box {
+  margin: 10px 0px;
+  width: 100%;
+}
+.label {
+  font-size: 15px;
+  color: black;
+  margin-bottom: 3px;
+}
+.input {
+  background-color: #f6f6f6;
+  padding: 0px 5px;
+  border: 2px solid rgba(216, 216, 216, 1);
+  border-radius: 10px;
+  overflow: hidden;
+  justify-content: flex-start;
+}
+
+.input input {
+  border: none;
+  outline: none;
+  padding: 10px 5px;
+  background-color: #f6f6f6;
+  flex: 1;
+}
+.input i {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.check span {
+  color: #000000b2;
+  font-size: 15px;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.btnlogin {
+  color: #ffffff;
+  border-radius: 30px;
+  /* padding: 10px 15px; */
+  background: linear-gradient(122.33deg, #68bed1 30.62%, #1e94e9 100%);
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  transition: all 0.3s linear;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+.extra-line {
+  font-size: 15px;
+  font-weight: 600;
+}
+.extra-line a {
+  color: #0095b6;
+}
+
+form .log{
+   margin: auto;
+}

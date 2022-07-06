@@ -1,34 +1,37 @@
 import React, { useContext, useState } from "react";
-import { logcont } from "../../Loginsignincontext/context";
+import { logcont } from "../Loginsignincontext/context";
 import "./login.css";
 
 import Button from "@mui/material/Button";
 import { NavLink, Route, useNavigate } from "react-router-dom";
+
 import Alert from "@mui/material/Alert";
 
-function Login() {
-  const { login, user } = useContext(logcont);
+function Signin() {
+  const navigate = useNavigate();
+
+  const { signin, user } = useContext(logcont);
 
   const [email, setemail] = useState("");
   const [pass, setpass] = useState("");
+  const [cpass, setcpass] = useState("");
   const [err, seterr] = useState("");
 
-  const navigate = useNavigate();
-
-  function loginuser() {
-    if (!email.includes(".com")) {
-      return seterr("Failed to Login.");
+  function signinuser() {
+    if (pass != cpass) {
+      return seterr("Sign in failed");
+    } else if (!email.includes(".com")) {
+      return seterr("Failed to Signin.");
     }
 
     seterr("");
-    login(email, pass)
+    signin(email, pass)
       .then((res) => {
-        // location.replace("/");
+        alert("you are succesfully signin");
         navigate("/");
-        window.location.reload();
       })
       .catch((err) => {
-        seterr("Login failed");
+        seterr("Failed to Signin.");
       });
   }
 
@@ -41,12 +44,12 @@ function Login() {
               <span>
                 <i class="fab fa-speakap"></i>
               </span>
-              <span>Scholar </span>
+              <span>STUHELP</span>
             </div>
-            <h1>Log In</h1>
-            <p>If you are authorized by Scholar then do login !!</p>
+            <h1>Sign In</h1>
+            <p>It's not long before you embark on this journey! </p>
             {err && <Alert severity="error">{err}</Alert>}
-            <form class="flex-c foormforlogin">
+            <form class="flex-c">
               <div class="input-box">
                 <span class="label">E-mail</span>
                 <div class=" flex-r input">
@@ -76,16 +79,39 @@ function Login() {
                   <i class="fas fa-lock"></i>
                 </div>
               </div>
-
+              <div class="input-box">
+                <span class="label">Confirm Password</span>
+                <div class="flex-r input">
+                  <input
+                    type="password"
+                    placeholder="8+ (a, A, 1, #)"
+                    value={cpass}
+                    onChange={(e) => {
+                      setcpass(e.target.value);
+                    }}
+                  />
+                  <i class="fas fa-lock"></i>
+                </div>
+              </div>
+              <div class="check">
+                <input type="checkbox" name="" id="" />
+                <span>I've read and agree with T&C</span>
+              </div>
               <Button
                 variant="contained"
                 className="log"
                 onClick={() => {
-                  loginuser();
+                  signinuser();
                 }}
               >
-                Login
+                Sign in
               </Button>
+              <span class="extra-line">
+                <span>Already have an account?</span>
+                <a>
+                  <NavLink to="/login"> Log In</NavLink>
+                </a>
+              </span>
             </form>
           </div>
         </div>
@@ -94,4 +120,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Signin;
