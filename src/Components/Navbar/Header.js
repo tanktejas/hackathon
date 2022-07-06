@@ -1,32 +1,41 @@
 import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
-import { logcont } from "../logincontext/authcontext";
+// import { logcont } from "../logincontext/authcontext";
 
 import "../main.css";
 
 import "./plugins.min.css";
 
+import { logcont } from "../../Loginsignincontext/context";
+
 function Header() {
+  const { login } = useContext(logcont);
+
   const [navicon, setnav] = useState({ display: "none" });
   const [scho, setscho] = useState({ display: "none" });
   const [cont, setcont] = useState({ display: "none" });
-  const { user, logout } = useContext(logcont);
-  const [curruser, setuser] = useState(user == "no" ? null : user);
+  // const { user, logout } = useContext(logcont);
+  // const [curruser, setuser] = useState(user == "no" ? null : user);
 
   // for admin logout
-  const Logout = () => {
-    console.log("ok");
-    logout()
-      .then((ok) => {
-        setuser(null);
-      })
-      .catch((err) => {
-        alert(err);
-      });
-  };
+  // const Logout = () => {
+  //   console.log("ok");
+  //   logout()
+  //     .then((ok) => {
+  //       setuser(null);
+  //     })
+  //     .catch((err) => {
+  //       alert(err);
+  //     });
+  // };
 
-  console.log(user);
+  // console.log(user);
+
+  const all = useContext(logcont);
+  if (all.user == undefined) {
+    return <h1>Loading...</h1>;
+  }
 
   return (
     <>
@@ -71,7 +80,7 @@ function Header() {
                 >
                   <ul className="navbar-nav ml-auto">
                     <li className="nav-item ">
-                      <NavLink className="nav-link" to="/">
+                      <NavLink className="nav-link" to="/login">
                         Home
                       </NavLink>
                     </li>
@@ -161,7 +170,28 @@ function Header() {
                         Contact
                       </NavLink>
                     </li>
-                    {!curruser && (
+                    {all.use != "no" && (
+                      <li className="nav-item">
+                        <NavLink className="nav-link" to="/dashboard">
+                          Dashboard
+                        </NavLink>
+                      </li>
+                    )}
+                    {all.use == "no" && (
+                      <li className="nav-item">
+                        <NavLink className="nav-link" to="/Login">
+                          Login
+                        </NavLink>
+                      </li>
+                    )} 
+                    {all.use == "no" && (
+                      <li className="nav-item">
+                        <NavLink className="nav-link" to="/Signin">
+                          Signin
+                        </NavLink>
+                      </li>  
+                    )}
+                    {/* {!curruser && (
                       <li className="nav-item">
                         <NavLink className="nav-link" to="/login">
                           Admin Login
@@ -185,7 +215,7 @@ function Header() {
                           logout
                         </button>
                       </li>
-                    )}
+                    )} */}
                   </ul>
                 </div>
               </nav>

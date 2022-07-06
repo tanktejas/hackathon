@@ -4,7 +4,7 @@ import "./index.css";
 import App from "./App";
 import "bootstrap/dist/css/bootstrap.css";
 
-import LogCompo from "./Components/logincontext/authcontext";
+import LogCompo from "./Loginsignincontext/context";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 

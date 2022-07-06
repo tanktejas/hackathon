@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { logcont } from "../../Loginsignincontext/context";
+import { logcont } from "../Loginsignincontext/context";
 import "./login.css";
 
 import Button from "@mui/material/Button";
@@ -23,12 +23,10 @@ function Login() {
     seterr("");
     login(email, pass)
       .then((res) => {
-        // location.replace("/");
         navigate("/");
-        window.location.reload();
       })
       .catch((err) => {
-        seterr("Login failed");
+        seterr("Failed to Login.");
       });
   }
 
@@ -41,12 +39,12 @@ function Login() {
               <span>
                 <i class="fab fa-speakap"></i>
               </span>
-              <span>Scholar </span>
+              <span>Study Buddy</span>
             </div>
             <h1>Log In</h1>
-            <p>If you are authorized by Scholar then do login !!</p>
+            <p>It's not long before you embark on this journey! </p>
             {err && <Alert severity="error">{err}</Alert>}
-            <form class="flex-c foormforlogin">
+            <form class="flex-c ff">
               <div class="input-box">
                 <span class="label">E-mail</span>
                 <div class=" flex-r input">
@@ -77,6 +75,10 @@ function Login() {
                 </div>
               </div>
 
+              <div class="check">
+                <NavLink to="/forgot">Forgot Password?</NavLink>
+              </div>
+
               <Button
                 variant="contained"
                 className="log"
@@ -86,6 +88,12 @@ function Login() {
               >
                 Login
               </Button>
+              <span class="extra-line">
+                <span>Don't have account?</span>
+                <a>
+                  <NavLink to="/signin"> Sign In</NavLink>
+                </a>
+              </span>
             </form>
           </div>
         </div>
