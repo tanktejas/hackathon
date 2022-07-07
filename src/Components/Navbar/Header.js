@@ -179,9 +179,9 @@ function Header() {
                     </li>
                     {all.user != "no" && (
                       <li className="nav-item">
-                        <NavLink className="nav-link" to="/dashboard">
+                        <a className="nav-link" href="https://dharmesh177.github.io/dashbaord/">
                           Dashboard
-                        </NavLink>
+                        </a>
                       </li>
                     )}
                     {all.user == "no" && (
