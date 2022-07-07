@@ -146,10 +146,11 @@ function Home() {
               <Card
                 name={ele.data().name}
                 eligiblity={ele.data().eligibility}
-                benefit={ele.data().outcome}
+                benefit={ele.data().objective}
                 deadline={ele.data().deadline}
                 viewlink={ele.id}
                 link={ele.data().link}
+                credit={ele.data().credit}
               />
             );
           })}

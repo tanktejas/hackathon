@@ -4,7 +4,7 @@ import "./card.css";
 import { Link } from "react-router-dom";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 
-function Card({ name, eligiblity, benefit, deadline, viewlink, link }) {
+function Card({ name, eligiblity, benefit, deadline, viewlink, link,credit }) {
   const url = `/scholarship/${viewlink}`;
 
   return (
@@ -31,11 +31,12 @@ function Card({ name, eligiblity, benefit, deadline, viewlink, link }) {
               <h6>{eligiblity[0]}</h6>
             </div>
             <div className="desc">
-              <h5>Benefits :</h5>
+              <h5>Objective :</h5>
               <h6 className="pt-2 mb-5 text-[15px] text-gray-700">
-                {benefit[0]}
+                {benefit}
               </h6>
             </div>
+            
             <div className="buttforsc">
               <Link style={{ textDecoration: "none" }} to={url}>
                 <button> View </button>

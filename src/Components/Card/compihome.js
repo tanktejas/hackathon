@@ -11,6 +11,7 @@ import {
 } from "firebase/firestore";
 
 import CompiCard from "./CompiCard";
+import Footer from "../footer/footer";
 
 function Compihome() {
   const [data, setsch] = useState([]);
@@ -97,6 +98,7 @@ function Compihome() {
           );
         })}
       </div>
+      <Footer/>
     </>
   );
 }

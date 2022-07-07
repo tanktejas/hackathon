@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext ,useEffect} from "react";
 import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 // import { logcont } from "../logincontext/authcontext";
@@ -15,6 +15,11 @@ function Header() {
   const [navicon, setnav] = useState({ display: "none" });
   const [scho, setscho] = useState({ display: "none" });
   const [cont, setcont] = useState({ display: "none" });
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    setTimeout((element) => {}, 0);
+    // alert(props.index);
+  }, []);
   // const { user, logout } = useContext(logcont);
   // const [curruser, setuser] = useState(user == "no" ? null : user);
 
@@ -41,6 +46,7 @@ function Header() {
     Logout();
   };
   console.log(all.user);
+ 
   return (
     <>
       <header className="grip-header sticky">
