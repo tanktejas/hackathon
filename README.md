@@ -41,6 +41,10 @@
 ![Screenshot (16)](https://user-images.githubusercontent.com/77108255/177700248-55032d39-dbff-48d4-a555-713fc22809b5.png)
 
  
+### `Result Page`
+![Screenshot (20)](https://user-images.githubusercontent.com/77108255/177704612-aa13175d-168b-4463-a0db-02942ee173dc.png)
+
+ 
 ### `Stundent / Teacher Login/signin Page`
 
 ![Screenshot (18)](https://user-images.githubusercontent.com/77108255/177699456-94434212-efb1-475b-bc79-f839d40bb8f4.png)
