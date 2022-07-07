@@ -1,4 +1,4 @@
-import React, { useState ,useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./footer.css";
 
@@ -39,7 +39,9 @@ function Footer() {
                 <div>
                   <i class="fa fa-envelope"></i>
                   <p>
-                    <a href="mailto:stuhelpofficial@gmail.com">Stuhelpofficial@gmail.com</a>
+                    <a href="mailto:stuhelpofficial@gmail.com">
+                      Stuhelpofficial@gmail.com
+                    </a>
                   </p>
                 </div>
               </div>
@@ -93,40 +95,42 @@ function Footer() {
                 Quick Links
               </h5>
               <ul style={width <= 987 ? ql : {}}>
-              <Link  to="/">
-                <li>
-                  <a href="#" className="lear-more-l">
-                    Home
-                  </a>
-                </li>
+                <Link to="/">
+                  <li>
+                    <a href="#" className="lear-more-l">
+                      Home
+                    </a>
+                  </li>
                 </Link>
-                <br/>
-                <Link  to="/login"><li>
-                <a href="#" className="lear-more-l">
-                 Student Login
-                </a>
-              </li></Link>
-              <Link  to="/tlogin">
-                <li className="hiring-link blink-menu">
-                  <a href="#" className="lear-more-l blink-active">
-                    Teacher Login
-                  </a>{" "}
-                  <span className="hiring">We Are Hiring</span>
-                </li>
+                <br />
+                <Link to="/login">
+                  <li>
+                    <a href="#" className="lear-more-l">
+                      Student Login
+                    </a>
+                  </li>
                 </Link>
-                <Link  to="/About-Scholar">
-                <li>
-                  <a href="#" className="lear-more-l">
-                    About Us
-                  </a>
-                </li>
+                <Link to="/tlogin">
+                  <li className="hiring-link blink-menu">
+                    <a href="#" className="lear-more-l blink-active">
+                      Teacher Login
+                    </a>{" "}
+                    <span className="hiring">We Are Hiring</span>
+                  </li>
                 </Link>
-                <Link  to="/contact">
-                <li>
-                  <a href="#" className="lear-more-l">
-                    COntact Us
-                  </a>
-                </li>
+                <Link to="/About-Scholar">
+                  <li>
+                    <a href="#" className="lear-more-l">
+                      About Us
+                    </a>
+                  </li>
+                </Link>
+                <Link to="/contact">
+                  <li>
+                    <a href="#" className="lear-more-l">
+                      COntact Us
+                    </a>
+                  </li>
                 </Link>
               </ul>
             </div>
@@ -182,40 +186,40 @@ function Footer() {
                 Foreign Study Helper
               </h5>
               <ul style={width <= 987 ? is : {}}>
-              <Link  to="/study-at-germany">
-                <li>
-                  <a href="#" className="lear-more-l">
-                    Study at germany
-                  </a>
-                </li>
+                <Link to="/study-at-germany">
+                  <li>
+                    <a href="#" className="lear-more-l">
+                      Study at germany
+                    </a>
+                  </li>
                 </Link>
-                <Link  to="/study-at-us">
-                <li>
-                  <a href="#" className="lear-more-l">
-                    Study at United State
-                  </a>
-                </li>
+                <Link to="/study-at-us">
+                  <li>
+                    <a href="#" className="lear-more-l">
+                      Study at United State
+                    </a>
+                  </li>
                 </Link>
-                <Link  to="/study-at-ukrain">
-                <li>
-                  <a href="#" className="lear-more-l">
-                    Study at Ukraine
-                  </a>
-                </li>
+                <Link to="/study-at-ukrain">
+                  <li>
+                    <a href="#" className="lear-more-l">
+                      Study at Ukraine
+                    </a>
+                  </li>
                 </Link>
-                <Link  to="/study-at-canada">
-                <li>
-                  <a href="#" className="lear-more-l">
-                    Study at Canada
-                  </a>
-                </li>
+                <Link to="/study-at-canada">
+                  <li>
+                    <a href="#" className="lear-more-l">
+                      Study at Canada
+                    </a>
+                  </li>
                 </Link>
-                <Link  to="/study-at-rusia">
-                <li>
-                  <a href="#" className="lear-more-l">
-                    Study at Rusia
-                  </a>
-                </li>
+                <Link to="/study-at-rusia">
+                  <li>
+                    <a href="#" className="lear-more-l">
+                      Study at Rusia
+                    </a>
+                  </li>
                 </Link>
               </ul>
             </div>
@@ -234,44 +238,43 @@ function Footer() {
                 Our's Compitition
               </h5>
               <ul style={width <= 987 ? rs : {}}>
-              <Link  to="/compihome">
-                <li>
-                  <a href="#" className="lear-more-l">
-                    Select * from brain
-                  </a>
-                </li>
+                <Link to="/compihome">
+                  <li>
+                    <a href="#" className="lear-more-l">
+                      Select * from brain
+                    </a>
+                  </li>
                 </Link>
-                <Link  to="/study-at-canada">
-                <li>
-                  <a href="#" className="lear-more-l">
-                  Spin E Web
-                  </a>
-                </li>
+                <Link to="/study-at-canada">
+                  <li>
+                    <a href="#" className="lear-more-l">
+                      Spin E Web
+                    </a>
+                  </li>
                 </Link>
-                <br/>
-                <Link  to="/study-at-canada">
-                <li>
-                  <a href="#" className="lear-more-l">
-                   MoneyHeist 
-                  </a>
-                </li>
-                
+                <br />
+                <Link to="/study-at-canada">
+                  <li>
+                    <a href="#" className="lear-more-l">
+                      MoneyHeist
+                    </a>
+                  </li>
                 </Link>
-                <br/>
-                <Link  to="/study-at-canada">
-                <li>
-                  <a href="#" className="lear-more-l">
-                    Maths Pirates
-                  </a>
-                </li>
+                <br />
+                <Link to="/study-at-canada">
+                  <li>
+                    <a href="#" className="lear-more-l">
+                      Maths Pirates
+                    </a>
+                  </li>
                 </Link>
-                <br/>
-                <Link  to="/study-at-canada">
-                <li>
-                  <a href="#" className="lear-more-l">
-                  Bug Bunny
-                  </a>
-                </li>
+                <br />
+                <Link to="/study-at-canada">
+                  <li>
+                    <a href="#" className="lear-more-l">
+                      Bug Bunny
+                    </a>
+                  </li>
                 </Link>
               </ul>
             </div>
@@ -290,63 +293,51 @@ function Footer() {
                 Imp !!
               </h5>
               <ul style={width <= 987 ? ex : {}}>
-              <Link  to="/ViewAllScholarships">
-                <li>
-                  <a href="#" className="lear-more-l">
-                    Courses
-                  </a>
-                </li>
+                <Link to="/ViewAllScholarships">
+                  <li>
+                    <a href="#" className="lear-more-l">
+                      Courses
+                    </a>
+                  </li>
                 </Link>
-                <br/>
-                <Link  to="/compihome">
-                <li>
-                  <a href="#" className="lear-more-l">
-                   Compitition
-                  </a>
-                </li>
+                <br />
+                <Link to="/compihome">
+                  <li>
+                    <a href="#" className="lear-more-l">
+                      Compitition
+                    </a>
+                  </li>
                 </Link>
-                <br/>
-                
-                <Link  to="/Team">
-                <li>
-                  <a href="#" className="lear-more-l">
-                    Our Team
-                  </a>
-                </li>
+                <br />
+
+                <Link to="/Team">
+                  <li>
+                    <a href="#" className="lear-more-l">
+                      Our Team
+                    </a>
+                  </li>
                 </Link>
-                <br/>
-                <Link  to="/career">
-                <li>
-                  <a href="#" className="lear-more-l">
-                    Career
-                  </a>
-                </li>
+                <br />
+                <Link to="/career">
+                  <li>
+                    <a href="#" className="lear-more-l">
+                      Career
+                    </a>
+                  </li>
                 </Link>
-                <br/>
-                <Link  to="/result">
-                <li>
-                  <a href="#" className="lear-more-l">
-                    Results
-                  </a>
-                </li>
+                <br />
+                <Link to="/result">
+                  <li>
+                    <a href="#" className="lear-more-l">
+                      Results
+                    </a>
+                  </li>
                 </Link>
               </ul>
             </div>
           </div>
           <div className="col-md-12 col-sm-12 col-xs-12 copy-right text-center">
             <p>
-              <a
-                href="https://www.dmca.com/Protection/Status.aspx?ID=b77fb9ca-2075-44ae-9d84-a87cbe917c18&amp;refurl=#9"
-                title="DMCA.com Protection Status"
-                className="dmca-badge"
-              >
-                <img
-                  src="https://images.dmca.com/Badges/dmca-badge-w100-5x1-03.png?ID=b77fb9ca-2075-44ae-9d84-a87cbe917c18"
-                  alt="DMCA.com Protection Status"
-                  width="100"
-                  height="20"
-                />
-              </a>
               <span>
                 © 2022
                 <a href="#" target="_new">
