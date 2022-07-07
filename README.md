@@ -9,8 +9,11 @@
       Firebase ( as a Database, Backend, Authentication (Login and signin) ).
       
       REST API ( Using Firebase with firestore )
+         
+     implemented search functionality using React with Elastic way.
       
-      implemented search functionality using React with Elastic way.
+     implement dashboard for teachers 
+          - when teache do login then he/she can she their dashboard ( see on below images or login on live site as s teacher ans see. )
 
 ### Live App Link :  https://stuhelp-by-tejas-and-dharmesh.vercel.app/
 ### Github Link : https://github.com/tanktejas/hackathon
@@ -58,5 +61,9 @@
 ![Screenshot (18)](https://user-images.githubusercontent.com/77108255/177699456-94434212-efb1-475b-bc79-f839d40bb8f4.png)
 ![Screenshot (19)](https://user-images.githubusercontent.com/77108255/177699461-f5a9c825-e483-4019-b2cf-f1dcf068f6b2.png)
 
+### `Teacher Dashbord ( Black and White Theme )`
+
+![Screenshot (21)](https://user-images.githubusercontent.com/77108255/177715473-683be7f9-7473-46b8-93bb-b85cf8915b0e.png)
+![Screenshot (22)](https://user-images.githubusercontent.com/77108255/177715503-d7b1f772-dbea-475e-b28f-d405056c94a7.png)
 
 ### Developed by Tejas and Dharmesh.
