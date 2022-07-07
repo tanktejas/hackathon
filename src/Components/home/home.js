@@ -61,25 +61,6 @@ function Home() {
       });
     }
 
-    if (isHandi) {
-      temp = temp.filter((ele) => {
-        return ele.data().isHandi;
-      });
-    }
-
-    if (ismilitry) {
-      temp = temp.filter((ele) => {
-        return ele.data().isMilitry;
-      });
-    }
-
-    if (category != "all") {
-      console.log(1);
-      temp = temp.filter((ele) => {
-        console.log(ele.data().category.toLowerCase());
-        return ele.data().category.toLowerCase() == category;
-      });
-    }
     let dd = temp;
     if (dd.length > 6) dd = dd.slice(0, 6);
 
@@ -127,7 +108,6 @@ function Home() {
           </div>
         </div>
       </section>
-     <CourseDetail/>
       {/* scholarship details filters */}
       <section class="bg-primary text-light p-5">
         <div class="container">
