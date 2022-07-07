@@ -93,7 +93,7 @@ function Home() {
                   data-bs-toggle="modal"
                   data-bs-target="#Enroll"
                 >
-                  All scholarships
+                  All Courses
                 </button>
               </Link>
             </div>
@@ -139,7 +139,7 @@ function Home() {
       </section>
 
       <section class="" id="services">
-        <h1 class="section-title text-center">All Scholarships</h1>
+        <h1 class="section-title text-center">All Courses</h1>
         <div class="container">
           {schodata.map((ele) => {
             return (
