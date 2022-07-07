@@ -68,11 +68,11 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Home />}></Route>
           <Route exact path="/compihome" element={<Compihome />}></Route>
-          <Routes
+          <Route
             exact
             path="/ViewAllScholarships"
             element={<AllScho />}
-          ></Routes>
+          ></Route>
           <Route exact path="/About-Scholar" element={<AboutUsPage />}></Route>
           <Route exact path="/Team" element={<Team />}></Route>
           <Route exact path="/scholarship-info" element={<Details />}></Route>

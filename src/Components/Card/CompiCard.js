@@ -60,7 +60,7 @@ export default function CompiCard({
 
           <div className="col-md-4">
             <img
-              src="https://github.com/jeet-1452001/udaan22-Images/blob/master/images/computer%20IT/Bugs%20Bunny.jpg?raw=true"
+              src={link}
               alt=""
               className="w-full funnn h-auto  rounded-t-lg"
             />
