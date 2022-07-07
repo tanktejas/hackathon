@@ -3,7 +3,7 @@
 ### This is STUHELP Platfrom which consist various courses and competition for student to improve their skills and make them competitive. 
 ### we have lots of feature and functionality so make sure you visit every possible corner.
 
-### Techs-tack Used :
+### Tech-stack Used :
       Reactjs ( as a frontend ) 
       
       Firebase ( as a Database, Backend, Authentication (Login and signin) ).
