@@ -10,8 +10,10 @@ export default function CompiCard({
   participant,
   tag,
 }) {
+
   return (
     <>
+     
       <div className="blg m-10 okk" style={{ backgroundColor: "#bbc7ff80" }}>
         <div class="row oww">
           <div class="col-md-8">
