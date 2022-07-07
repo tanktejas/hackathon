@@ -28,23 +28,22 @@ import { collection, addDoc, Timestamp } from "firebase/firestore";
 // import { db } from "./Loginsignincontext/firebase";
 import { db } from "./ff";
 
-import data from "./course.json";
+import data from "./compitition.json";
+
+import Compihome from "./Components/Card/compihome";
 
 function App() {
   const all = useContext(logcont);
 
   // useEffect(() => {
-  //   console.log(data);
   //   function fn() {
   //     data.map(async (item) => {
-  //       await addDoc(collection(db, "courses"), {
+  //       await addDoc(collection(db, "competition"), {
   //         name: item.name,
-  //         deadline: item.deadline,
-  //         eligibility: item.eligibility,
-  //         objective: item.objective,
-  //         outcome: item.outcome,
-  //         credit: item.credit,
-  //         Refrences: item.Refrences,
+  //         Tagline: item.Tagline,
+  //         participant: item.participant,
+  //         Round: item.Round,
+  //         tag: item.tag,
   //         link: item.link,
   //       })
   //         .then((result) => {
@@ -55,7 +54,7 @@ function App() {
   //         });
   //     });
   //   }
-  //   // fn();
+  //   fn();
   // }, []);
 
   if (all.user == undefined) {
@@ -79,7 +78,8 @@ function App() {
           <Route exact path="/login" element={<Login />}></Route>
           <Route exact path="/tlogin" element={<TeacherLogin />}></Route>
           <Route exact path="/tsignin" element={<TeacherSign />}></Route>
-
+          <Route exact path="/compihome" element={<Compihome />}></Route>
+ 
           <Route
             exact
             path="/scholarship/:schoid"

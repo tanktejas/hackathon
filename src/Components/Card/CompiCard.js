@@ -2,24 +2,27 @@ import React, { useState } from "react";
 import "./allblog.css";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-export default function CompiCard(props) {
-  const [classn, setStyle] = useState(props.classn);
+export default function CompiCard({
+  name,
+  Tagline,
+  link,
+  Round,
+  participant,
+  tag,
+}) {
   return (
     <>
-      <div className="blg m-10" style={{ backgroundColor: "#bbc7ff80" }}>
-        <div class="row">
+      <div className="blg m-10 okk" style={{ backgroundColor: "#bbc7ff80" }}>
+        <div class="row oww">
           <div class="col-md-8">
             <div className="blogcont">
-              <h2>Bugs Bunny</h2>
+              <h2>{name}</h2>
               <p>
                 {" "}
                 <div class="redd">Tagline</div>
                 <div class="merge">
                   <ChevronRightIcon />
-                  <li style={{ listStyle: "none" }}>
-                    {" "}
-                    Champions Are Never Born
-                  </li>
+                  <li style={{ listStyle: "none" }}> {tag}</li>
                 </div>{" "}
               </p>
 
@@ -27,27 +30,18 @@ export default function CompiCard(props) {
                 <div class="redd">Round 1.</div>
                 <div class="merge">
                   <ChevronRightIcon />
-                  <li style={{ listStyle: "none" }}>
-                    {" "}
-                    Code Error Hunting / Bug Fixing Championship Again, 50%
-                    Students To Be Taken For Next Round{" "}
-                  </li>
+                  <li style={{ listStyle: "none" }}> {Round[0]}</li>
                 </div>
                 <br />
                 <div class="redd">Round 2.</div>{" "}
                 <div class="merge">
                   <ChevronRightIcon />
-                  <li style={{ listStyle: "none" }}>
-                    {" "}
-                    A Pattern / Object Will Be Provided To Students And They
-                    Have Code It. - Time-Based Evaluation. 50% To Be Taken For
-                    Next Round{" "}
-                  </li>
+                  <li style={{ listStyle: "none" }}>{Round[1]}</li>
                 </div>{" "}
                 <br />
               </p>
               <p>
-                <div class="redd">No of Participant - 2</div>
+                <div class="redd">No of Participant - {participant}</div>
               </p>
 
               <div
