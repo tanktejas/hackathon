@@ -38,6 +38,7 @@ import data from "./compitition.json";
 import Compihome from "./Components/Card/compihome";
 import Dataform from "./Components/dataform/dataform"
 
+
 function App() {
   const all = useContext(logcont);
   useEffect(() => {
@@ -88,6 +89,7 @@ function App() {
           <Route exact path="/tsignin" element={<TeacherSign />}></Route>
 
           <Route exact path="/result" element={<Dataform/>}></Route>
+
           <Route exact path="/study-at-rusia" element={<StudyAtR/>}></Route>
           <Route exact path="/study-at-ukrain" element={<StudyAtUK/>}></Route>
           <Route exact path="/study-at-germany" element={<StudyAtG/>}></Route>
