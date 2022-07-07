@@ -67,19 +67,19 @@ function App() {
         <Header />
         <Routes>
           <Route exact path="/" element={<Home />}></Route>
-          <Route
+          <Route exact path="/compihome" element={<Compihome />}></Route>
+          <Routes
             exact
             path="/ViewAllScholarships"
             element={<AllScho />}
-          ></Route>
+          ></Routes>
           <Route exact path="/About-Scholar" element={<AboutUsPage />}></Route>
           <Route exact path="/Team" element={<Team />}></Route>
           <Route exact path="/scholarship-info" element={<Details />}></Route>
           <Route exact path="/login" element={<Login />}></Route>
           <Route exact path="/tlogin" element={<TeacherLogin />}></Route>
           <Route exact path="/tsignin" element={<TeacherSign />}></Route>
-          <Route exact path="/compihome" element={<Compihome />}></Route>
- 
+
           <Route
             exact
             path="/scholarship/:schoid"
