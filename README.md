@@ -8,6 +8,8 @@
       Firebase ( as a Database, Backend, Authentication (Login and signin) ).
       
       REST API ( Using Firebase with firestore )
+      
+      implemented search functionality using React with Elastic way.
 
 ### Live App Link :  https://stuhelp-by-tejas-and-dharmesh.vercel.app/
 ### Github Link : https://github.com/tanktejas/hackathon
