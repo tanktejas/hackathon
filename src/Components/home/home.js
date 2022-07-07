@@ -139,17 +139,18 @@ function Home() {
       </section>
 
       <section class="" id="services">
-        <h1 class="section-title text-center">All Scholarships</h1>
+        <h1 class="section-title text-center">All Course</h1>
         <div class="container">
           {schodata.map((ele) => {
             return (
               <Card
                 name={ele.data().name}
                 eligiblity={ele.data().eligibility}
-                benefit={ele.data().outcome}
+                benefit={ele.data().objective}
                 deadline={ele.data().deadline}
                 viewlink={ele.id}
                 link={ele.data().link}
+                credit={ele.data().credit}
               />
             );
           })}

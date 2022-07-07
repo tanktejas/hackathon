@@ -1,6 +1,7 @@
 import "./App.css";
 import Navbar from "./Components/Navbar/Navbar";
 import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
+import React from "react";
 import { HashRouter } from "react-router-dom";
 import Home from "./Components/home/home";
 import Header from "./Components/Navbar/Header";
@@ -9,7 +10,11 @@ import AllScho from "./Components/home/AllScho";
 import Login from "./loginsignup/login";
 import Signin from "./loginsignup/signin";
 // import Logout from "./loginsignup/change";
-
+import StudyAtG from "./Components/study/StudyAtR.js";
+import StudyAtR from "./Components/study/StudyAtR.js";
+import StudyAtUK from "./Components/study/StudyAtUK";
+import StudyAtCa from "./Components/study/StudyAtCa";
+import StudyAtU from "./Components/study/StudyAtU.js";
 import Team from "./Components/Team/Team";
 import Details from "./Components/Details/Details";
 import AllCard from "./Components/Scholarship detail/schodetail";
@@ -35,6 +40,11 @@ import Dataform from "./Components/dataform/dataform"
 
 function App() {
   const all = useContext(logcont);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    setTimeout((element) => {}, 0);
+    // alert(props.index);
+  }, []);
 
   // useEffect(() => {
   //   function fn() {
@@ -82,7 +92,11 @@ function App() {
           <Route exact path="/tsignin" element={<TeacherSign />}></Route>
 
           <Route exact path="/result" element={<Dataform/>}></Route>
-
+          <Route exact path="/study-at-rusia" element={<StudyAtR/>}></Route>
+          <Route exact path="/study-at-ukrain" element={<StudyAtUK/>}></Route>
+          <Route exact path="/study-at-germany" element={<StudyAtG/>}></Route>
+          <Route exact path="/study-at-canada" element={<StudyAtCa/>}></Route>
+          <Route exact path="/study-at-us" element={<StudyAtU/>}></Route>
           <Route
             exact
             path="/scholarship/:schoid"
