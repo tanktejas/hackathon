@@ -27,12 +27,29 @@
 .cardmain{
     width: 329px !important;
 }
-.cardmain img{
-    height: auto;
+.cardmain img{ 
+        object-fit: revert !important; 
+        height: 33% !important;
 }
 .bodypart .eligi ul{
     /* display: flex;
     justify-content: center;  */
+}
+    
+.okk{
+    box-shadow: 3px 3px 13px #403c3c;
+    background-color: #f6f9f2 !important;
+    border: none !important;
+}
+@media (max-width:1115px) {
+    .oww div{
+        width: 94%;
+        margin: 5px;
+    }
+    .oww{
+        display: flex;
+        justify-content: center;
+    }
 }
 .buttforsc{
     display: flex;

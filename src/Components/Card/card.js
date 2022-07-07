@@ -4,16 +4,16 @@ import "./card.css";
 import { Link } from "react-router-dom";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 
-function Card({ name, eligiblity, benefit, deadline, viewlink }) {
+function Card({ name, eligiblity, benefit, deadline, viewlink, link }) {
   const url = `/scholarship/${viewlink}`;
 
   return (
     <>
       <div className="bg-white w-72 shadow-lg rounded-lg cardmain">
         <img
-          src="https://bigeye.ug/wp-content/uploads/2016/05/Couple-travel.jpg"
+          src={link}
           alt=""
-          className="w-full h-44 object-cover rounded-t-lg"
+          className="w-full h-50 object-cover rounded-t-lg"
         />
         <div className="px-6 py-3 sbody">
           <div className="bodypart">

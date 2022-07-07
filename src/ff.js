@@ -1,5 +1,5 @@
 // Import the functions you need from the SDKs you need
-import { getApp, initializeApp } from "firebase/app";
+import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
@@ -9,20 +9,19 @@ import firebase from "firebase/app";
 // import * as firebase from "firebase";
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCRWnkv8bHq2QJw8AeGGmifiIiEJP0t70Y",
-  authDomain: "temp-7cd58.firebaseapp.com",
-  projectId: "temp-7cd58",
-  storageBucket: "temp-7cd58.appspot.com",
-  messagingSenderId: "559604025037",
-  appId: "1:559604025037:web:2e3fe6b7b49401ab790b84",
-  measurementId: "G-KKQKL71375",
+  apiKey: "AIzaSyByinTkn3KOLqZ_khGUU1ugRq7LgZEPCiE",
+  authDomain: "hackathon-bef00.firebaseapp.com",
+  projectId: "hackathon-bef00",
+  storageBucket: "hackathon-bef00.appspot.com",
+  messagingSenderId: "128881263717",
+  appId: "1:128881263717:web:ac9e6adf78c82a2231b28c",
+  measurementId: "G-YZ4Y3DJFWH",
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig, "app");
 // console.log(firebase);
 // const app = firebase.app();
 const db = getFirestore(app);
-const auth = getAuth(app);
 
-export { db, auth };
+export { db };

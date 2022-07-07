@@ -23,17 +23,20 @@ import { Link } from "react-router-dom";
 import { color } from "@mui/system";
 
 function Details({ data }) {
-  const [scholar, setscho] = useState([]);
+  const [scholar, setscho] = useState(null);
 
   useEffect(() => {
-    const q = query(collection(db, "Scholarships"));
-    onSnapshot(q, (qS) => {
-      let data = qS.docs;
-      setscho(data.slice(0, 2));
-    });
+    // const q = query(collection(db, "courses"));
+    // onSnapshot(q, (qS) => {
+    //   let data = qS.docs;
+    //   console.log(data);
+    //   setscho(data.slice(0, 2));
+    // });
+
+    setscho(data);
   }, []);
 
-  if (scholar.length == 0) {
+  if (scholar == null) {
     return (
       <>
         <h1>Loading...</h1>
@@ -41,7 +44,6 @@ function Details({ data }) {
     );
   }
   console.log(scholar);
-
   return (
     <div>
       <div class=" ccc">
@@ -51,13 +53,6 @@ function Details({ data }) {
             <div class="fleep">
               <h4>Last Updated..</h4>
               <h6>25 min ago</h6>
-            </div>
-          </div>
-          <div class="siz25 itemm">
-            <EmojiEventsIcon />
-            <div class="fleep">
-              <h4>Region</h4>
-              <h6>{data.region.toUpperCase()}</h6>
             </div>
           </div>
           <div class="siz25 itemm">
@@ -72,8 +67,8 @@ function Details({ data }) {
           <div class="siz25 itemm">
             <CalendarMonthIcon />
             <div class="fleep">
-              <h4>Deadline</h4>
-              <h6>{data.closeingDate}</h6>
+              <h4>deadline</h4>
+              <h6>{data.deadline}</h6>
             </div>
           </div>
         </div>
@@ -95,7 +90,7 @@ function Details({ data }) {
                   <article class="brandScholarshipDetails_contentBoxWrapper___GQGi">
                     <span class="brandScholarshipDetails_calendarIcon__2-5hX">
                       <CalendarMonthIcon />
-                      <p>Deadline : {data.closeingDate}</p>
+                      <p>Deadline : {data.deadline}</p>
                     </span>
                     <article class="brandScholarshipDetails_sectionBox__yP4qi brandScholarshipDetails_firstElem__2pjgC">
                       <span class="brandScholarshipDetails_sectionTitle__2t6sl  sec-t">
@@ -103,7 +98,7 @@ function Details({ data }) {
                       </span>
                       <div>
                         <ul>
-                          {data.eligiblity.map((item) => {
+                          {data.eligibility.map((item) => {
                             return (
                               <>
                                 <div class="merge">
@@ -122,7 +117,7 @@ function Details({ data }) {
                       </span>
                       <div>
                         <ul>
-                          {data.benefit.map((item) => {
+                          {data.outcome.map((item) => {
                             return (
                               <>
                                 <div class="merge">
@@ -141,7 +136,7 @@ function Details({ data }) {
                       </span>
                       <div>
                         <ul>
-                          {data.document.map((item) => {
+                          {data.Refrences.map((item) => {
                             return (
                               <>
                                 <div class="merge">
@@ -156,24 +151,22 @@ function Details({ data }) {
                     </article>
                     <article class="brandScholarshipDetails_sectionBox__yP4qi">
                       <span class="brandScholarshipDetails_sectionTitle__2t6sl sec-t">
-                        How can you apply?
+                        How can you Take Course?
                       </span>
                       <div>
-                        <p>Click on the 'Apply Now' button below.</p>
+                        <p>Click on the 'Take Now' button below.</p>
                       </div>
                     </article>
                     <article class="centerItem ">
                       <a href={data.link}>
-                        <button class="button2 get-a-demo m-2">
-                          Apply Now
-                        </button>
+                        <button class="button2 get-a-demo m-2">Take Now</button>
                       </a>
                       <a
                         class="button2 get-a-demo m-2"
                         href={data.link}
                         target="_blank"
                       >
-                        Check Result
+                        View Review
                       </a>
                     </article>
                   </article>
@@ -182,29 +175,6 @@ function Details({ data }) {
             </ul>
           </article>
         </div>
-
-        <section class=" featuredScholarshipsDefault_featuredScholarshipsDefault__25PDG">
-          <h4>Featured Scholarships</h4>
-          <div class="cardd brandScholarshipDetails_content__1uj_y">
-            {/* //scholarship card  */}
-            <div className="op">
-              {scholar.map((ele) => {
-                return (
-                  <Card
-                    name={ele.data().name}
-                    eligiblity={ele.data().eligiblity}
-                    benefit={ele.data().benefit}
-                    deadline={ele.data().closeingDate}
-                    viewlink={ele.id}
-                  />
-                );
-              })}
-            </div>
-            <Link className="ioo" to="/ViewAllScholarships">
-              see more..
-            </Link>
-          </div>
-        </section>
       </div>
 
       <div class="scholarshipDetails_box__3aJoB scholarshipDetails_paddingB__HPwi8 ">

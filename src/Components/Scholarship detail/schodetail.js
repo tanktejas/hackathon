@@ -8,7 +8,7 @@ import {
   doc,
 } from "firebase/firestore";
 
-import { db } from "../DB/firebase";
+import { db } from "../../ff";
 
 import { addDoc, Timestamp } from "firebase/firestore";
 
@@ -19,7 +19,7 @@ function AllCard() {
   const [arrofdetail, setarrofdetail] = useState(null);
 
   useEffect(() => {
-    const q = query(collection(db, "Scholarships"));
+    const q = query(collection(db, "courses"));
     onSnapshot(q, (qS) => {
       let data = qS.docs;
       let final;

@@ -9,7 +9,7 @@ import Footer from "../footer/footer";
 import ServiceFaqM from "../Faq/ServiceFaqM";
 import { Link } from "react-router-dom";
 
-import { db } from "../DB/firebase";
+import { db } from "../../ff";
 
 import {
   collection,
@@ -35,9 +35,9 @@ function Home() {
 
   useEffect(() => {
     setstatus(false);
-    const q = query(collection(db, "Scholarships"));
+    const q = query(collection(db, "courses"));
     onSnapshot(q, (qS) => {
-      let data = qS.docs.slice(0, 6);
+      let data = qS.docs.slice(0, 3);
       setsch(data);
       setperdata(qS.docs);
     });
@@ -61,25 +61,6 @@ function Home() {
       });
     }
 
-    if (isHandi) {
-      temp = temp.filter((ele) => {
-        return ele.data().isHandi;
-      });
-    }
-
-    if (ismilitry) {
-      temp = temp.filter((ele) => {
-        return ele.data().isMilitry;
-      });
-    }
-
-    if (category != "all") {
-      console.log(1);
-      temp = temp.filter((ele) => {
-        console.log(ele.data().category.toLowerCase());
-        return ele.data().category.toLowerCase() == category;
-      });
-    }
     let dd = temp;
     if (dd.length > 6) dd = dd.slice(0, 6);
 
@@ -127,7 +108,6 @@ function Home() {
           </div>
         </div>
       </section>
-     <CourseDetail/>
       {/* scholarship details filters */}
       <section class="bg-primary text-light p-5">
         <div class="container">
@@ -155,54 +135,6 @@ function Home() {
               </button>
             </div>
           </div>
-          <div className="filter">
-            <div>
-              <h3>Filter : </h3>
-            </div>
-            <select
-              onChange={(e) => {
-                if (e.target.value === "Hendicap") {
-                  setishan(true);
-                } else setishan(false);
-              }}
-            >
-              <option>Hendicap</option>
-              <option selected>Non-hendicap</option>
-            </select>
-            <select
-              onChange={(e) => {
-                if (e.target.value == "For-Miletry") {
-                  setismil(true);
-                  console.log(ismilitry);
-                } else {
-                  setismil(false);
-                }
-              }}
-            >
-              <option>For-Miletry</option>
-              <option selected>Normal</option>
-            </select>
-            <select
-              onChange={(e) => {
-                setcate(e.target.value.toLowerCase());
-              }}
-            >
-              <option selected>All</option>
-              <option>OBC</option>
-              <option>General</option>
-              <option>SC</option>
-              <option>ST</option>
-            </select>
-            <button
-              class="btn btn-dark btn-lg  applyfilt"
-              type="button"
-              onClick={() => {
-                filter();
-              }}
-            >
-              Apply
-            </button>
-          </div>
         </div>
       </section>
 
@@ -213,10 +145,11 @@ function Home() {
             return (
               <Card
                 name={ele.data().name}
-                eligiblity={ele.data().eligiblity}
-                benefit={ele.data().benefit}
-                deadline={ele.data().closeingDate}
+                eligiblity={ele.data().eligibility}
+                benefit={ele.data().outcome}
+                deadline={ele.data().deadline}
                 viewlink={ele.id}
+                link={ele.data().link}
               />
             );
           })}
