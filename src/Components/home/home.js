@@ -9,7 +9,7 @@ import Footer from "../footer/footer";
 import ServiceFaqM from "../Faq/ServiceFaqM";
 import { Link } from "react-router-dom";
 
-import { db } from "../DB/firebase";
+import { db } from "../../ff";
 
 import {
   collection,
@@ -32,9 +32,9 @@ function Home() {
 
   useEffect(() => {
     setstatus(false);
-    const q = query(collection(db, "Scholarships"));
+    const q = query(collection(db, "courses"));
     onSnapshot(q, (qS) => {
-      let data = qS.docs.slice(0, 6);
+      let data = qS.docs.slice(0, 3);
       setsch(data);
       setperdata(qS.docs);
     });
@@ -97,7 +97,8 @@ function Home() {
                 <span class="text-warning">Welcome to STUHELP !!</span>
               </h1>
               <p class="lead my-4 ">
-                Here you will register for course/compitition -- Teacher's can analyse each Student Evalution
+                Here you will register for course/compitition -- Teacher's can
+                analyse each Student Evalution
               </p>
               <p class="lead my-4 ">
                 Find your best Course and take advantage of it.
@@ -114,7 +115,11 @@ function Home() {
             </div>
 
             <a href="https://svgshare.com/s/gH0" className="right">
-              <img class="img-fluid  d-none d-sm-block" src="img/44.png" title="" />
+              <img
+                class="img-fluid  d-none d-sm-block"
+                src="img/44.png"
+                title=""
+              />
             </a>
           </div>
         </div>
@@ -146,54 +151,6 @@ function Home() {
               </button>
             </div>
           </div>
-          <div className="filter">
-            <div>
-              <h3>Filter : </h3>
-            </div>
-            <select
-              onChange={(e) => {
-                if (e.target.value === "Hendicap") {
-                  setishan(true);
-                } else setishan(false);
-              }}
-            >
-              <option>Hendicap</option>
-              <option selected>Non-hendicap</option>
-            </select>
-            <select
-              onChange={(e) => {
-                if (e.target.value == "For-Miletry") {
-                  setismil(true);
-                  console.log(ismilitry);
-                } else {
-                  setismil(false);
-                }
-              }}
-            >
-              <option>For-Miletry</option>
-              <option selected>Normal</option>
-            </select>
-            <select
-              onChange={(e) => {
-                setcate(e.target.value.toLowerCase());
-              }}
-            >
-              <option selected>All</option>
-              <option>OBC</option>
-              <option>General</option>
-              <option>SC</option>
-              <option>ST</option>
-            </select>
-            <button
-              class="btn btn-dark btn-lg  applyfilt"
-              type="button"
-              onClick={() => {
-                filter();
-              }}
-            >
-              Apply
-            </button>
-          </div>
         </div>
       </section>
 
@@ -204,10 +161,11 @@ function Home() {
             return (
               <Card
                 name={ele.data().name}
-                eligiblity={ele.data().eligiblity}
-                benefit={ele.data().benefit}
-                deadline={ele.data().closeingDate}
+                eligiblity={ele.data().eligibility}
+                benefit={ele.data().outcome}
+                deadline={ele.data().deadline}
                 viewlink={ele.id}
+                link={ele.data().link}
               />
             );
           })}

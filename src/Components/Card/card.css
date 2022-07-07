@@ -27,8 +27,9 @@
 .cardmain{
     width: 329px !important;
 }
-.cardmain img{
-    height: auto;
+.cardmain img{ 
+        object-fit: revert !important; 
+        height: 33% !important;
 }
 .bodypart .eligi ul{
     /* display: flex;
