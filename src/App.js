@@ -31,6 +31,7 @@ import { db } from "./ff";
 import data from "./compitition.json";
 
 import Compihome from "./Components/Card/compihome";
+import Dataform from "./Components/dataform/dataform"
 
 function App() {
   const all = useContext(logcont);
@@ -79,6 +80,8 @@ function App() {
           <Route exact path="/login" element={<Login />}></Route>
           <Route exact path="/tlogin" element={<TeacherLogin />}></Route>
           <Route exact path="/tsignin" element={<TeacherSign />}></Route>
+
+          <Route exact path="/result" element={<Dataform/>}></Route>
 
           <Route
             exact
