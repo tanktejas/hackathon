@@ -99,7 +99,7 @@ function Header() {
                     >
                       <NavLink
                         className="nav-link  dropdown-toggle"
-                        to="/ViewAllScholarships"
+                        to="/ViewAllCourses"
                         id="navbarDropdown"
                         role="button"
                         data-toggle="dropdown"
