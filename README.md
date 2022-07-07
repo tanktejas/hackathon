@@ -1,6 +1,7 @@
 ### Hello Everyone,
 
-### This is STUHELP Platfrom which consist various courses and competition for student to improve their skills and make them competitive.
+### This is STUHELP Platfrom which consist various courses and competition for student to improve their skills and make them competitive. 
+### we have lots of feature and functionality so make sure you visit every possible corner.
 
 ### Techs-tack Used :
       Reactjs ( as a frontend ) 
@@ -39,6 +40,13 @@
  
 ![Screenshot (15)](https://user-images.githubusercontent.com/77108255/177700232-49b9334c-1de4-4c0d-8614-21b53d4aed17.png)
 ![Screenshot (16)](https://user-images.githubusercontent.com/77108255/177700248-55032d39-dbff-48d4-a555-713fc22809b5.png)
+
+### `Teacher Dashboard`
+(![image](https://user-images.githubusercontent.com/77879603/177711579-f39f8d56-a392-4ccc-913d-6c9366ca5645.png)
+)
+![image](https://user-images.githubusercontent.com/77879603/177711677-81876d4d-e51c-4d80-af08-e66c5cf01a80.png)
+![image](https://user-images.githubusercontent.com/77879603/177711788-0336cafd-a7b5-439c-a04b-9702c358f61b.png)
+
 
  
 ### `Result Page`
