@@ -145,7 +145,7 @@ function Header() {
                     </li>
 
                     <li className="nav-item ">
-                      <Link className="nav-link  " to="/">
+                      <Link className="nav-link  " to="/compihome">
                         Compitition
                       </Link>
                     </li>
@@ -181,7 +181,7 @@ function Header() {
                     {all.user == "no" && (
                       <li className="nav-item">
                         <NavLink className="nav-link" to="/Login">
-                          Student 
+                          Student
                         </NavLink>
                       </li>
                     )}
@@ -201,7 +201,7 @@ function Header() {
                     {all.user == "no" && (
                       <li className="nav-item">
                         <NavLink className="nav-link" to="/tlogin">
-                          Teacher 
+                          Teacher
                         </NavLink>
                       </li>
                     )}
