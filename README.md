@@ -1,6 +1,6 @@
 ### Hello Everyone,
 
-### This is STUHELP Platfrom which consist various courses and competition for student to improve their skills and make them competitive. 
+### This is STUHELP Platfrom which consist various courses and competition for student to improve their academic and soft - skills and make them competitive. 
 ### we have lots of feature and functionality so make sure you visit every possible corner.
 
 ### Tech-stack Used :
@@ -17,6 +17,32 @@
 
 ### Live App Link :  https://stuhelp-by-tejas-and-dharmesh.vercel.app/
 ### Github Link : https://github.com/tanktejas/hackathon
+
+###Detail Decription of Functionality :
+
+1. Course's Page where data come from Backend So as yours need you can add any no of courses. Just need to provide necessary data. Student can view more detail or apply for this course.
+
+2. Search Functionality in course and compitition page implemented with elastic way.
+
+3. Compitition Page where many compitition was shown / Students can take participate in those or may view more details of it.
+
+4. when student want to view more about any course we provide page where all the details about that course is shown Again it is also Dynamic.😂😂👌
+
+5. Many Student has Dream to go foreign for their study so we have provided Foreign study Helper to those student to give basic idea.
+
+6. On Result Page Student can view their result by just entering asked info.
+
+7. We have Teacher Panel (Due to limited time Panel Backend is Pending) where teacher can view 
+   - no of student registerd on his/her course
+   - no of student participated in any compitition which was handled by his/her
+   - average result of class
+   - create/update result of student
+   - student activity on Stuhelp by time
+   - and much many more..
+   
+8. Separate Student and Teacher Login 
+  
+9. And as common About Us / COntact Us etc.. Go and visit ..
 
 # Photos:
 
